@@ -16,19 +16,14 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <Image
-                src="/logo-new.png"
+                src="/logo.png"
                 alt="מריאטה פנחסי - משרד עורכי דין"
                 width={50}
                 height={50}
                 className="rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                 onError={(e) => {
-                  // אם התמונה לא נטענת, ננסה את הקובץ המקורי
-                  if (e.currentTarget.src.includes('logo-new.png')) {
-                    e.currentTarget.src = '/logo.png'
-                  } else {
-                    // אם גם זה לא עובד, נסתיר אותה
-                    e.currentTarget.style.display = 'none'
-                  }
+                  // אם התמונה לא נטענת, נסתיר אותה
+                  e.currentTarget.style.display = 'none'
                 }}
               />
             </div>

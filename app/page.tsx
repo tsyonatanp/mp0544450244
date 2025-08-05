@@ -327,23 +327,18 @@ export default function HomePage() {
             <div className="flex justify-center mb-8">
               <div className="relative">
                 <Image
-                  src="/logo-new.png"
+                  src="/logo.png"
                   alt="מריאטה פנחסי - משרד עורכי דין"
                   width={140}
                   height={140}
                   className="rounded-full shadow-2xl ring-4 ring-white/20"
                   onError={(e) => {
-                    // אם התמונה לא נטענת, ננסה את הקובץ המקורי
-                    if (e.currentTarget.src.includes('logo-new.png')) {
-                      e.currentTarget.src = '/logo.png'
-                    } else if (e.currentTarget.src.includes('logo.png')) {
-                      // אם גם זה לא עובד, נציג placeholder
-                      e.currentTarget.style.display = 'none'
-                      const placeholder = document.createElement('div')
-                      placeholder.className = 'w-35 h-35 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-2xl ring-4 ring-white/20'
-                      placeholder.textContent = 'מ'
-                      e.currentTarget.parentNode?.appendChild(placeholder)
-                    }
+                    // אם התמונה לא נטענת, נציג placeholder
+                    e.currentTarget.style.display = 'none'
+                    const placeholder = document.createElement('div')
+                    placeholder.className = 'w-35 h-35 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-2xl ring-4 ring-white/20'
+                    placeholder.textContent = 'מ'
+                    e.currentTarget.parentNode?.appendChild(placeholder)
                   }}
                   priority
                 />
@@ -422,19 +417,14 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative">
                 <Image
-                  src="/photo-new.jpg"
+                  src="/professional-photo.jpg"
                   alt="מריאטה פנחסי"
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl"
                   onError={(e) => {
-                    // אם התמונה לא נטענת, ננסה את הקובץ המקורי
-                    if (e.currentTarget.src.includes('photo-new.jpg')) {
-                      e.currentTarget.src = '/professional-photo.jpg'
-                    } else {
-                      // אם גם זה לא עובד, נסתיר אותה
-                      e.currentTarget.style.display = 'none'
-                    }
+                    // אם התמונה לא נטענת, נסתיר אותה
+                    e.currentTarget.style.display = 'none'
                   }}
                   priority
                 />
