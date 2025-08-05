@@ -178,4 +178,39 @@ body {
     outline: 3px solid #ffffff !important;
     outline-offset: 2px !important;
   }
+
+  /* Mobile Accessibility Button Improvements */
+  @media (max-width: 640px) {
+    /* Ensure accessibility button is always visible on mobile */
+    .accessibility-button {
+      position: fixed !important;
+      bottom: 16px !important;
+      left: 16px !important;
+      z-index: 9999 !important;
+      background-color: rgba(245, 158, 11, 0.9) !important;
+      backdrop-filter: blur(8px) !important;
+      border: 2px solid rgba(255, 255, 255, 0.3) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Improve touch targets on mobile */
+    .accessibility-panel button,
+    .accessibility-panel input[type="checkbox"] {
+      min-height: 48px !important;
+      min-width: 48px !important;
+      padding: 12px !important;
+    }
+
+    /* Better spacing for mobile */
+    .accessibility-panel {
+      max-width: calc(100vw - 32px) !important;
+      margin: 0 16px !important;
+    }
+
+    /* Improve text readability on mobile */
+    .accessibility-panel {
+      font-size: 14px !important;
+      line-height: 1.4 !important;
+    }
+  }
 } 

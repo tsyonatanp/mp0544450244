@@ -119,18 +119,18 @@ export default function HomePage() {
       <Header />
       
       {/* Accessibility Button */}
-      <div className="fixed top-20 right-4 z-50">
+      <div className="fixed bottom-4 left-4 z-50 sm:bottom-6 sm:left-4">
         <button
           onClick={() => setAccessibilityOpen(!accessibilityOpen)}
           onKeyDown={(e) => e.key === 'Enter' && setAccessibilityOpen(!accessibilityOpen)}
-          className="bg-amber-500 hover:bg-amber-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-300 keyboard-nav"
+          className="accessibility-button bg-amber-500/80 hover:bg-amber-600/90 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-300 keyboard-nav backdrop-blur-sm"
           aria-label="פתח אפשרויות נגישות"
           aria-expanded={accessibilityOpen}
           aria-controls="accessibility-panel"
           tabIndex={0}
-          style={{ minWidth: '48px', minHeight: '48px' }}
+          style={{ minWidth: '44px', minHeight: '44px' }}
         >
-          <FaUniversalAccess className="text-xl" />
+          <FaUniversalAccess className="text-lg sm:text-xl" />
           <span className="sr-only">פתח אפשרויות נגישות</span>
         </button>
         
@@ -138,46 +138,46 @@ export default function HomePage() {
         {accessibilityOpen && (
           <div 
             id="accessibility-panel"
-            className="absolute right-0 top-12 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 max-h-96 overflow-y-auto"
+            className="accessibility-panel absolute left-0 bottom-12 bg-white rounded-lg shadow-xl border border-gray-200 p-3 sm:p-4 w-72 sm:w-80 max-h-80 sm:max-h-96 overflow-y-auto"
             role="dialog"
             aria-labelledby="accessibility-title"
             aria-describedby="accessibility-description"
           >
-            <h3 id="accessibility-title" className="text-lg font-bold text-gray-900 mb-4">אפשרויות נגישות</h3>
+            <h3 id="accessibility-title" className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">אפשרויות נגישות</h3>
             <p id="accessibility-description" className="sr-only">פאנל להגדרת אפשרויות נגישות לאתר</p>
             
             {/* Font Size */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">גודל טקסט</label>
-              <div className="flex gap-2">
+            <div className="mb-3 sm:mb-4">
+              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">גודל טקסט</label>
+              <div className="flex gap-1 sm:gap-2">
                 <button
                   onClick={() => setFontSize(Math.max(12, fontSize - 2))}
                   onKeyDown={(e) => e.key === 'Enter' && setFontSize(Math.max(12, fontSize - 2))}
-                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-2 rounded text-sm keyboard-nav"
+                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 sm:px-3 py-2 rounded text-xs sm:text-sm keyboard-nav"
                   aria-label="הקטן גודל טקסט"
                   tabIndex={0}
-                  style={{ minWidth: '44px', minHeight: '44px' }}
+                  style={{ minWidth: '40px', minHeight: '40px' }}
                 >
                   <FaFont className="text-xs" />
                   <span className="sr-only">הקטן גודל טקסט</span>
                 </button>
-                <span className="px-3 py-2 bg-gray-100 rounded text-sm flex items-center" aria-live="polite">גודל טקסט: {fontSize}px</span>
+                <span className="px-2 sm:px-3 py-2 bg-gray-100 rounded text-xs sm:text-sm flex items-center" aria-live="polite">גודל: {fontSize}px</span>
                 <button
                   onClick={() => setFontSize(Math.min(24, fontSize + 2))}
                   onKeyDown={(e) => e.key === 'Enter' && setFontSize(Math.min(24, fontSize + 2))}
-                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-2 rounded text-sm keyboard-nav"
+                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 sm:px-3 py-2 rounded text-xs sm:text-sm keyboard-nav"
                   aria-label="הגדל גודל טקסט"
                   tabIndex={0}
-                  style={{ minWidth: '44px', minHeight: '44px' }}
+                  style={{ minWidth: '40px', minHeight: '40px' }}
                 >
-                  <FaFont className="text-lg" />
+                  <FaFont className="text-sm sm:text-lg" />
                   <span className="sr-only">הגדל גודל טקסט</span>
                 </button>
               </div>
             </div>
             
             {/* High Contrast */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -186,14 +186,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="high-contrast-desc"
                 />
-                <FaEye className="mr-2" />
-                <span className="text-sm">ניגודיות גבוהה</span>
+                <FaEye className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">ניגודיות גבוהה</span>
               </label>
               <p id="high-contrast-desc" className="sr-only">הפעלת מצב ניגודיות גבוהה לבעלי ראייה מוגבלת</p>
             </div>
             
             {/* Focus Indicators */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -202,14 +202,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="focus-desc"
                 />
-                <FaMousePointer className="mr-2" />
-                <span className="text-sm">הדגשת מיקוד</span>
+                <FaMousePointer className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">הדגשת מיקוד</span>
               </label>
               <p id="focus-desc" className="sr-only">הדגשת אלמנטים במצב מיקוד לניווט מקלדת</p>
             </div>
 
             {/* Grayscale */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -218,14 +218,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="grayscale-desc"
                 />
-                <FaEye className="mr-2" />
-                <span className="text-sm">מצב שחור-לבן</span>
+                <FaEye className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">מצב שחור-לבן</span>
               </label>
               <p id="grayscale-desc" className="sr-only">הפעלת מצב שחור-לבן לבעלי עיוורון צבעים</p>
             </div>
 
             {/* Large Cursor */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -234,14 +234,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="cursor-desc"
                 />
-                <FaMousePointer className="mr-2" />
-                <span className="text-sm">סמן גדול</span>
+                <FaMousePointer className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">סמן גדול</span>
               </label>
               <p id="cursor-desc" className="sr-only">הגדלת הסמן לניווט קל יותר</p>
             </div>
 
             {/* Disable Animations */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -250,14 +250,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="animations-desc"
                 />
-                <FaEye className="mr-2" />
-                <span className="text-sm">ביטול אנימציות</span>
+                <FaEye className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">ביטול אנימציות</span>
               </label>
               <p id="animations-desc" className="sr-only">ביטול אנימציות לבעלי רגישות לתנועה</p>
             </div>
 
             {/* Reading Guide */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -266,14 +266,14 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="reading-desc"
                 />
-                <FaEye className="mr-2" />
-                <span className="text-sm">מדריך קריאה</span>
+                <FaEye className="mr-2 text-sm" />
+                <span className="text-xs sm:text-sm">מדריך קריאה</span>
               </label>
               <p id="reading-desc" className="sr-only">הוספת מדריך קריאה לבעלי קשיי קריאה</p>
             </div>
             
             {/* Reset Button */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <button
                 onClick={() => {
                   setFontSize(16)
@@ -293,12 +293,12 @@ export default function HomePage() {
                   setDisableAnimations(false)
                   setReadingGuide(false)
                 })()}
-                className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded text-sm keyboard-nav flex items-center justify-center gap-2"
+                className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded text-xs sm:text-sm keyboard-nav flex items-center justify-center gap-2"
                 aria-label="אפס הגדרות נגישות"
                 tabIndex={0}
-                style={{ minHeight: '44px' }}
+                style={{ minHeight: '40px' }}
               >
-                <FaUndo className="text-sm" />
+                <FaUndo className="text-xs sm:text-sm" />
                 אפס הגדרות
               </button>
             </div>
@@ -307,10 +307,10 @@ export default function HomePage() {
             <button
               onClick={() => setAccessibilityOpen(false)}
               onKeyDown={(e) => e.key === 'Enter' && setAccessibilityOpen(false)}
-              className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 rounded text-sm keyboard-nav"
+              className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 rounded text-xs sm:text-sm keyboard-nav"
               aria-label="סגור פאנל נגישות"
               tabIndex={0}
-              style={{ minHeight: '44px' }}
+              style={{ minHeight: '40px' }}
             >
               סגור
             </button>
