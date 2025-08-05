@@ -345,6 +345,7 @@ export default function HomePage() {
                       e.currentTarget.parentNode?.appendChild(placeholder)
                     }
                   }}
+                  priority
                 />
               </div>
             </div>
@@ -435,6 +436,7 @@ export default function HomePage() {
                       e.currentTarget.style.display = 'none'
                     }
                   }}
+                  priority
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 rounded-xl shadow-xl">
                   <div className="text-center">

@@ -94,8 +94,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#fbbf24" />
         
         {/* Preload Critical Resources */}
-        <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/professional-photo.jpg" as="image" />
+        <link rel="preload" href="/logo-new.png" as="image" />
+        <link rel="preload" href="/photo-new.jpg" as="image" />
         
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//maps.googleapis.com" />

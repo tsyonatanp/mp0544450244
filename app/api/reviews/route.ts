@@ -79,6 +79,7 @@ export async function GET(request: NextRequest) {
   const origin = request.headers.get('origin')
   const allowedOrigins = [
     'https://marita-pinchasi-law.co.il',
+    'https://mp0544450244.vercel.app',
     'http://localhost:3000',
     'http://localhost:3001'
   ]
