@@ -21,6 +21,10 @@ const Header = () => {
                 width={50}
                 height={50}
                 className="rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                onError={(e) => {
+                  // אם התמונה לא נטענת, נסתיר אותה
+                  e.currentTarget.style.display = 'none'
+                }}
               />
             </div>
             <div className="hidden sm:block">

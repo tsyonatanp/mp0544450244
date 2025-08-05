@@ -332,6 +332,14 @@ export default function HomePage() {
                   width={140}
                   height={140}
                   className="rounded-full shadow-2xl ring-4 ring-white/20"
+                  onError={(e) => {
+                    // אם התמונה לא נטענת, נסתיר אותה ונציג placeholder
+                    e.currentTarget.style.display = 'none'
+                    const placeholder = document.createElement('div')
+                    placeholder.className = 'w-35 h-35 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-2xl ring-4 ring-white/20'
+                    placeholder.textContent = 'מ'
+                    e.currentTarget.parentNode?.appendChild(placeholder)
+                  }}
                 />
               </div>
             </div>
@@ -413,6 +421,10 @@ export default function HomePage() {
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl"
+                  onError={(e) => {
+                    // אם התמונה לא נטענת, נסתיר אותה
+                    e.currentTarget.style.display = 'none'
+                  }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 rounded-xl shadow-xl">
                   <div className="text-center">
