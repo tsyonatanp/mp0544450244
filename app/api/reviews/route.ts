@@ -94,11 +94,37 @@ export async function GET(request: NextRequest) {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY
   const placeId = process.env.GOOGLE_PLACE_ID || 'ChIJ4bekR3JKHRURjd6jEiR8SoE'
 
+  // אם אין API key, נחזיר ביקורות דמו
   if (!apiKey) {
-    return new NextResponse(JSON.stringify([]), {
+    const demoReviews = [
+      {
+        name: 'דוד כהן',
+        text: 'מריאטה ליוותה אותנו לאורך כל תהליך רכישת הדירה. מקצועית, זמינה וקשובה!',
+        rating: 5,
+        time: 'לפני חודש',
+        profile_photo: ''
+      },
+      {
+        name: 'שרה לוי',
+        text: 'קיבלנו פיצוי מלא על ליקויי בניה – בזכות ליווי משפטי מדויק ונחוש.',
+        rating: 5,
+        time: 'לפני חודשיים',
+        profile_photo: ''
+      },
+      {
+        name: 'משה ישראלי',
+        text: 'פתרה סכסוך שכנים מורכב ברוגע וביעילות. ממליץ מאוד!',
+        rating: 5,
+        time: 'לפני 3 חודשים',
+        profile_photo: ''
+      }
+    ]
+
+    return new NextResponse(JSON.stringify(demoReviews), {
       status: 200,
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
+        'X-Demo': 'true',
       },
     })
   }
