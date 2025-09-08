@@ -151,6 +151,9 @@ export default function RootLayout({
               },
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "חרמון 3",
+                "addressLocality": "אור יהודה",
+                "postalCode": "6041908",
                 "addressCountry": "IL",
                 "addressRegion": "מרכז הארץ"
               },
@@ -158,8 +161,8 @@ export default function RootLayout({
               "priceRange": "$$",
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "3",
+                "ratingValue": "4.9",
+                "reviewCount": "18",
                 "bestRating": "5",
                 "worstRating": "1"
               },

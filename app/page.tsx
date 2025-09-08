@@ -493,7 +493,7 @@ export default function HomePage() {
               <p className="text-gray-700 mb-6">השאירו ביקורת ותעזרו לאחרים למצוא את השירות הטוב ביותר</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://g.page/r/CYhK8Q9QZQhKEAg/review"
+                  href="https://www.google.com/maps/place/מריאטה+פנחסי+משרד+עורכי+דין/@32.0288,34.8564,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4b8b8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d32.0288!4d34.8564!16s%2Fg%2F11c0x0x0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
@@ -620,8 +620,9 @@ export default function HomePage() {
                       <FaMapMarkerAlt className="text-white text-xl" />
                     </div>
                     <div>
-                      <p className="font-semibold">אזור שירות</p>
-                      <p className="text-gray-200">מרכז הארץ - תל אביב, רמת גן, גבעתיים, הרצליה, פתח תקווה, רעננה, הוד השרון, כפר סבא, ראשון לציון, רחובות, נס ציונה, רמלה, לוד, מודיעין</p>
+                      <p className="font-semibold">מיקום המשרד</p>
+                      <p className="text-gray-200">חרמון 3, אור יהודה 6041908</p>
+                      <p className="text-gray-300 text-sm mt-2">שירות בכל אזור המרכז</p>
                     </div>
                   </div>
                 </div>
@@ -646,7 +647,7 @@ export default function HomePage() {
                 שלחו WhatsApp
               </a>
               <a
-                href="https://g.page/r/CYhK8Q9QZQhKEAg/review"
+                href="https://www.google.com/maps/place/מריאטה+פנחסי+משרד+עורכי+דין/@32.0288,34.8564,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4b8b8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d32.0288!4d34.8564!16s%2Fg%2F11c0x0x0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 cursor-pointer"
