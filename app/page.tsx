@@ -63,26 +63,8 @@ export default function HomePage() {
   const [disableAnimations, setDisableAnimations] = useState(false)
   const [readingGuide, setReadingGuide] = useState(false)
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('/api/reviews')
-        if (response.ok) {
-          const reviews = await response.json()
-          if (reviews.length > 0) {
-            setTestimonials(reviews)
-          }
-        }
-      } catch (error) {
-        console.error('Failed to fetch reviews:', error)
-        // לא נשנה את testimonials אם יש שגיאה - נשאיר את הביקורות הקיימות
-      }
-    }
-
-    // נחכה קצת לפני שננסה לטעון ביקורות
-    const timer = setTimeout(fetchReviews, 1000)
-    return () => clearTimeout(timer)
-  }, [])
+  // הסרנו את הטעינה של ביקורות מזויפות
+  // הביקורות האמיתיות נמצאות ב-Google Business Profile
 
   return (
     <div 
