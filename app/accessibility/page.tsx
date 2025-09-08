@@ -17,7 +17,7 @@ export default function AccessibilityPage() {
               <FaUniversalAccess className="text-2xl" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">הצהרת נגישות</h1>
-            <p className="text-lg text-gray-600">משרד עורכת הדין מריאטה פנחסי מחויב לנגישות מלאה לכל המשתמשים</p>
+            <p className="text-lg text-gray-600">משרד עורכת הדין ונוטריון מריאטה פנחסי מחויב לנגישות מלאה לכל המשתמשים</p>
           </div>
 
           <div className="space-y-8">
@@ -25,7 +25,7 @@ export default function AccessibilityPage() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">מחויבות לנגישות</h2>
               <p className="text-gray-700 leading-relaxed">
-                משרד עורכת הדין מריאטה פנחסי מחויב לספק שירות נגיש לכל המשתמשים, כולל אנשים עם מוגבלויות. 
+                משרד עורכת הדין ונוטריון מריאטה פנחסי מחויב לספק שירות נגיש לכל המשתמשים, כולל אנשים עם מוגבלויות. 
                 האתר עומד בתקנות הנגישות הישראליות ומאפשר גישה שווה לכל המידע והשירותים.
               </p>
             </section>

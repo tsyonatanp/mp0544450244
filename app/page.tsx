@@ -294,7 +294,7 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/logo.png"
-                  alt="מריאטה פנחסי - משרד עורכי דין"
+                  alt="מריאטה פנחסי - משרד עורכי דין ונוטריון"
                   width={140}
                   height={140}
                   className="rounded-full shadow-2xl ring-4 ring-white/20"
@@ -314,7 +314,7 @@ export default function HomePage() {
               מריאטה פנחסי
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-              משרד עורכי דין
+              משרד עורכי דין ונוטריון
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
               מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון

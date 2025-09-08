@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400">
-              © 2024 מריאטה פנחסי - משרד עורכי דין. כל הזכויות שמורות.
+              © 2024 מריאטה פנחסי - משרד עורכי דין ונוטריון. כל הזכויות שמורות.
             </p>
             <Link
               href="/accessibility"

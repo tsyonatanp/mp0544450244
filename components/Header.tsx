@@ -17,7 +17,7 @@ const Header = () => {
             <div className="relative">
               <Image
                 src="/logo.png"
-                alt="מריאטה פנחסי - משרד עורכי דין"
+                alt="מריאטה פנחסי - משרד עורכי דין ונוטריון"
                 width={50}
                 height={50}
                 className="rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-300"
@@ -31,7 +31,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-gray-900 group-hover:text-slate-600 transition-colors">
                 מריאטה פנחסי
               </h1>
-              <p className="text-sm text-gray-600">משרד עורכי דין</p>
+              <p className="text-sm text-gray-600">משרד עורכי דין ונוטריון</p>
             </div>
           </Link>
 
