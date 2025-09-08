@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'מריאטה פנחסי - עורך דין נדל"ן | הסכמי מכר, ליקויי בניה, צוואות',
   description: 'עורך דין נדל"ן מנוסה. הסכמי מכר ורכישה, תביעות ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות ושירותי נוטריון. שירות בכל הארץ',
-  keywords: 'עורך דין נדל"ן, הסכמי מכר ורכישה, ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות, נוטריון, עורך דין נדל"ן',
+  keywords: 'עורך דין נדל"ן, הסכמי מכר ורכישה, ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות, נוטריון, עורך דין נדל"ן, עורך דין נדל"ן תל אביב, עורך דין נדל"ן רמת גן, עורך דין נדל"ן גבעתיים, עורך דין נדל"ן הרצליה, עורך דין נדל"ן פתח תקווה, עורך דין נדל"ן רעננה, עורך דין נדל"ן הוד השרון, עורך דין נדל"ן כפר סבא, עורך דין נדל"ן ראשון לציון, עורך דין נדל"ן רחובות, עורך דין נדל"ן נס ציונה, עורך דין נדל"ן רמלה, עורך דין נדל"ן לוד, עורך דין נדל"ן מודיעין, עורך דין נדל"ן רעננה, עורך דין נדל"ן הוד השרון, עורך דין נדל"ן כפר סבא, עורך דין נדל"ן ראשון לציון, עורך דין נדל"ן רחובות, עורך דין נדל"ן נס ציונה, עורך דין נדל"ן רמלה, עורך דין נדל"ן לוד, עורך דין נדל"ן מודיעין',
   authors: [{ name: 'מריאטה פנחסי' }],
   creator: 'מריאטה פנחסי',
   publisher: 'מריאטה פנחסי - משרד עורכי דין',
@@ -106,6 +106,64 @@ export default function RootLayout({
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        
+        {/* Schema Markup for Legal Service */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              "name": "מריאטה פנחסי - משרד עורכי דין",
+              "description": "עורך דין נדל\"ן מנוסה. הסכמי מכר ורכישה, תביעות ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות ושירותי נוטריון",
+              "url": "https://marita-pinchasi-law.co.il",
+              "telephone": "054-4450244",
+              "areaServed": [
+                "תל אביב",
+                "רמת גן", 
+                "גבעתיים",
+                "הרצליה",
+                "פתח תקווה",
+                "רעננה",
+                "הוד השרון",
+                "כפר סבא",
+                "ראשון לציון",
+                "רחובות",
+                "נס ציונה",
+                "רמלה",
+                "לוד",
+                "מודיעין",
+                "מרכז הארץ"
+              ],
+              "serviceType": [
+                "עריכת דין נדל\"ן",
+                "הסכמי מכר ורכישה",
+                "תביעות ליקויי בניה",
+                "איחור במסירה",
+                "סכסוכי שכנים",
+                "צוואות וירושות",
+                "שירותי נוטריון"
+              ],
+              "provider": {
+                "@type": "Person",
+                "name": "מריאטה פנחסי",
+                "jobTitle": "עורכת דין"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IL",
+                "addressRegion": "מרכז הארץ"
+              },
+              "openingHours": "Mo-Fr 09:00-18:00",
+              "priceRange": "$$",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "3"
+              }
+            })
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

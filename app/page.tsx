@@ -353,6 +353,9 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
               מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון
             </p>
+            <p className="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              שירות מקצועי בכל אזור המרכז: תל אביב, רמת גן, גבעתיים, הרצליה, פתח תקווה, רעננה, הוד השרון, כפר סבא, ראשון לציון, רחובות, נס ציונה, רמלה, לוד, מודיעין ועוד
+            </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="tel:054-4450244"
@@ -592,7 +595,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="font-semibold">אזור שירות</p>
-                      <p className="text-gray-200">כל הארץ</p>
+                      <p className="text-gray-200">מרכז הארץ - תל אביב, רמת גן, גבעתיים, הרצליה, פתח תקווה, רעננה, הוד השרון, כפר סבא, ראשון לציון, רחובות, נס ציונה, רמלה, לוד, מודיעין</p>
                     </div>
                   </div>
                 </div>
