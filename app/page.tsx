@@ -486,6 +486,32 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">דברי לקוחותינו</h2>
             <p className="text-xl text-gray-600">הצלחות ותוצאות מוכחות</p>
+            
+            {/* Google Reviews CTA */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl border border-blue-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">ביקורות Google</h3>
+              <p className="text-gray-700 mb-6">השאירו ביקורת ותעזרו לאחרים למצוא את השירות הטוב ביותר</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://g.page/r/CYhK8Q9QZQhKEAg/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <FaStar className="text-xl" />
+                  השאירו ביקורת ב-Google
+                </a>
+                <a
+                  href="https://www.google.com/search?q=מריאטה+פנחסי+עורך+דין+נדלן&rlz=1C1CHBF_heIL922IL922&oq=מריאטה+פנחסי+עורך+דין+נדלן&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YDRiABDIKCAIQABgNGA0YgAQyCggDEC4YDRiABDIKCAQQABgNGA0YgAQyCggFEC4YDRiABDIKCAYQABgNGA0YgAQyCggHEC4YDRiABDIKCAgQABgNGA0YgAQyCggJEC4YDRiABNIBCDI0MTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x151d4b8b8b8b8b8b:0x8b8b8b8b8b8b8b8b,1,,,"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <FaStar className="text-xl" />
+                  צפו בביקורות Google
+                </a>
+              </div>
+            </div>
           </div>
           
           {/* Reviews Display */}
@@ -618,6 +644,15 @@ export default function HomePage() {
               >
                 <FaWhatsapp className="text-xl" />
                 שלחו WhatsApp
+              </a>
+              <a
+                href="https://g.page/r/CYhK8Q9QZQhKEAg/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 cursor-pointer"
+              >
+                <FaStar className="text-xl" />
+                השאירו ביקורת
               </a>
               <a
                 href="https://www.facebook.com/m0544450244"
