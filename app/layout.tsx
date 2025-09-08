@@ -166,47 +166,6 @@ export default function RootLayout({
                 "bestRating": "5",
                 "worstRating": "1"
               },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "דוד כהן"
-                  },
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "reviewBody": "מריאטה ליוותה אותנו לאורך כל תהליך רכישת הדירה. מקצועית, זמינה וקשובה!"
-                },
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "שרה לוי"
-                  },
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "reviewBody": "קיבלנו פיצוי מלא על ליקויי בניה – בזכות ליווי משפטי מדויק ונחוש."
-                },
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "משה ישראלי"
-                  },
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "reviewBody": "פתרה סכסוך שכנים מורכב ברוגע וביעילות. ממליץ מאוד!"
-                }
-              ]
             })
           }}
         />

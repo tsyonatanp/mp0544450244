@@ -48,23 +48,7 @@ export default function HomePage() {
     }
   ]
 
-  const [testimonials, setTestimonials] = useState([
-    {
-      name: 'דוד כהן',
-      text: 'מריאטה ליוותה אותנו לאורך כל תהליך רכישת הדירה. מקצועית, זמינה וקשובה!',
-      rating: 5
-    },
-    {
-      name: 'שרה לוי',
-      text: 'קיבלנו פיצוי מלא על ליקויי בניה – בזכות ליווי משפטי מדויק ונחוש.',
-      rating: 5
-    },
-    {
-      name: 'משה ישראלי',
-      text: 'פתרה סכסוך שכנים מורכב ברוגע וביעילות. ממליץ מאוד!',
-      rating: 5
-    }
-  ])
+  const [testimonials, setTestimonials] = useState([])
 
   const [currentPage, setCurrentPage] = useState(0)
   const reviewsPerPage = 1
@@ -493,7 +477,7 @@ export default function HomePage() {
               <p className="text-gray-700 mb-6">השאירו ביקורת ותעזרו לאחרים למצוא את השירות הטוב ביותר</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://www.google.com/maps/place/מריאטה+פנחסי+משרד+עורכי+דין/@32.0288,34.8564,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4b8b8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d32.0288!4d34.8564!16s%2Fg%2F11c0x0x0"
+                  href="https://g.page/r/Ce7aJP0Ck8vwEAI/review"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
@@ -517,25 +501,44 @@ export default function HomePage() {
           {/* Reviews Display */}
           <div className="relative">
             <div className="flex justify-center">
-              {testimonials
-                .slice(currentPage * reviewsPerPage, (currentPage + 1) * reviewsPerPage)
-                .map((testimonial, index) => (
-                  <div key={currentPage * reviewsPerPage + index} className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-8 border border-slate-100 h-80 flex flex-col w-full max-w-md">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <FaStar key={i} className="text-amber-500" />
-                      ))}
-                    </div>
-                    <div className="flex-1 flex flex-col">
-                      <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden">
-                        "{testimonial.text.length > 200 ? `${testimonial.text.substring(0, 200)}...` : testimonial.text}"
-                      </p>
-                      <div className="font-semibold text-gray-900 mt-4 pt-4 border-t border-gray-200">
-                        – {testimonial.name}
+              {testimonials.length > 0 ? (
+                testimonials
+                  .slice(currentPage * reviewsPerPage, (currentPage + 1) * reviewsPerPage)
+                  .map((testimonial, index) => (
+                    <div key={currentPage * reviewsPerPage + index} className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-8 border border-slate-100 h-80 flex flex-col w-full max-w-md">
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <FaStar key={i} className="text-amber-500" />
+                        ))}
+                      </div>
+                      <div className="flex-1 flex flex-col">
+                        <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden">
+                          "{testimonial.text.length > 200 ? `${testimonial.text.substring(0, 200)}...` : testimonial.text}"
+                        </p>
+                        <div className="font-semibold text-gray-900 mt-4 pt-4 border-t border-gray-200">
+                          – {testimonial.name}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+              ) : (
+                <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 border border-blue-200 h-80 flex flex-col w-full max-w-md items-center justify-center text-center">
+                  <div className="text-6xl mb-4">⭐</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">ביקורות Google</h3>
+                  <p className="text-gray-700 mb-6">
+                    צפו בביקורות האמיתיות שלנו ב-Google Business Profile
+                  </p>
+                  <a
+                    href="https://www.google.com/search?q=מריאטה+פנחסי+עורך+דין+נדלן"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                  >
+                    <FaStar className="text-lg" />
+                    צפו בביקורות Google
+                  </a>
+                </div>
+              )}
             </div>
 
             {/* Navigation Arrows */}
@@ -647,7 +650,7 @@ export default function HomePage() {
                 שלחו WhatsApp
               </a>
               <a
-                href="https://www.google.com/maps/place/מריאטה+פנחסי+משרד+עורכי+דין/@32.0288,34.8564,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4b8b8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d32.0288!4d34.8564!16s%2Fg%2F11c0x0x0"
+                href="https://g.page/r/Ce7aJP0Ck8vwEAI/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 cursor-pointer"
