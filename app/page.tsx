@@ -48,10 +48,7 @@ export default function HomePage() {
     }
   ]
 
-  const [testimonials, setTestimonials] = useState([])
-
-  const [currentPage, setCurrentPage] = useState(0)
-  const reviewsPerPage = 1
+  // Removed testimonials state - using Google reviews instead
 
   // Accessibility state
   const [accessibilityOpen, setAccessibilityOpen] = useState(false)
@@ -65,6 +62,35 @@ export default function HomePage() {
 
   // הסרנו את הטעינה של ביקורות מזויפות
   // הביקורות האמיתיות נמצאות ב-Google Business Profile
+
+  // Service Schema Data
+  const serviceSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "LegalService",
+          "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "חרמון 3",
+            "addressLocality": "אור יהודה",
+            "postalCode": "6041908",
+            "addressCountry": "IL"
+          },
+          "telephone": "054-4450244"
+        },
+        "areaServed": ["בקעת אונו", "אור יהודה", "קריית אונו", "יהוד-מונוסון", "גני תקווה"],
+        "serviceType": "עריכת דין נדל\"ן ונוטריון"
+      }
+    }))
+  }
 
   return (
     <div 
@@ -429,33 +455,7 @@ export default function HomePage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ItemList",
-              "itemListElement": services.map((service, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "item": {
-                  "@type": "Service",
-                  "name": service.title,
-                  "description": service.description,
-                  "provider": {
-                    "@type": "LegalService",
-                    "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "חרמון 3",
-                      "addressLocality": "אור יהודה",
-                      "postalCode": "6041908",
-                      "addressCountry": "IL"
-                    },
-                    "telephone": "054-4450244"
-                  },
-                  "areaServed": ["בקעת אונו", "אור יהודה", "קריית אונו", "יהוד-מונוסון", "גני תקווה"],
-                  "serviceType": "עריכת דין נדל\"ן ונוטריון"
-                }
-              }))
-            })
+            __html: JSON.stringify(serviceSchemaData)
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
