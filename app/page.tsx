@@ -48,7 +48,10 @@ export default function HomePage() {
     }
   ]
 
-  // Removed testimonials state - using Google reviews instead
+  const [testimonials, setTestimonials] = useState([])
+
+  const [currentPage, setCurrentPage] = useState(0)
+  const reviewsPerPage = 1
 
   // Accessibility state
   const [accessibilityOpen, setAccessibilityOpen] = useState(false)
@@ -62,35 +65,6 @@ export default function HomePage() {
 
   // הסרנו את הטעינה של ביקורות מזויפות
   // הביקורות האמיתיות נמצאות ב-Google Business Profile
-
-  // Service Schema Data
-  const serviceSchemaData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": services.map((service, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Service",
-        "name": service.title,
-        "description": service.description,
-        "provider": {
-          "@type": "LegalService",
-          "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "חרמון 3",
-            "addressLocality": "אור יהודה",
-            "postalCode": "6041908",
-            "addressCountry": "IL"
-          },
-          "telephone": "054-4450244"
-        },
-        "areaServed": ["בקעת אונו", "אור יהודה", "קריית אונו", "יהוד-מונוסון", "גני תקווה"],
-        "serviceType": "עריכת דין נדל\"ן ונוטריון"
-      }
-    }))
-  }
 
   return (
     <div 
@@ -320,13 +294,11 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/logo.png"
-                  alt="מריאטה פנחסי - עורכת דין נדל"ן ונוטריון באזור בקעת אונו - אור יהודה, קריית אונו, יהוד"
+                  alt="מריאטה פנחסי - עורכת דין נדלן ונוטריון באזור בקעת אונו"
                   width={140}
                   height={140}
                   className="rounded-full shadow-2xl ring-4 ring-white/20"
-                  loading="eager"
                   onError={(e) => {
-                    // אם התמונה לא נטענת, נציג placeholder
                     e.currentTarget.style.display = 'none'
                     const placeholder = document.createElement('div')
                     placeholder.className = 'w-35 h-35 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-2xl ring-4 ring-white/20'
@@ -346,17 +318,9 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
               מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון
             </p>
-            <p className="text-lg md:text-xl mb-4 text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed max-w-4xl mx-auto">
               שירות מקצועי בכל אזור המרכז: תל אביב, רמת גן, גבעתיים, הרצליה, פתח תקווה, רעננה, הוד השרון, כפר סבא, ראשון לציון, רחובות, נס ציונה, רמלה, לוד, מודיעין ועוד
             </p>
-            <div className="bg-amber-500/20 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto border border-amber-500/30">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">עורך דין נדל"ן ונוטריון באזור בקעת אונו</h3>
-              <p className="text-gray-100 text-base md:text-lg leading-relaxed">
-                המשרד ממוקם ב<strong className="text-white">אור יהודה</strong> ומעניק שירות מקצועי בכל אזור <strong className="text-white">בקעת אונו</strong>: 
-                <strong className="text-white"> אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה</strong> ועוד. 
-                ניסיון של מעל 14 שנים בליווי משפטי בעסקאות נדל"ן, תביעות ליקויי בניה, צוואות ושירותי נוטריון באזור.
-              </p>
-            </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="tel:054-4450244"
@@ -382,20 +346,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
                 אודות המשרד
               </h2>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                עורך דין נדל"ן ונוטריון באזור בקעת אונו
-              </h3>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  משרד עורכת הדין <strong className="text-gray-900">מריאטה פנחסי</strong> נוסד מתוך מחויבות עמוקה למקצועיות, שירות אישי והגנה על זכויות הלקוח. 
-                  המשרד ממוקם ב<strong className="text-gray-900">אור יהודה</strong> ומעניק שירות מקצועי בכל אזור <strong className="text-gray-900">בקעת אונו</strong>.
+                  משרד עורכת הדין <strong className="text-gray-900">מריאטה פנחסי</strong> נוסד מתוך מחויבות עמוקה למקצועיות, שירות אישי והגנה על זכויות הלקוח.
                 </p>
                 <p>
                   עם ניסיון של מעל 14 שנות ניסיון בתחומי הנדל"ן והמשפט האזרחי, המשרד מעניק ליווי משפטי מלא, מדויק ואמין – מהשלב הראשון ועד לסיום התהליך – תוך שמירה על זמינות גבוהה ויחס אישי בגובה העיניים.
-                  אנו משרתים לקוחות ב<strong className="text-gray-900">אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה</strong> וכל אזור בקעת אונו.
                 </p>
                 <div className="bg-slate-50 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">חזון המשרד</h3>
@@ -427,13 +386,12 @@ export default function HomePage() {
               <div className="relative">
                 <Image
                   src="/professional-photo.jpg"
-                  alt="מריאטה פנחסי - עורכת דין נדל"ן ונוטריון בקעת אונו עם 14 שנות ניסיון"
+                  alt="מריאטה פנחסי - עורכת דין נדלן ונוטריון בקעת אונו עם 14 שנות ניסיון"
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl"
                   loading="lazy"
                   onError={(e) => {
-                    // אם התמונה לא נטענת, נסתיר אותה
                     e.currentTarget.style.display = 'none'
                   }}
                 />
@@ -451,13 +409,6 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-50">
-        {/* Service Schema Markup */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceSchemaData)
-          }}
-        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">תחומי התמחות</h2>
@@ -477,9 +428,6 @@ export default function HomePage() {
                   </h3>
                   <p className="text-gray-600 leading-relaxed mb-6">
                     {service.description}
-                    {service.title.includes('נוטריון') && (
-                      <span> שירות מהיר ומקצועי ללקוחות ב<strong className="text-gray-900">אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה</strong> וכל אזור <strong className="text-gray-900">בקעת אונו</strong>.</span>
-                    )}
                   </p>
                   <ul className="space-y-2 text-left">
                     {service.features.map((feature, idx) => (
@@ -494,117 +442,6 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-              שאלות נפוצות - עורך דין נדל"ן ונוטריון בקעת אונו
-            </h2>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                איפה ממוקם המשרד?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                המשרד ממוקם ב<strong>אור יהודה</strong>, חרמון 3, ומעניק שירות מקצועי בכל אזור <strong>בקעת אונו</strong> כולל אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה וסביבתן.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                אילו שירותים אתם מציעים באזור בקעת אונו?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                אנו מציעים שירותים מקיפים של עורך דין נדל"ן ונוטריון באזור בקעת אונו: הסכמי מכר ורכישה, תביעות ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות ושירותי נוטריון.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                האם אתם מגיעים ללקוחות באזור בקעת אונו?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                כן, אנו מעניקים שירות נייד ונוח ללקוחות ב<strong>אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה</strong> וכל אזור בקעת אונו. ניתן לקבוע פגישה במשרד או עד הבית/בית העסק.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                כמה זמן לוקח טיפול בעסקת נדל"ן?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                משך הטיפול תלוי בסוג העסקה ומורכבותה. אנו מספקים ליווי משפטי מלא מהשלב הראשון ועד להשלמת העסקה, תוך שמירה על זמינות גבוהה ותקשורת שוטפת עם הלקוח.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                מה המחיר לשירותי נוטריון באזור בקעת אונו?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                המחיר תלוי בסוג השירות הנדרש. אנו מציעים מחירים תחרותיים ושירות מהיר ומקצועי. לפרטים נוספים, צרו קשר בטלפון 054-4450244.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Schema Markup */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "איפה ממוקם המשרד?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "המשרד ממוקם באור יהודה, חרמון 3, ומעניק שירות מקצועי בכל אזור בקעת אונו כולל אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה וסביבתן."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "אילו שירותים אתם מציעים באזור בקעת אונו?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "אנו מציעים שירותים מקיפים של עורך דין נדל\"ן ונוטריון באזור בקעת אונו: הסכמי מכר ורכישה, תביעות ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות ושירותי נוטריון."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "האם אתם מגיעים ללקוחות באזור בקעת אונו?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "כן, אנו מעניקים שירות נייד ונוח ללקוחות באור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה וכל אזור בקעת אונו. ניתן לקבוע פגישה במשרד או עד הבית/בית העסק."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "כמה זמן לוקח טיפול בעסקת נדל\"ן?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "משך הטיפול תלוי בסוג העסקה ומורכבותה. אנו מספקים ליווי משפטי מלא מהשלב הראשון ועד להשלמת העסקה, תוך שמירה על זמינות גבוהה ותקשורת שוטפת עם הלקוח."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "מה המחיר לשירותי נוטריון באזור בקעת אונו?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "המחיר תלוי בסוג השירות הנדרש. אנו מציעים מחירים תחרותיים ושירות מהיר ומקצועי. לפרטים נוספים, צרו קשר בטלפון 054-4450244."
-                  }
-                }
-              ]
-            })
-          }}
-        />
       </section>
 
       {/* Testimonials Section */}
@@ -754,9 +591,7 @@ export default function HomePage() {
                     <div>
                       <p className="font-semibold">מיקום המשרד</p>
                       <p className="text-gray-200">חרמון 3, אור יהודה 6041908</p>
-                      <p className="text-gray-300 text-sm mt-2">
-                        שירות בכל אזור <strong className="text-white">בקעת אונו</strong>: אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה
-                      </p>
+                      <p className="text-gray-300 text-sm mt-2">שירות בכל אזור המרכז</p>
                     </div>
                   </div>
                 </div>
