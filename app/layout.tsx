@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'AfzvrTL7y21afQyZ3gvo3QvNeSfT_sbDyliKER_DCLs',
+    google: 'EcJP0O_fKFzQYbmjb1nhwFVMjEsg5m6ktYA9mvFYHio',
   },
 }
 
@@ -117,6 +117,9 @@ export default function RootLayout({
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="EcJP0O_fKFzQYbmjb1nhwFVMjEsg5m6ktYA9mvFYHio" />
         
         {/* Organization Schema */}
         <script
