@@ -1,14 +1,15 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'מריאטה פנחסי - עורך דין נדל"ן ונוטריון בקעת אונו | אור יהודה, קריית אונו, יהוד',
-  description: 'עורך דין נדל"ן ונוטריון מנוסה באזור בקעת אונו. שירות מקצועי באור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה. הסכמי מכר, ליקויי בניה, צוואות ושירותי נוטריון',
-  keywords: 'עורך דין נדל"ן בקעת אונו, עורך דין נדל"ן אור יהודה, עורך דין נדל"ן קריית אונו, עורך דין נדל"ן יהוד, עורך דין נדל"ן גני תקווה, נוטריון בקעת אונו, נוטריון אור יהודה, נוטריון קריית אונו, עורך דין נדל"ן, הסכמי מכר ורכישה, ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות, נוטריון, עורך דין נדל"ן תל אביב, עורך דין נדל"ן רמת גן, עורך דין נדל"ן גבעתיים, עורך דין נדל"ן הרצליה, עורך דין נדל"ן פתח תקווה',
+  description: 'משרד עורכי דין מריאטה פנחסי - מומחים במגוון תחומי המשפט: נדל"ן ומקרקעין, משפט אזרחי-מסחרי, דיני משפחה, נזיקין, דיני עבודה, הוצאה לפועל וחדלות פירעון. שירות מקצועי ויחס אישי באור יהודה והמרכז.',
+  keywords: 'עורך דין אור יהודה, עורך דין בקעת אונו, נדל"ן ומקרקעין, עסקאות מכר ורכישה, התחדשות עירונית, מיסוי מקרקעין, ליקויי בנייה, משפט אזרחי מסחרי, דיני חוזים, ליטיגציה, גבייה והוצאה לפועל, פשיטת רגל, דיני משפחה, גירושין, צוואות וירושות, ייפוי כוח מתמשך, נזיקין, תאונות דרכים, רשלנות רפואית, דיני עבודה, זכויות עובדים, משפט פלילי, משפט מנהלי, דיני תכנון ובנייה, נוטריון, אזרחות ישראלית, דיני חברות',
   authors: [{ name: 'מריאטה פנחסי' }],
   creator: 'מריאטה פנחסי',
   publisher: 'מריאטה פנחסי - משרד עורכי דין ונוטריון',
@@ -93,17 +94,17 @@ export default function RootLayout({
         <meta name="accessibility-hazard" content="none" />
         <meta name="accessibility-control" content="fullKeyboardControl" />
         <meta name="accessibility-api" content="ARIA" />
-        
+
         {/* Viewport for Accessibility */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-        
+
         {/* Color Scheme */}
         <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#fbbf24" />
-        
+
         {/* Preload Critical Resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
-        
+
         {/* DNS Prefetch & Preconnect for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -111,16 +112,16 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.facebook.com" />
         <link rel="dns-prefetch" href="//www.google.com" />
         <link rel="dns-prefetch" href="//g.page" />
-        
+
         {/* Security Headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        
+
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="EcJP0O_fKFzQYbmjb1nhwFVMjEsg5m6ktYA9mvFYHio" />
-        
+
         {/* Organization Schema */}
         <script
           type="application/ld+json"
@@ -212,7 +213,7 @@ export default function RootLayout({
                 "מונוסון",
                 "גני תקווה",
                 "תל אביב",
-                "רמת גן", 
+                "רמת גן",
                 "גבעתיים",
                 "הרצליה",
                 "פתח תקווה",
@@ -267,7 +268,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-ENV1EW9H1B" />
+        {children}
+      </body>
     </html>
   )
 } 

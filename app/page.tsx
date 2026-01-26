@@ -3,51 +3,13 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaPhone, FaWhatsapp, FaGavel, FaHome, FaTools, FaUsers, FaFileContract, FaStamp, FaMapMarkerAlt, FaClock, FaFacebook, FaStar, FaCheckCircle, FaUniversalAccess, FaEye, FaFont, FaMousePointer, FaUndo } from 'react-icons/fa'
+import { FaPhone, FaWhatsapp, FaGavel, FaHome, FaTools, FaUsers, FaFileContract, FaStamp, FaMapMarkerAlt, FaClock, FaFacebook, FaStar, FaCheckCircle, FaUniversalAccess, FaEye, FaFont, FaMousePointer, FaUndo, FaChevronDown } from 'react-icons/fa'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import FacebookGroupInfo from '../components/FacebookGroupInfo'
+import AllServices from '../components/AllServices'
 
 export default function HomePage() {
-  const services = [
-    {
-      icon: <FaHome className="text-3xl" />,
-      title: 'הסכמי מכר ורכישה',
-      description: 'ליווי משפטי מקיף בעסקאות נדל"ן – החל מהשלב הראשון ועד להשלמת העסקה',
-      features: ['בדיקות מקדימות של נסח טאבו', 'ניסוח והערות להסכם מכר/רכישה', 'ליווי מול הבנקים והרשויות', 'טיפול בעסקאות יד שנייה']
-    },
-    {
-      icon: <FaTools className="text-3xl" />,
-      title: 'ליקויי בנייה',
-      description: 'ייצוג משפטי מול קבלנים וחברות בנייה בגין ליקויים בדירות חדשות או לאחר שיפוץ',
-      features: ['חוות דעת הנדסית', 'תביעות בגין רטיבות וליקויים', 'ייעוץ אסטרטגי וליווי משפטי', 'ניהול מו״מ והליכי פיצוי']
-    },
-    {
-      icon: <FaGavel className="text-3xl" />,
-      title: 'תביעות בגין איחור במסירה',
-      description: 'השגת פיצויים מכוח חוק המכר דירות, במקרה של איחור במסירת הנכס',
-      features: ['בדיקת זכאות וחישוב פיצויים', 'טיפול בהתנגדויות מצד הקבלן', 'ייצוג משפטי מלא עד למיצוי הזכויות', 'קבלת הפיצוי המלא']
-    },
-    {
-      icon: <FaUsers className="text-3xl" />,
-      title: 'סכסוכי שכנים וניהול בניינים',
-      description: 'מענה משפטי מקצועי לסכסוכים בבנייני מגורים',
-      features: ['מטרדי רעש ובנייה בלתי חוקית', 'סכסוכים מול ועד בית', 'ליווי בתביעות לפינוי', 'פתרונות גישור במידת הצורך']
-    },
-    {
-      icon: <FaFileContract className="text-3xl" />,
-      title: 'צוואות, ירושות וניהול עיזבון',
-      description: 'שמירה על רצון המצווה והגנה על זכויות היורשים',
-      features: ['עריכת צוואות פשוטות ומורכבות', 'הגשת בקשות לצו ירושה', 'טיפול בהתנגדויות וסכסוכים משפחתיים', 'ניהול עיזבונות מורכבים']
-    },
-    {
-      icon: <FaStamp className="text-3xl" />,
-      title: 'שירותי נוטריון',
-      description: 'שירותי נוטריון מהירים, מקצועיים ונוחים',
-      features: ['אישור מסמכים רשמיים ותצהירים', 'אימות חתימה, הסכמים ותרגומים נוטריוניים', 'הנפקת אישור אפוסטיל', 'שירות נייד – עד הבית או בית העסק']
-    }
-  ]
-
   const [testimonials, setTestimonials] = useState([])
 
   const [currentPage, setCurrentPage] = useState(0)
@@ -67,7 +29,7 @@ export default function HomePage() {
   // הביקורות האמיתיות נמצאות ב-Google Business Profile
 
   return (
-    <div 
+    <div
       className={`min-h-screen ${disableAnimations ? 'motion-reduce' : ''} ${largeCursor ? 'cursor-large' : ''} ${highContrast ? 'high-contrast-mode' : ''} ${grayscale ? 'grayscale-mode' : ''} ${readingGuide ? 'reading-guide' : ''}`}
       style={{
         fontSize: `${fontSize}px`,
@@ -81,9 +43,9 @@ export default function HomePage() {
       <a href="#main-content" className="skip-link">
         דלג לתוכן הראשי
       </a>
-      
+
       <Header />
-      
+
       {/* Accessibility Button */}
       <div className="fixed bottom-4 left-4 z-50 sm:bottom-6 sm:left-4">
         <button
@@ -99,10 +61,10 @@ export default function HomePage() {
           <FaUniversalAccess className="text-lg sm:text-xl" />
           <span className="sr-only">פתח אפשרויות נגישות</span>
         </button>
-        
+
         {/* Accessibility Panel */}
         {accessibilityOpen && (
-          <div 
+          <div
             id="accessibility-panel"
             className="accessibility-panel absolute left-0 bottom-12 bg-white rounded-lg shadow-xl border border-gray-200 p-3 sm:p-4 w-72 sm:w-80 max-h-80 sm:max-h-96 overflow-y-auto"
             role="dialog"
@@ -111,7 +73,7 @@ export default function HomePage() {
           >
             <h3 id="accessibility-title" className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">אפשרויות נגישות</h3>
             <p id="accessibility-description" className="sr-only">פאנל להגדרת אפשרויות נגישות לאתר</p>
-            
+
             {/* Font Size */}
             <div className="mb-3 sm:mb-4">
               <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">גודל טקסט</label>
@@ -141,7 +103,7 @@ export default function HomePage() {
                 </button>
               </div>
             </div>
-            
+
             {/* High Contrast */}
             <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
@@ -157,7 +119,7 @@ export default function HomePage() {
               </label>
               <p id="high-contrast-desc" className="sr-only">הפעלת מצב ניגודיות גבוהה לבעלי ראייה מוגבלת</p>
             </div>
-            
+
             {/* Focus Indicators */}
             <div className="mb-3 sm:mb-4">
               <label className="flex items-center cursor-pointer">
@@ -237,7 +199,7 @@ export default function HomePage() {
               </label>
               <p id="reading-desc" className="sr-only">הוספת מדריך קריאה לבעלי קשיי קריאה</p>
             </div>
-            
+
             {/* Reset Button */}
             <div className="mb-3 sm:mb-4">
               <button
@@ -268,7 +230,7 @@ export default function HomePage() {
                 אפס הגדרות
               </button>
             </div>
-            
+
             {/* Close Button */}
             <button
               onClick={() => setAccessibilityOpen(false)}
@@ -283,61 +245,54 @@ export default function HomePage() {
           </div>
         )}
       </div>
-      
+
       {/* Hero Section */}
-      <section id="main-content" className="relative bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-700/30 to-gray-800/30"></div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <div className="flex justify-center mb-8">
-              <div className="relative">
-                <Image
-                  src="/logo.png"
-                  alt="מריאטה פנחסי - עורכת דין נדלן ונוטריון באזור בקעת אונו"
-                  width={140}
-                  height={140}
-                  className="rounded-full shadow-2xl ring-4 ring-white/20"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                    const placeholder = document.createElement('div')
-                    placeholder.className = 'w-35 h-35 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-2xl ring-4 ring-white/20'
-                    placeholder.textContent = 'מ'
-                    e.currentTarget.parentNode?.appendChild(placeholder)
-                  }}
-                  priority
-                />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-              מריאטה פנחסי
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-              משרד עורכי דין ונוטריון
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
-              מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון
-            </p>
-            <p className="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed max-w-4xl mx-auto">
-              שירות מקצועי בכל אזור המרכז: תל אביב, רמת גן, גבעתיים, הרצליה, פתח תקווה, רעננה, הוד השרון, כפר סבא, ראשון לציון, רחובות, נס ציונה, רמלה, לוד, מודיעין ועוד
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="tel:054-4450244"
-                className="group bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
-              >
-                <FaPhone className="text-xl" />
-                התקשרו: 054-4450244
-              </a>
-              <a
-                href="https://wa.me/972544450244"
-                className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
-              >
-                <FaWhatsapp className="text-xl" />
-                WhatsApp
-              </a>
-            </div>
+      <section id="main-content" className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white overflow-hidden min-h-[90vh] flex items-center justify-center">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
+
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 pt-20">
+          {/* Logo removed to avoid redundancy with header */}
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white">
+            מריאטה פנחסי
+          </h1>
+          <h2 className="text-xl md:text-2xl font-light mb-8 text-amber-500 tracking-wider uppercase">
+            משרד עורכי דין ונוטריון
+          </h2>
+
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8 rounded-full opacity-80"></div>
+
+          <p className="text-xl md:text-2xl mb-4 text-gray-200 font-light leading-relaxed max-w-3xl mx-auto">
+            מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון
+          </p>
+
+          <p className="text-base md:text-lg mb-10 text-gray-400 font-light max-w-2xl mx-auto">
+            ליווי משפטי אישי ומקצועי בכל אזור גוש דן והמרכז
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:054-4450244"
+              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30 flex items-center gap-2 min-w-[200px] justify-center"
+            >
+              <FaPhone className="text-lg" />
+              שיחת ייעוץ
+            </a>
+            <a
+              href="https://wa.me/972544450244"
+              className="bg-transparent border border-gray-600 hover:border-green-500 hover:text-green-400 text-gray-300 px-8 py-3 rounded-full font-medium text-lg transition-all duration-300 flex items-center gap-2 min-w-[200px] justify-center hover:bg-white/5"
+            >
+              <FaWhatsapp className="text-lg" />
+              הודעה ב-WhatsApp
+            </a>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50">
+          <FaChevronDown className="text-white text-xl" />
         </div>
       </section>
 
@@ -416,30 +371,8 @@ export default function HomePage() {
               אנו מתמחים במגוון רחב של שירותים משפטיים בתחום הנדל"ן והמשפט האזרחי
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 border border-gray-100">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-700 text-white rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 text-left">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <FaCheckCircle className="text-green-500 text-sm flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+          <div className="mb-16 text-center">
+            <AllServices />
           </div>
         </div>
       </section>
@@ -450,9 +383,9 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">דברי לקוחותינו</h2>
             <p className="text-xl text-gray-600">הצלחות ותוצאות מוכחות</p>
-            
+
           </div>
-          
+
           {/* Reviews Display */}
           <div className="relative">
             <div className="flex justify-center">
@@ -548,7 +481,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">צרו קשר</h2>
             <p className="text-xl text-gray-200">מוכנים לעזור לכם בכל שאלה או בעיה משפטית</p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">פרטי קשר</h3>
@@ -598,7 +531,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-16">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
