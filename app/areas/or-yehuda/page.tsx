@@ -1,177 +1,126 @@
-'use client'
 
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaMapMarkerAlt, FaCheckCircle, FaStar, FaPhone, FaWhatsapp, FaUniversity, FaBuilding, FaRoad } from 'react-icons/fa'
+import { Metadata } from 'next'
+import { FaMapMarkerAlt, FaPhone, FaWhatsapp, FaHome, FaLandmark, FaRoute } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'עורך דין באור יהודה | מריאטה פנחסי - משרד מקומי וזמין',
+    description: 'מחפשים עורך דין באור יהודה? משרד עו"ד מריאטה פנחסי ממוקם בלב אור יהודה ומעניק שירותי נדל"ן, נוטריון וליקויי בנייה לתושבי העיר והסביבה. זמינות גבוהה ויחס אישי.',
+    keywords: 'עורך דין אור יהודה, נוטריון באור יהודה, עורך דין נדלן אור יהודה, נווה סביון, סביון, קריית אונו',
+    alternates: {
+        canonical: 'https://marita-pinchasi-law.co.il/areas/or-yehuda',
+    },
+    openGraph: {
+        title: 'עורך דין באור יהודה - מריאטה פנחסי',
+        description: 'משרד עורכי דין מקומי באור יהודה. התמחות בנדל"ן, ליקויי בנייה ושירותי נוטריון מהיום להיום.',
+        images: ['https://marita-pinchasi-law.co.il/logo.png'],
+    }
+}
+
 export default function OrYehudaPage() {
     return (
-        <div className="min-h-screen bg-gray-50 direction-rtl">
+        <div className="min-h-screen bg-gray-50 font-sans" dir="rtl">
+
+            {/* LocalBusiness Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "מריאטה פנחסי - עורכת דין ונוטריון באור יהודה",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "חרמון 3",
+                            "addressLocality": "אור יהודה",
+                            "postalCode": "6041908",
+                            "addressRegion": "בקעת אונו"
+                        },
+                        "telephone": "054-4450244",
+                        "areaServed": {
+                            "@type": "City",
+                            "name": "אור יהודה"
+                        },
+                        "url": "https://marita-pinchasi-law.co.il/areas/or-yehuda"
+                    })
+                }}
+            />
+
             <Header />
 
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white pt-40 pb-20 overflow-hidden">
-                <div className="absolute inset-0 bg-black opacity-40"></div>
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-                        עורך דין נדל"ן באור יהודה
+            <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white">
+                <div className="absolute inset-0 bg-[url('/city-pattern.png')] opacity-10"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
+                        עורכת דין ונוטריון באור יהודה
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                        משרד עורכי דין מריאטה פנחסי - המומחים שלך לנדל"ן, צוואות ונוטריון בלב אור יהודה.
-                        ליווי אישי ומקצועי לתושבי העיר והסביבה.
+                    <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                        שירות משפטי מקצועי ליד הבית.
+                        <br />
+                        משרדנו ממוקם בלב אור יהודה ומשרת את תושבי העיר, נווה סביון ובקעת אונו.
                     </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:054-4450244" className="flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-orange-500/30">
+                            <FaPhone />
+                            054-4450244
+                        </a>
+                        <a href="https://waze.com/ul?ll=32.0288,34.8564&navigate=yes" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-slate-500/30">
+                            <FaRoute />
+                            ניווט למשרד (WAZE)
+                        </a>
+                    </div>
                 </div>
             </section>
 
             {/* Main Content */}
-            <section className="py-16">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12">
-
-                        {/* Right Side */}
-                        <div className="space-y-8">
-                            <div>
-                                <h2 className="text-3xl font-bold text-gray-900 mb-4">למה לבחור במשרד שלנו באור יהודה?</h2>
-                                <p className="text-lg text-gray-600 leading-relaxed">
-                                    היכרות מעמיקה עם העיר, שכונותיה ותוכניות הפיתוח שלה היא יתרון מכריע בעסקאות נדל"ן.
-                                    משרדנו ממוקם באור יהודה ומעניק שירות שוטף ליזמים, קבלנים ודיירים בפרויקטים השונים בעיר,
-                                    החל משכונת נווה רבין הוותיקה ועד "בית בפארק" החדשה.
-                                </p>
-                            </div>
-
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                                    <FaUniversity className="text-3xl text-amber-500 mb-3" />
-                                    <h3 className="font-bold text-gray-900 mb-2">יתרון מקומי</h3>
-                                    <p className="text-sm text-gray-600">היכרות עם מחלקות העירייה והוועדה לתכנון ובנייה המקומית.</p>
-                                </div>
-                                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                                    <FaBuilding className="text-3xl text-amber-500 mb-3" />
-                                    <h3 className="font-bold text-gray-900 mb-2">התחדשות עירונית</h3>
-                                    <p className="text-sm text-gray-600">ניסיון רב בפרויקטים של פינוי-בינוי ותמ"א 38 באור יהודה.</p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                                <div className="bg-slate-800 text-white p-4">
-                                    <h3 className="font-bold text-lg flex items-center gap-2">
-                                        <FaMapMarkerAlt />
-                                        אזורי שירות מרכזיים בעיר
-                                    </h3>
-                                </div>
-                                <div className="p-6 grid grid-cols-2 gap-4">
-                                    {['נווה רבין', 'נווה סביון', 'בית בפארק', 'קרית גיורא', 'סקיה', 'אזור התעשייה'].map((neighborhood) => (
-                                        <div key={neighborhood} className="flex items-center gap-2 text-gray-700">
-                                            <FaCheckCircle className="text-green-500 text-sm" />
-                                            {neighborhood}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">שירותים משפטיים לתושבי אור יהודה</h3>
-                                <ul className="space-y-4">
-                                    <li className="flex items-start gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="font-bold text-amber-600">1</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-gray-900">מכירה ורכישת דירות</h4>
-                                            <p className="text-gray-600 text-sm">ליווי מעטפת מלאה לעסקאות יד שנייה ודירות מקבלן.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="font-bold text-amber-600">2</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-gray-900">שירותי נוטריון מקומיים</h4>
-                                            <p className="text-gray-600 text-sm">אימות חתימה, ייפוי כוח, אישורי חיים ותרגומים - קרוב לבית.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="font-bold text-amber-600">3</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-gray-900">צוואות וירושות</h4>
-                                            <p className="text-gray-600 text-sm">עריכת צוואות, בקשות לצווי ירושה וניהול עיזבונות ברגישות ובמקצועיות.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">למה לבחור בעורך דין מקומי?</h2>
+                        <div className="prose prose-lg text-gray-600">
+                            <p className="mb-4">
+                                כשאתם בוחרים עורך דין מהעיר שלכם, אתם מרוויחים יותר מרק נוחות גיאוגרפית.
+                                ההיכרות המעמיקה שלנו עם הרשות המקומית, מחלקות ההנדסה בעיריית אור יהודה והטאבו האזורי, מאפשרת לנו לקדם תהליכים במהירות וביעילות.
+                            </p>
+                            <p className="mb-6">
+                                אנו גאים להיות חלק מהקהילה באור יהודה ולספק שירות אישי, נגיש ומקצועי לשכנים שלנו.
+                                אין צורך לנסוע לתל אביב ולחפש חניה – כל השירותים המשפטיים זמינים לכם כאן, ליד הבית.
+                            </p>
                         </div>
 
-                        {/* Left Side - Contact & Map */}
-                        <div className="lg:sticky lg:top-24 space-y-8">
-                            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                                <div className="text-center mb-6">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">גרים באור יהודה והסביבה?</h3>
-                                    <p className="text-gray-600">אנחנו קרובים אליכם יותר מתמיד.</p>
+                        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-6">שירותים לתושבי אור יהודה והסביבה:</h3>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {[
+                                'אישורי נוטריון מהירים (כולל שירות עד הבית לקשישים ומוגבלים)',
+                                'ליווי רכישת דירה בפרויקטים החדשים באור יהודה (בית בפארק, עיריית אור יהודה)',
+                                'טיפול בליקויי בנייה מול קבלנים באזור',
+                                'צוואות וירושות'
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl">
+                                    <FaHome className="text-amber-500 mt-1 flex-shrink-0" />
+                                    <span className="font-medium">{item}</span>
                                 </div>
-
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl">
-                                        <FaMapMarkerAlt className="text-amber-500 text-xl" />
-                                        <div>
-                                            <p className="font-bold text-gray-900">כתובתנו:</p>
-                                            <p className="text-gray-600">חרמון 3, אור יהודה 6041908</p>
-                                        </div>
-                                    </div>
-
-                                    <hr className="border-gray-100" />
-
-                                    <a
-                                        href="tel:054-4450244"
-                                        className="flex items-center justify-center gap-3 w-full bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-xl font-bold transition-all shadow-lg"
-                                    >
-                                        <FaPhone />
-                                        054-4450244
-                                    </a>
-
-                                    <a
-                                        href="https://wa.me/972544450244"
-                                        className="flex items-center justify-center gap-3 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold transition-all shadow-lg"
-                                    >
-                                        <FaWhatsapp className="text-xl" />
-                                        הודעה בוואטסאפ
-                                    </a>
-                                </div>
-                            </div>
-
-                            {/* Fake Map Image Placeholder */}
-                            <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-50 relative group h-64 flex flex-col items-center justify-center text-center p-6 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]">
-                                <FaMapMarkerAlt className="text-5xl text-red-500 mb-4 drop-shadow-md animate-bounce" />
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">המשרד באור יהודה</h4>
-                                <p className="text-gray-600 mb-6">חרמון 3, אור יהודה (קומה 1)</p>
-
-                                <div className="flex gap-3 w-full justify-center">
-                                    <a
-                                        href="https://waze.com/ul?ll=32.038879,34.859295&navigate=yes"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-bold text-sm transition-colors shadow-md"
-                                    >
-                                        <FaMapMarkerAlt />
-                                        נווט עם Waze
-                                    </a>
-                                    <a
-                                        href="https://maps.google.com/?q=32.038879,34.859295"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-4 py-2 rounded-lg font-bold text-sm transition-colors shadow-sm"
-                                    >
-                                        <FaMapMarkerAlt />
-                                        Google Maps
-                                    </a>
-                                </div>
-                            </div>
+                            ))}
                         </div>
 
+                        <div className="mt-12 p-6 bg-amber-50 rounded-xl border border-amber-100">
+                            <h4 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <FaMapMarkerAlt className="text-amber-600" />
+                                איפה אנחנו נמצאים?
+                            </h4>
+                            <p className="text-gray-700">
+                                <strong>כתובת:</strong> רחוב חרמון 3, אור יהודה (קומת קרקע)
+                                <br />
+                                <strong>חניה:</strong> חניה בשפע ברחוב ובקרבת מקום (חינם)
+                                <br />
+                                <strong>שעות קבלה:</strong> בתיאום מראש (גמישות בשעות)
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
