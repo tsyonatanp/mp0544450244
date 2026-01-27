@@ -238,8 +238,8 @@ body {
 
     /* Mobile Hero Section - Fix initial view */
     section[class*="pt-32"] {
-      padding-top: 5rem !important;
-      /* Reduced from 6rem to fit better on mobile */
+      padding-top: 7rem !important;
+      /* Increased to account for fixed header overlap */
       padding-bottom: 2rem !important;
       min-height: auto !important;
     }
