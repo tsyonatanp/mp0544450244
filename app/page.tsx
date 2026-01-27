@@ -247,18 +247,20 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section id="main-content" className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white overflow-hidden min-h-[90vh] flex items-center justify-center">
+      {/* Hero Section */}
+      {/* Hero Section */}
+      <section id="main-content" className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
 
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 pt-20">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           {/* Logo removed to avoid redundancy with header */}
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
             מריאטה פנחסי
           </h1>
-          <h2 className="text-xl md:text-2xl font-light mb-8 text-amber-500 tracking-wider uppercase">
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-amber-500 tracking-wider uppercase">
             משרד עורכי דין ונוטריון
           </h2>
 
@@ -268,31 +270,26 @@ export default function HomePage() {
             מומחית בדיני נדל"ן, ליקויי בנייה, צוואות ושירותי נוטריון
           </p>
 
-          <p className="text-base md:text-lg mb-10 text-gray-400 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-10 text-gray-400 font-light max-w-2xl mx-auto">
             ליווי משפטי אישי ומקצועי בכל אזור גוש דן והמרכז
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:054-4450244"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30 flex items-center gap-2 min-w-[200px] justify-center"
+              className="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30 flex items-center justify-center gap-2 min-w-[220px]"
             >
               <FaPhone className="text-lg" />
               שיחת ייעוץ
             </a>
             <a
               href="https://wa.me/972544450244"
-              className="bg-transparent border border-gray-600 hover:border-green-500 hover:text-green-400 text-gray-300 px-8 py-3 rounded-full font-medium text-lg transition-all duration-300 flex items-center gap-2 min-w-[200px] justify-center hover:bg-white/5"
+              className="bg-transparent border border-gray-600 hover:border-green-500 hover:text-green-400 text-gray-300 px-10 py-4 rounded-xl font-medium text-lg transition-all duration-300 flex items-center justify-center gap-2 min-w-[220px] hover:bg-white/5"
             >
               <FaWhatsapp className="text-lg" />
               הודעה ב-WhatsApp
             </a>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50">
-          <FaChevronDown className="text-white text-xl" />
         </div>
       </section>
 

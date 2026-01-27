@@ -21,6 +21,14 @@ export default function Header() {
   const servicesLinks = [
     { name: 'נדל"ן ומקרקעין', href: '/services/real-estate' },
     { name: 'ליקויי בנייה', href: '/services/construction-defects' },
+    { name: 'דיני משפחה וירושה', href: '/services/family-law' },
+    { name: 'משפט אזרחי ומסחרי', href: '/services/civil-commercial' },
+    { name: 'משפט פלילי', href: '/services/criminal-law' },
+    { name: 'דיני עבודה', href: '/services/labor-law' },
+    { name: 'נזיקין וביטוח', href: '/services/torts' },
+    { name: 'משפט מנהלי וארנונה', href: '/services/administrative-law' },
+    { name: 'קניין רוחני וטכנולוגיה', href: '/services/ip-tech' },
+    { name: 'הגירה ומשרד הפנים', href: '/services/immigration' },
     { name: 'נוטריון', href: '/services/notary' },
   ]
 

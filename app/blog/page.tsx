@@ -21,16 +21,52 @@ export default function BlogPage() {
             author: 'עו"ד מריאטה פנחסי',
             category: 'נדל"ן',
             slug: '/blog/buying-guide-or-yehuda-2025',
-            image: '/professional-photo.jpg'
+            image: '/blog-images/real_estate_keys.png'
         },
         {
-            title: 'ארנונה לעסקים: איך להפחית חיובים להגיש השגה?',
+            title: 'ארנונה לעסקים: איך להפחית חיובים ולהגיש השגה?',
             excerpt: 'חיוב הארנונה הוא אחת ההוצאות הכבדות לעסק. האם ידעתם שטעויות בחישוב הארנונה נפוצות מאוד? כך תבדקו אם מגיע לכם כסף בחזרה.',
             date: '25 ינואר, 2026',
             author: 'עו"ד מריאטה פנחסי',
             category: 'משפט מנהלי',
             slug: '/blog/arnona-discounts',
-            image: '/professional-photo-2.jpg'
+            image: '/blog-images/arnona_tax_calc.png'
+        },
+        {
+            title: 'תאונת עבודה: מיצוי זכויות ופיצויים',
+            excerpt: 'נפצעתם במהלך העבודה? המדריך המלא לזכויות שלכם מול המוסד לביטוח לאומי ומול המעסיק. אל תישארו בלי הפיצוי המגיע לכם.',
+            date: '24 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'נזיקין וביטוח',
+            slug: '/blog/work-accident-rights',
+            image: '/blog-images/work_accident_helmet.png'
+        },
+        {
+            title: 'הפרת חוזה: מתי מותר לבטל?',
+            excerpt: 'חתמתם על חוזה והצד השני לא קיים אותו? מתי הפרה נחשבת יסודית, האם מותר לבטל את החוזה חד-צדדית ומהם הפיצויים שניתן לדרוש.',
+            date: '22 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'חוזים ומסחר',
+            slug: '/blog/contract-breach',
+            image: '/blog-images/contract_breach_pen.png'
+        },
+        {
+            title: 'הליך גירושין: צעד אחר צעד',
+            excerpt: 'עומדים בפני הליך גירושין? חשוב שתכירו את השלבים השונים, ההבדל בין בית הדין הרבני לבית המשפט לענייני משפחה, ואיך צולחים את התקופה הזו.',
+            date: '20 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'דיני משפחה',
+            slug: '/blog/divorce-process-guide',
+            image: '/blog-images/divorce_justice_scales.png'
+        },
+        {
+            title: 'זכויות עובדים בשימוע לפני פיטורין',
+            excerpt: 'זומנתם לשימוע? זהו שלב קריטי. דעו את הזכויות שלכם: הזכות לייצוג, הזכות לעיין במסמכים והזכות לטעון כנגד הכוונה לפטר אתכם.',
+            date: '18 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'דיני עבודה',
+            slug: '/blog/employee-hearing-rights',
+            image: '/blog-images/labor_hearing_room.png'
         },
         {
             title: 'ליקויי בנייה בדירה חדשה: מדריך לזכויות הרוכשים',
@@ -39,7 +75,34 @@ export default function BlogPage() {
             author: 'עו"ד מריאטה פנחסי',
             category: 'ליקויי בנייה',
             slug: '/blog/construction-defects-guide',
-            image: '/photo-new.jpg'
+            image: '/blog-images/construction_defects_tools.png'
+        },
+        {
+            title: 'חקירה במשטרה: זכויות הנחקר',
+            excerpt: 'זומנתם לחקירה במשטרה? כל מילה שתאמרו עלולה לשמש נגדכם. המדריך החיוני לזכויות הנחקר, חשיבות ההיוועצות בעורך דין וכיצד לנהוג בחדר החקירות.',
+            date: '10 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'משפט פלילי',
+            slug: '/blog/police-investigation-guide',
+            image: '/blog-images/police_investigation_abstract.png'
+        },
+        {
+            title: 'ויזת מומחה זר: המדריך למעסיק',
+            excerpt: 'מעוניינים להעסיק מומחה זר? הבירוקרטיה יכולה להיות מתישה. כל מה שצריך לדעת על היתרי העסקה, סוגי הויזות והתהליך מול משרד הפנים.',
+            date: '08 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'הגירה',
+            slug: '/blog/foreign-expert-visa',
+            image: '/blog-images/visa_passport_globe.png'
+        },
+        {
+            title: 'רישום סימן מסחר: איך להגן על המותג?',
+            excerpt: 'בניתם עסק ומותג מצליח? אל תשאירו אותו חשוף. למה חשוב לרשום סימן מסחר, איך עושים את זה ומה נותנת לכם ההגנה המשפטית.',
+            date: '05 ינואר, 2026',
+            author: 'עו"ד מריאטה פנחסי',
+            category: 'קניין רוחני',
+            slug: '/blog/trademark-registration',
+            image: '/blog-images/trademark_protection.png'
         },
         {
             title: 'למה כולם מדברים על ייפוי כוח מתמשך?',
@@ -48,7 +111,7 @@ export default function BlogPage() {
             author: 'עו"ד מריאטה פנחסי',
             category: 'צוואות וייפוי כוח',
             slug: '/blog/enduring-power-of-attorney',
-            image: '/logo-new.png'
+            image: '/blog-images/power_of_attorney_hands.png'
         }
     ]
 
