@@ -418,7 +418,7 @@ export default function HomePage() {
                       href="https://g.page/r/Ce7aJP0Ck8vwEAI/review"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                     >
                       <FaStar className="text-lg" />
                       השאירו ביקורת
@@ -427,7 +427,7 @@ export default function HomePage() {
                       href="https://www.google.com/search?q=מריאטה+פנחסי+עורך+דין+נדלן"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                      className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                     >
                       <FaStar className="text-lg" />
                       צפו בביקורות

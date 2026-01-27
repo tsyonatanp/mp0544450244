@@ -118,11 +118,11 @@ export default function BuyingGuideOrYehuda2025() {
                                 <p className="text-gray-300">אל תקחו סיכונים מיותרים. פנו אלינו לייעוץ משפטי מקצועי.</p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="tel:054-4450244" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+                                <a href="tel:054-4450244" className="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all duration-300">
                                     <FaPhone />
                                     חייגו
                                 </a>
-                                <a href="https://wa.me/972544450244" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+                                <a href="https://wa.me/972544450244" className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all duration-300">
                                     <FaWhatsapp />
                                     וואטסאפ
                                 </a>
