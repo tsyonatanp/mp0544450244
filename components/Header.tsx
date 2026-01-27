@@ -62,7 +62,7 @@ export default function Header() {
           </Link>
 
           {/* Center Navigation - Absolute Position for Perfect Center */}
-          <div className="hidden lg:flex items-center justify-center gap-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none">
+          <div className="hidden lg:flex items-center justify-center gap-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-fit pointer-events-none">
             <div className={`pointer-events-auto flex items-center gap-8 px-8 py-2 rounded-full transition-all duration-300 border ${isScrolled
               ? 'bg-white/50 backdrop-blur-sm shadow-sm border-gray-100/50'
               : 'bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20'
