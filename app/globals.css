@@ -212,5 +212,59 @@ body {
       font-size: 14px !important;
       line-height: 1.4 !important;
     }
+    
+    /* Mobile Typography Improvements */
+    h1 {
+      line-height: 1.2 !important;
+      margin-bottom: 1rem !important;
+    }
+    
+    h2 {
+      line-height: 1.3 !important;
+    }
+    
+    /* Mobile Button Improvements - Ensure consistent sizing */
+    a[class*="bg-amber"], 
+    a[class*="bg-green"],
+    a[class*="bg-white"],
+    button {
+      padding: 1rem 2rem !important;
+      font-size: 1rem !important;
+      min-height: 54px !important;
+    }
+    
+    /* Reduce hero section padding on mobile */
+    section[class*="pt-32"] {
+      padding-top: 6rem !important;
+      padding-bottom: 3rem !important;
+    }
+    
+    /* Adjust container padding on mobile */
+    .max-w-7xl,
+    .max-w-5xl,
+    .max-w-4xl {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+
+  /* Mobile-specific improvements for all screen sizes < 768px */
+  @media (max-width: 768px) {
+    /* Ensure all buttons are consistent */
+    a[href^="tel:"],
+    a[href^="https://wa.me"],
+    a[href*="whatsapp"] {
+      width: 100% !important;
+      justify-content: center !important;
+    }
+    
+    /* Improve Hero section text on tablets */
+    .text-4xl {
+      font-size: 2rem !important;
+    }
+    
+    .text-3xl {
+      font-size: 1.75rem !important;
+    }
   }
 } 

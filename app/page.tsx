@@ -257,7 +257,7 @@ export default function HomePage() {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           {/* Logo removed to avoid redundancy with header */}
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
             מריאטה פנחסי
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-amber-500 tracking-wider uppercase">

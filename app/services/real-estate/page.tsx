@@ -135,11 +135,11 @@ export default function RealEstatePage() {
                             ליווי משפטי מקצועי, יסודי ואישי בעסקאות נדל"ן.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="tel:054-4450244" className="flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-orange-500/30">
+                            <a href="tel:054-4450244" className="flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30">
                                 <FaPhone />
                                 שיחת ייעוץ ראשונית
                             </a>
-                            <a href="https://wa.me/972544450244" className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-green-500/30">
+                            <a href="https://wa.me/972544450244" className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/30">
                                 <FaWhatsapp />
                                 דברו איתנו בוואטסאפ
                             </a>
@@ -245,3 +245,4 @@ export default function RealEstatePage() {
         </div>
     )
 }
+
