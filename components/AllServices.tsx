@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { FaBalanceScale, FaHome, FaUsers, FaCarCrash, FaUserTie, FaGavel, FaLandmark, FaGlobe, FaPassport, FaBriefcase, FaAngleDown, FaCheck } from 'react-icons/fa'
+import { FaBalanceScale, FaHome, FaUsers, FaCarCrash, FaUserTie, FaGavel, FaLandmark, FaGlobe, FaPassport, FaBriefcase, FaAngleDown, FaCheck, FaTools, FaStamp } from 'react-icons/fa'
 
 const AllServices = () => {
     const [openCategory, setOpenCategory] = useState<number | null>(null)
@@ -20,29 +20,25 @@ const AllServices = () => {
 
     const categories = [
         {
-            title: 'משפט אזרחי–מסחרי',
-            icon: <FaBalanceScale />,
-            link: '/services/civil-commercial',
-            items: [
-                'דיני חוזים',
-                'משפט מסחרי',
-                'ליטיגציה אזרחית',
-                'גבייה והוצאה לפועל',
-                'חדלות פירעון ופשיטת רגל',
-                'דיני חברות'
-            ]
-        },
-        {
             title: 'נדל"ן ומקרקעין',
             icon: <FaHome />,
             link: '/services/real-estate',
             items: [
-                'מקרקעין ונדל"ן',
                 'עסקאות מכר ורכישה',
                 'פינוי־בינוי ותמ״א 38',
                 'רישום בטאבו',
-                'מיסוי מקרקעין',
-                'ליקויי בנייה'
+                'מיסוי מקרקעין'
+            ]
+        },
+        {
+            title: 'ליקויי בנייה',
+            icon: <FaTools />, // Assuming FaHaus doesn't exist, will use FaTools or similar. Checking imports... using FaHammer instead if available, or just FaHome again with a different style. Let's use FaTools for construction defects.
+            link: '/services/construction-defects',
+            items: [
+                'רטיבות ונזילות',
+                'סדקים וליקויים',
+                'אי התאמה למפרט',
+                'ירידת ערך'
             ]
         },
         {
@@ -51,11 +47,9 @@ const AllServices = () => {
             link: '/services/family-law',
             items: [
                 'גירושין ומזונות',
-                'משמורת והסדרי ראייה',
+                'משמורת ילדים',
                 'הסכמי ממון',
-                'ידועים בציבור',
-                'ירושות וצוואות',
-                'אפוטרופסות'
+                'ירושות וצוואות'
             ]
         },
         {
@@ -63,10 +57,9 @@ const AllServices = () => {
             icon: <FaCarCrash />,
             link: '/services/torts',
             items: [
-                'נזיקין ונזקי רכוש',
-                'תאונות דרכים ועבודה',
+                'תאונות דרכים',
+                'תאונות עבודה',
                 'רשלנות רפואית',
-                'תביעות ביטוח',
                 'ביטוח לאומי'
             ]
         },
@@ -75,11 +68,10 @@ const AllServices = () => {
             icon: <FaUserTie />,
             link: '/services/labor-law',
             items: [
+                'שימוע ופיטורים',
                 'זכויות עובדים',
-                'פיטורים שלא כדין',
-                'שימוע לפני פיטורים',
-                'הטרדה מינית בעבודה',
-                'עובדים זרים'
+                'הטרדה מינית',
+                'חוזי עבודה'
             ]
         },
         {
@@ -87,33 +79,32 @@ const AllServices = () => {
             icon: <FaGavel />,
             link: '/services/criminal-law',
             items: [
+                'חקירה משטרתית',
+                'מעצרים',
                 'עבירות צווארון לבן',
-                'עבירות סמים ואלימות',
-                'עבירות מין',
-                'מעצרים ושחרור',
-                'ייצוג קטינים'
+                'רישום פלילי'
             ]
         },
         {
-            title: 'משפט מנהלי וציבורי',
+            title: 'משפט מנהלי',
             icon: <FaLandmark />,
             link: '/services/administrative-law',
             items: [
                 'עתירות מנהליות',
-                'מכרזים ציבוריים',
-                'רשויות מקומיות',
-                'דיני תכנון ובנייה'
+                'מכרזים',
+                'ארנונה לעסקים',
+                'רישוי עסקים'
             ]
         },
         {
-            title: 'טכנולוגיה וקניין רוחני',
+            title: 'קניין רוחני',
             icon: <FaGlobe />,
             link: '/services/ip-tech',
             items: [
-                'זכויות יוצרים',
                 'סימני מסחר',
-                'פטנטים וטכנולוגיה',
-                'הגנת הפרטיות'
+                'זכויות יוצרים',
+                'הגנת הפרטיות',
+                'דיני אינטרנט'
             ]
         },
         {
@@ -121,21 +112,32 @@ const AllServices = () => {
             icon: <FaPassport />,
             link: '/services/immigration',
             items: [
-                'אשרות עבודה ומומחים',
-                'איחוד משפחות',
+                'ויזת מומחה זר',
                 'אזרחות ישראלית',
-                'מעמד תושב'
+                'איחוד משפחות',
+                'הסדרת מעמד'
             ]
         },
         {
-            title: 'תחומים משלימים',
-            icon: <FaBriefcase />,
+            title: 'נוטריון',
+            icon: <FaStamp />,
             link: '/services/notary',
             items: [
-                'משפט צבאי ובינלאומי',
-                'דיני ספורט ותעבורה',
-                'נוטריון וייפוי כוח',
-                'דיני צרכנות'
+                'ייפוי כוח נוטריוני',
+                'אימות חתימה',
+                'תרגום נוטריוני',
+                'צוואה נוטריונית'
+            ]
+        },
+        {
+            title: 'משפט מסחרי',
+            icon: <FaBalanceScale />,
+            link: '/services/civil-commercial',
+            items: [
+                'דיני חוזים',
+                'הקמת חברות',
+                'ליטיגציה עסקית',
+                'גבייה והוצאה לפועל'
             ]
         }
     ]
