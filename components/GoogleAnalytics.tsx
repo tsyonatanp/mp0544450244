@@ -2,14 +2,15 @@
 
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 
-export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
+function GoogleAnalyticsLogic({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
     const pathname = usePathname()
     const searchParams = useSearchParams()
 
     useEffect(() => {
         const url = pathname + searchParams.toString()
+        console.log('Sending GA pageview for:', url)
 
         if (typeof window !== 'undefined' && (window as any).gtag) {
             (window as any).gtag('config', GA_MEASUREMENT_ID, {
@@ -18,6 +19,10 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
         }
     }, [pathname, searchParams, GA_MEASUREMENT_ID])
 
+    return null
+}
+
+export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
     return (
         <>
             <Script
@@ -39,6 +44,9 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
           `,
                 }}
             />
+            <Suspense fallback={null}>
+                <GoogleAnalyticsLogic GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
+            </Suspense>
         </>
     )
 }
