@@ -23,12 +23,16 @@ export function middleware(request: NextRequest) {
 
   // Block common attack patterns
   const url = request.nextUrl.pathname
+  const lowerUrl = url.toLowerCase()
+
   if (
-    url.includes('..') ||
-    url.includes('wp-admin') ||
-    url.includes('php') ||
-    url.includes('admin') ||
-    url.includes('config')
+    lowerUrl.includes('..') ||
+    lowerUrl.includes('.php') ||
+    lowerUrl.includes('.env') ||
+    lowerUrl.includes('wp-admin') ||
+    lowerUrl.includes('wp-login') ||
+    lowerUrl.includes('/config') ||
+    (lowerUrl.includes('/admin') && !lowerUrl.includes('administrative')) // Allow administrative-law
   ) {
     return new NextResponse('Forbidden', { status: 403 })
   }
