@@ -15,11 +15,11 @@ export function middleware(request: NextRequest) {
   // Content Security Policy
   const csp = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://www.googletagmanager.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://maps.googleapis.com https://sheets.googleapis.com",
+    "img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com",
+    "connect-src 'self' https://maps.googleapis.com https://sheets.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net",
     "frame-src 'self'",
     "object-src 'none'",
     "base-uri 'self'",
