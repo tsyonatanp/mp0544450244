@@ -341,11 +341,10 @@ export default function HomePage() {
                   alt="מריאטה פנחסי - עורכת דין נדלן ונוטריון בקעת אונו עם 14 שנות ניסיון"
                   width={500}
                   height={600}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
                   className="rounded-2xl shadow-2xl"
+                  style={{ width: '100%', height: 'auto' }}
                   loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 rounded-xl shadow-xl">
                   <div className="text-center">

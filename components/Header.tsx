@@ -47,6 +47,7 @@ export default function Header() {
                 src="/logo.png"
                 alt="לוגו משרד עו''ד מריאטה פנחסי"
                 fill
+                sizes="(max-width: 768px) 48px, 56px"
                 className="object-contain"
                 priority
               />

@@ -102,8 +102,8 @@ export default function RootLayout({
         <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#fbbf24" />
 
+
         {/* Preload Critical Resources */}
-        <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
         {/* DNS Prefetch & Preconnect for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,11 +113,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.google.com" />
         <link rel="dns-prefetch" href="//g.page" />
 
-        {/* Security Headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        {/* Security Headers are handled in next.config.js */}
 
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="EcJP0O_fKFzQYbmjb1nhwFVMjEsg5m6ktYA9mvFYHio" />
