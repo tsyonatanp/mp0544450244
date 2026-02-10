@@ -147,47 +147,68 @@ const AllServices = () => {
     }
 
     return (
-        <div ref={containerRef} className="relative">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div ref={containerRef} className="relative w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
                 {categories.map((category, index) => (
                     <div
                         key={index}
                         className={`
-                            relative bg-white rounded-xl shadow-sm border border-gray-100 transition-all duration-200
+                            relative bg-white rounded-xl shadow-sm border border-gray-100 transition-all duration-200 flex flex-col
                             ${openCategory === index ? 'ring-2 ring-amber-400 z-10' : 'hover:shadow-md hover:-translate-y-1'}
                         `}
                     >
                         <button
-                            onClick={() => toggleCategory(index)}
-                            className="w-full p-6 flex flex-col items-center gap-3 text-center h-full outline-none"
+                            onClick={() => setOpenCategory(openCategory === index ? null : index)}
+                            className="w-full p-4 sm:p-6 flex flex-col items-center gap-2 sm:gap-3 text-center outline-none h-full"
                             aria-expanded={openCategory === index}
                         >
                             <div className={`
-                                w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-2 transition-colors duration-300
+                                w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-xl sm:text-2xl mb-1 sm:mb-2 transition-colors duration-300
                                 ${openCategory === index ? 'bg-amber-500 text-white' : 'bg-slate-50 text-slate-600'}
                             `}>
                                 {category.icon}
                             </div>
-                            <h3 className="font-bold text-gray-900 leading-tight min-h-[40px] flex items-center justify-center text-sm md:text-base">
+                            <h3 className="font-bold text-gray-900 leading-tight flex items-center justify-center text-xs sm:text-sm md:text-base min-h-[32px] sm:min-h-[40px]">
                                 {category.title}
                             </h3>
                             <FaAngleDown
-                                className={`text-gray-400 mt-2 transition-transform duration-300 ${openCategory === index ? 'rotate-180 text-amber-500' : ''}`}
+                                className={`text-gray-400 mt-1 sm:mt-2 transition-transform duration-300 ${openCategory === index ? 'rotate-180 text-amber-500' : ''}`}
                             />
                         </button>
 
-                        {/* Expandable Content Overlay */}
+                        {/* Expandable Content */}
+                        {/* Mobile/Tablet: Inline (Static) */}
                         <div
                             className={`
-                                absolute left-0 right-0 top-[105%] bg-white rounded-xl shadow-xl border border-gray-100 p-5 z-20
+                                lg:hidden bg-gray-50 border-t border-gray-100 p-4 rounded-b-xl overflow-hidden transition-all duration-300 ease-in-out
+                                ${openCategory === index ? 'max-h-[500px] opacity-100 py-4' : 'max-h-0 opacity-0 py-0 border-none'}
+                            `}
+                        >
+                            <div className="text-right">
+                                <ul className="space-y-2 mb-4">
+                                    {category.items.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-gray-700">
+                                            <FaCheck className="text-amber-500 text-[10px] mt-1 flex-shrink-0" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <a
+                                    href={category.link}
+                                    className="block w-full text-center bg-slate-900 text-white py-2 rounded-lg text-xs sm:text-sm font-bold hover:bg-slate-800 transition-colors"
+                                >
+                                    למידע נוסף
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Desktop: Popover (Absolute) */}
+                        <div
+                            className={`
+                                hidden lg:block absolute left-1/2 -translate-x-1/2 top-[110%] bg-white rounded-xl shadow-xl border border-gray-100 p-5 z-20 w-[280px]
                                 transition-all duration-200 origin-top
                                 ${openCategory === index ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}
                             `}
-                            style={{
-                                minWidth: '280px',
-                                left: '50%',
-                                transform: 'translateX(-50%)'
-                            }}
                         >
                             {/* Little triangle pointer */}
                             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45"></div>
