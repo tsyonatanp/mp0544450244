@@ -130,9 +130,11 @@ export default function Header() {
 
           {/* Mobile Menu Button - Color Logic */}
           <div className="lg:hidden flex items-center gap-3 z-10">
-            <a href="tel:054-4450244" className={`w-9 h-9 flex items-center justify-center rounded-full shadow-lg transition-transform active:scale-95 ${isScrolled ? 'bg-slate-900 text-white' : 'bg-amber-500 text-white border border-amber-400/30'}`}>
-              <FaPhone className="text-sm" />
-            </a>
+            <div className={`transition-all duration-300 ease-in-out ${isScrolled ? 'w-9 opacity-100 scale-100' : 'w-0 opacity-0 scale-0 overflow-hidden'}`}>
+              <a href="tel:054-4450244" className="w-9 h-9 flex items-center justify-center rounded-full shadow-lg transition-transform active:scale-95 bg-slate-900 text-white">
+                <FaPhone className="text-sm" />
+              </a>
+            </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`focus:outline-none p-2 rounded-full transition-colors ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
