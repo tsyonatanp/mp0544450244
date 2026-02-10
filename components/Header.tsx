@@ -34,29 +34,29 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-6'
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4 sm:py-6'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
 
           {/* Logo Section - Right (z-10 to stay clickable) */}
-          <Link href="/" className="flex items-center gap-3 group z-10 relative">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group z-10 relative">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo.png"
                 alt="לוגו משרד עו''ד מריאטה פנחסי"
                 fill
-                sizes="(max-width: 768px) 48px, 56px"
+                sizes="(max-width: 768px) 40px, 56px"
                 className="object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className={`text-xl md:text-2xl font-bold leading-none group-hover:text-amber-500 transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              <span className={`text-lg sm:text-xl md:text-2xl font-bold leading-none group-hover:text-amber-500 transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
                 מריאטה פנחסי
               </span>
-              <span className={`text-sm font-medium tracking-wide ${isScrolled ? 'text-gray-500' : 'text-gray-300'}`}>
+              <span className={`text-xs sm:text-sm font-medium tracking-wide ${isScrolled ? 'text-gray-500' : 'text-gray-300'}`}>
                 משרד עורכי דין ונוטריון
               </span>
             </div>
@@ -129,13 +129,13 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button - Color Logic */}
-          <div className="lg:hidden flex items-center gap-4 z-10">
-            <a href="tel:054-4450244" className={`w-10 h-10 flex items-center justify-center rounded-full ${isScrolled ? 'bg-slate-900 text-white' : 'bg-amber-500 text-white'}`}>
-              <FaPhone />
+          <div className="lg:hidden flex items-center gap-3 z-10">
+            <a href="tel:054-4450244" className={`w-9 h-9 flex items-center justify-center rounded-full shadow-lg transition-transform active:scale-95 ${isScrolled ? 'bg-slate-900 text-white' : 'bg-amber-500 text-white border border-amber-400/30'}`}>
+              <FaPhone className="text-sm" />
             </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`focus:outline-none p-2 ${isScrolled ? 'text-gray-800' : 'text-white'}`}
+              className={`focus:outline-none p-2 rounded-full transition-colors ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
               aria-label="תפריט"
             >
               {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}

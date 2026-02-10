@@ -51,12 +51,12 @@ export default function HomePage() {
         <button
           onClick={() => setAccessibilityOpen(!accessibilityOpen)}
           onKeyDown={(e) => e.key === 'Enter' && setAccessibilityOpen(!accessibilityOpen)}
-          className="accessibility-button bg-amber-500/80 hover:bg-amber-600/90 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-300 keyboard-nav backdrop-blur-sm"
+          className="accessibility-button bg-amber-500/80 hover:bg-amber-600/90 text-white p-2.5 sm:p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-300 keyboard-nav backdrop-blur-sm"
           aria-label="פתח אפשרויות נגישות"
           aria-expanded={accessibilityOpen}
           aria-controls="accessibility-panel"
           tabIndex={0}
-          style={{ minWidth: '44px', minHeight: '44px' }}
+          style={{ minWidth: '40px', minHeight: '40px' }}
         >
           <FaUniversalAccess className="text-lg sm:text-xl" />
           <span className="sr-only">פתח אפשרויות נגישות</span>
@@ -249,7 +249,7 @@ export default function HomePage() {
       {/* Hero Section */}
       {/* Hero Section */}
       {/* Hero Section */}
-      <section id="main-content" className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white overflow-hidden">
+      <section id="main-content" className="relative pt-28 md:pt-32 pb-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
@@ -257,7 +257,7 @@ export default function HomePage() {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           {/* Logo removed to avoid redundancy with header */}
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
             מריאטה פנחסי
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-amber-500 tracking-wider uppercase">
@@ -298,7 +298,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
                 אודות המשרד
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
@@ -362,7 +362,7 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">תחומי התמחות</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">תחומי התמחות</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               אנו מתמחים במגוון רחב של שירותים משפטיים בתחום הנדל"ן והמשפט האזרחי
             </p>
@@ -377,7 +377,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">דברי לקוחותינו</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">דברי לקוחותינו</h2>
             <p className="text-xl text-gray-600">הצלחות ותוצאות מוכחות</p>
 
           </div>
@@ -474,7 +474,7 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">צרו קשר</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">צרו קשר</h2>
             <p className="text-xl text-gray-200">מוכנים לעזור לכם בכל שאלה או בעיה משפטית</p>
           </div>
 
