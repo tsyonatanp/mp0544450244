@@ -66,7 +66,7 @@ export default function HomePage() {
         {accessibilityOpen && (
           <div
             id="accessibility-panel"
-            className="accessibility-panel absolute left-0 bottom-12 bg-white rounded-lg shadow-xl border border-gray-200 p-3 sm:p-4 w-72 sm:w-80 max-h-80 sm:max-h-96 overflow-y-auto"
+            className="accessibility-panel absolute left-0 bottom-12 bg-white rounded-lg shadow-xl border border-gray-200 p-3 sm:p-4 w-72 sm:w-80 max-h-80 sm:max-h-96 overflow-y-auto text-gray-900"
             role="dialog"
             aria-labelledby="accessibility-title"
             aria-describedby="accessibility-description"
@@ -114,8 +114,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="high-contrast-desc"
                 />
-                <FaEye className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">ניגודיות גבוהה</span>
+                <FaEye className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">ניגודיות גבוהה</span>
               </label>
               <p id="high-contrast-desc" className="sr-only">הפעלת מצב ניגודיות גבוהה לבעלי ראייה מוגבלת</p>
             </div>
@@ -130,8 +130,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="focus-desc"
                 />
-                <FaMousePointer className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">הדגשת מיקוד</span>
+                <FaMousePointer className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">הדגשת מיקוד</span>
               </label>
               <p id="focus-desc" className="sr-only">הדגשת אלמנטים במצב מיקוד לניווט מקלדת</p>
             </div>
@@ -146,8 +146,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="grayscale-desc"
                 />
-                <FaEye className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">מצב שחור-לבן</span>
+                <FaEye className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">מצב שחור-לבן</span>
               </label>
               <p id="grayscale-desc" className="sr-only">הפעלת מצב שחור-לבן לבעלי עיוורון צבעים</p>
             </div>
@@ -162,8 +162,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="cursor-desc"
                 />
-                <FaMousePointer className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">סמן גדול</span>
+                <FaMousePointer className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">סמן גדול</span>
               </label>
               <p id="cursor-desc" className="sr-only">הגדלת הסמן לניווט קל יותר</p>
             </div>
@@ -178,8 +178,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="animations-desc"
                 />
-                <FaEye className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">ביטול אנימציות</span>
+                <FaEye className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">ביטול אנימציות</span>
               </label>
               <p id="animations-desc" className="sr-only">ביטול אנימציות לבעלי רגישות לתנועה</p>
             </div>
@@ -194,8 +194,8 @@ export default function HomePage() {
                   className="mr-2 w-4 h-4"
                   aria-describedby="reading-desc"
                 />
-                <FaEye className="mr-2 text-sm" />
-                <span className="text-xs sm:text-sm">מדריך קריאה</span>
+                <FaEye className="mr-2 text-sm text-gray-700" />
+                <span className="text-xs sm:text-sm text-gray-900">מדריך קריאה</span>
               </label>
               <p id="reading-desc" className="sr-only">הוספת מדריך קריאה לבעלי קשיי קריאה</p>
             </div>
