@@ -204,11 +204,19 @@ html {
     }
 
     /* Improve touch targets on mobile */
-    .accessibility-panel button,
+    .accessibility-panel button {
+      min-height: 44px !important;
+      min-width: 44px !important;
+      padding: 8px !important;
+    }
+
     .accessibility-panel input[type="checkbox"] {
-      min-height: 48px !important;
-      min-width: 48px !important;
-      padding: 12px !important;
+      min-height: 24px !important;
+      min-width: 24px !important;
+      height: 24px !important;
+      width: 24px !important;
+      margin-left: 12px !important;
+      padding: 0 !important;
     }
 
     /* Better spacing for mobile */
