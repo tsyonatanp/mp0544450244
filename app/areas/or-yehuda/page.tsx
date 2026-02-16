@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     description: 'מחפשים עורך דין באור יהודה? משרד עו"ד מריאטה פנחסי ממוקם בלב אור יהודה ומעניק שירותי נדל"ן, נוטריון וליקויי בנייה לתושבי העיר והסביבה. זמינות גבוהה ויחס אישי.',
     keywords: 'עורך דין אור יהודה, נוטריון באור יהודה, עורך דין נדלן אור יהודה, נווה סביון, סביון, קריית אונו',
     alternates: {
-        canonical: 'https://marita-pinchasi-law.co.il/areas/or-yehuda',
+        canonical: 'https://mp0544450244.vercel.app/areas/or-yehuda',
     },
     openGraph: {
         title: 'עורך דין באור יהודה - מריאטה פנחסי',
         description: 'משרד עורכי דין מקומי באור יהודה. התמחות בנדל"ן, ליקויי בנייה ושירותי נוטריון מהיום להיום.',
-        images: ['https://marita-pinchasi-law.co.il/logo.png'],
+        images: ['https://mp0544450244.vercel.app/logo.png'],
     }
 }
 
@@ -45,7 +45,7 @@ export default function OrYehudaPage() {
                             "@type": "City",
                             "name": "אור יהודה"
                         },
-                        "url": "https://marita-pinchasi-law.co.il/areas/or-yehuda"
+                        "url": "https://mp0544450244.vercel.app/areas/or-yehuda"
                     })
                 }}
             />

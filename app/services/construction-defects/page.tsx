@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     description: 'משרד עורכי דין מריאטה פנחסי מתמחה בתביעות ליקויי בנייה, רטיבות ואי התאמות מול קבלנים. ליווי משפטי מלא משלב חוות הדעת ההנדסית ועד קבלת הפיצוי הכספי.',
     keywords: 'ליקויי בנייה, תביעת קבלן, רטיבות בדירה, אי התאמה למפרט, עורך דין ליקויי בנייה אור יהודה, בדק בית, ירידת ערך, פיצוי ליקויי בנייה',
     alternates: {
-        canonical: 'https://marita-pinchasi-law.co.il/services/construction-defects',
+        canonical: 'https://mp0544450244.vercel.app/services/construction-defects',
     },
     openGraph: {
         title: 'תביעות ליקויי בנייה ורטיבות | מריאטה פנחסי - השגת פיצוי מקסימלי',
         description: 'גילתם ליקויים בדירה החדשה? הקבלן מתחמק מאחריות? אנו נלחם עבורכם לקבלת הפיצוי המגיע לכם ותיקון הליקויים.',
-        images: ['https://marita-pinchasi-law.co.il/logo.png'],
+        images: ['https://mp0544450244.vercel.app/logo.png'],
     }
 }
 

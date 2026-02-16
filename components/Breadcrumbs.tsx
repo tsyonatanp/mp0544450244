@@ -22,13 +22,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "דף הבית",
-        "item": "https://marita-pinchasi-law.co.il"
+        "item": "https://mp0544450244.vercel.app"
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        "item": item.href ? `https://marita-pinchasi-law.co.il${item.href}` : undefined
+        "item": item.href ? `https://mp0544450244.vercel.app${item.href}` : undefined
       })).filter(item => item.item)
     ]
   }
@@ -44,8 +44,8 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       <nav aria-label="Breadcrumb" className="bg-gray-50 py-3 px-4 border-b border-gray-200">
         <ol className="flex items-center space-x-2 space-x-reverse text-sm text-gray-600 max-w-6xl mx-auto">
           <li>
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="flex items-center hover:text-amber-600 transition-colors"
               aria-label="דף הבית"
             >
@@ -56,7 +56,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
             <li key={index} className="flex items-center">
               <FaChevronLeft className="text-xs mx-2 text-gray-400" />
               {item.href ? (
-                <Link 
+                <Link
                   href={item.href}
                   className="hover:text-amber-600 transition-colors"
                 >

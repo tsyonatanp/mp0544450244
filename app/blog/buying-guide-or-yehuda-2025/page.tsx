@@ -13,18 +13,18 @@ export default function BuyingGuideOrYehuda2025() {
         "@type": "Article",
         "headline": "המדריך המלא לרכישת דירה באור יהודה ב-2025",
         "description": "מתכננים לקנות דירה באור יהודה? כל מה שצריך לדעת על התפתחות העיר, השכונות החדשות וההיבטים המשפטיים החשובים לפני שחותמים על חוזה.",
-        "image": "https://marita-pinchasi-law.co.il/professional-photo.jpg",
+        "image": "https://mp0544450244.vercel.app/professional-photo.jpg",
         "author": {
             "@type": "Person",
             "name": "מריאטה פנחסי",
-            "url": "https://marita-pinchasi-law.co.il"
+            "url": "https://mp0544450244.vercel.app"
         },
         "publisher": {
             "@type": "Organization",
             "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://marita-pinchasi-law.co.il/logo.png"
+                "url": "https://mp0544450244.vercel.app/logo.png"
             }
         },
         "datePublished": "2026-01-26",

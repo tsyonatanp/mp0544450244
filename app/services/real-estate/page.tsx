@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     description: 'משרד עורכי דין מריאטה פנחסי מתמחה בנדל"ן ומקרקעין באור יהודה, קריית אונו ובקעת אונו. ליווי משפטי מלא בעסקאות מכר ורכישה (יד ראשונה ושנייה), בדיקות מקדימות וייצוג בטאבו.',
     keywords: 'עורך דין נדלן אור יהודה, עורך דין מקרקעין בקעת אונו, הסכם מכר דירה, רכישת דירה מקבלן, עורך דין קריית אונו נדלן, עורך דין יהוד נדלן',
     alternates: {
-        canonical: 'https://marita-pinchasi-law.co.il/services/real-estate',
+        canonical: 'https://mp0544450244.vercel.app/services/real-estate',
     },
     openGraph: {
         title: 'עורך דין נדל"ן ומקרקעין | מריאטה פנחסי - ליווי עסקאות בטוח',
         description: 'קונים או מוכרים דירה? אל תחתמו בלי ייעוץ משפטי. משרדנו באור יהודה מספק מעטפת הגנה מלאה לכל עסקת נדל"ן.',
-        images: ['https://marita-pinchasi-law.co.il/logo.png'],
+        images: ['https://mp0544450244.vercel.app/logo.png'],
     }
 }
 

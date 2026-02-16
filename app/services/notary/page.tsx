@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     description: 'משרד עורכי דין ונוטריון מריאטה פנחסי מספק שירותי נוטריון מקצועיים באור יהודה, קריית אונו ובקעת אונו. אימות חתימה, ייפוי כוח נוטריוני, תרגומים וצוואות. שירות מהיר וזמין.',
     keywords: 'נוטריון אור יהודה, נוטריון בקעת אונו, אימות חתימה נוטריון, ייפוי כוח נוטריוני, תרגום נוטריוני, נוטריון קריית אונו, מריאטה פנחסי',
     alternates: {
-        canonical: 'https://marita-pinchasi-law.co.il/services/notary',
+        canonical: 'https://mp0544450244.vercel.app/services/notary',
     },
     openGraph: {
         title: 'נוטריון באור יהודה והסביבה | שירותי נוטריון מריאטה פנחסי',
         description: 'צריכים אישור נוטריוני? משרדנו באור יהודה מספק את כל שירותי הנוטריון במהירות ובמקצועיות. התקשרו עכשיו לקביעת תור.',
-        images: ['https://marita-pinchasi-law.co.il/logo.png'],
+        images: ['https://mp0544450244.vercel.app/logo.png'],
     }
 }
 
