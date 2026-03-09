@@ -22,13 +22,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "דף הבית",
-        "item": "https://mp0544450244.vercel.app"
+        "item": "https://www.marietta-law.co.il"
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        "item": item.href ? `https://mp0544450244.vercel.app${item.href}` : undefined
+        "item": item.href ? `https://www.marietta-law.co.il${item.href}` : undefined
       })).filter(item => item.item)
     ]
   }

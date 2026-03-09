@@ -38,6 +38,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://mp0544450244.vercel.app/sitemap.xml',
+    sitemap: 'https://www.marietta-law.co.il/sitemap.xml',
   }
 }

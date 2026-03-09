@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://mp0544450244.vercel.app'),
+  metadataBase: new URL('https://www.marietta-law.co.il'),
   alternates: {
-    canonical: 'https://mp0544450244.vercel.app/',
+    canonical: 'https://www.marietta-law.co.il/',
   },
   other: {
     'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
@@ -37,20 +37,20 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'מריאטה פנחסי - משרד עורכי דין ונוטריון',
     description: 'משרד עורכי דין ונוטריון מנוסה. הסכמי מכר ורכישה, תביעות ליקויי בניה, צוואות ושירותי נוטריון',
-    url: 'https://mp0544450244.vercel.app',
+    url: 'https://www.marietta-law.co.il',
     siteName: 'מריאטה פנחסי - משרד עורכי דין ונוטריון',
     locale: 'he_IL',
     type: 'website',
     images: [
       {
-        url: 'https://mp0544450244.vercel.app/logo.png',
+        url: 'https://www.marietta-law.co.il/logo.png',
         width: 1200,
         height: 630,
         alt: 'מריאטה פנחסי - עורכת דין נדל"ן ונוטריון בקעת אונו - אור יהודה, קריית אונו, יהוד',
         type: 'image/png',
       },
       {
-        url: 'https://mp0544450244.vercel.app/professional-photo.jpg',
+        url: 'https://www.marietta-law.co.il/professional-photo.jpg',
         width: 1200,
         height: 630,
         alt: 'מריאטה פנחסי - עורכת דין מנוסה בקעת אונו',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'מריאטה פנחסי - משרד עורכי דין ונוטריון',
     description: 'משרד עורכי דין ונוטריון מנוסה. הסכמי מכר ורכישה, תביעות ליקויי בניה, צוואות ושירותי נוטריון',
-    images: ['https://mp0544450244.vercel.app/logo.png', 'https://mp0544450244.vercel.app/professional-photo.jpg'],
+    images: ['https://www.marietta-law.co.il/logo.png', 'https://www.marietta-law.co.il/professional-photo.jpg'],
   },
   robots: {
     index: true,
@@ -126,9 +126,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
-              "url": "https://mp0544450244.vercel.app",
-              "logo": "https://mp0544450244.vercel.app/logo.png",
-              "image": "https://mp0544450244.vercel.app/professional-photo.jpg",
+              "url": "https://www.marietta-law.co.il",
+              "logo": "https://www.marietta-law.co.il/logo.png",
+              "image": "https://www.marietta-law.co.il/professional-photo.jpg",
               "description": "משרד עורכי דין ונוטריון מנוסה באזור בקעת אונו",
               "telephone": "054-4450244",
               "email": "office@marita-pinchasi-law.co.il",
@@ -157,8 +157,8 @@ export default function RootLayout({
               "@type": "Person",
               "name": "מריאטה פנחסי",
               "jobTitle": "עורכת דין ונוטריון",
-              "image": "https://mp0544450244.vercel.app/professional-photo.jpg",
-              "url": "https://mp0544450244.vercel.app",
+              "image": "https://www.marietta-law.co.il/professional-photo.jpg",
+              "url": "https://www.marietta-law.co.il",
               "worksFor": {
                 "@type": "Organization",
                 "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
@@ -198,7 +198,7 @@ export default function RootLayout({
               "@type": ["LegalService", "LocalBusiness"],
               "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
               "description": "משרד עורכי דין ונוטריון מנוסה. הסכמי מכר ורכישה, תביעות ליקויי בניה, איחור במסירה, סכסוכי שכנים, צוואות ושירותי נוטריון",
-              "url": "https://mp0544450244.vercel.app",
+              "url": "https://www.marietta-law.co.il",
               "telephone": "054-4450244",
               "areaServed": [
                 "בקעת אונו",
