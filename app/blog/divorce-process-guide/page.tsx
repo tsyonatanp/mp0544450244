@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaCalendar, FaUser, FaArrowRight, FaHandHoldingHeart, FaChild, FaBalanceScale } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'הליך גירושין: צעד אחר צעד | מריאטה פנחסי - עורכת דין',
+    description: 'עומדים בפני הליך גירושין? חשוב שתכירו את השלבים השונים, ההבדל בין בית הדין הרבני לבית המשפט לענייני משפחה, ואיך צולחים את התקופה הזו.',
+    keywords: 'גירושין, הליך גירושין, בית דין רבני, בית משפט למשפחה, משמורת ילדים, חלוקת רכוש, מזונות, עורך דין גירושין',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/divorce-process-guide',
+    },
+    openGraph: {
+        title: 'הליך גירושין: צעד אחר צעד',
+        description: 'עומדים בפני הליך גירושין? חשוב שתכירו את השלבים השונים, ההבדל בין בית הדין הרבני לבית המשפט לענייני משפחה, ואיך צולחים את התקופה הזו.',
+        url: 'https://www.marietta-law.co.il/blog/divorce-process-guide',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/divorce_justice_scales.png',
+            width: 1200,
+            height: 630,
+            alt: 'הליך גירושין: צעד אחר צעד',
+        }],
+    },
+}
+
 export default function DivorceProcessGuide() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "הליך גירושין: צעד אחר צעד",
+                        "description": "עומדים בפני הליך גירושין? חשוב שתכירו את השלבים השונים, ההבדל בין בית הדין הרבני לבית המשפט לענייני משפחה, ואיך צולחים את התקופה הזו.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-20",
+                        "dateModified": "2026-01-20",
+                        "image": "https://www.marietta-law.co.il/blog-images/divorce_justice_scales.png",
+                        "url": "https://www.marietta-law.co.il/blog/divorce-process-guide",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/divorce-process-guide"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>

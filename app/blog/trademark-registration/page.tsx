@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaArrowRight, FaTrademark, FaLightbulb, FaGlobe } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'רישום סימן מסחר: איך להגן על המותג? | מריאטה פנחסי - עורכת דין',
+    description: 'בניתם עסק ומותג מצליח? אל תשאירו אותו חשוף. למה חשוב לרשום סימן מסחר, איך עושים את זה ומה נותנת לכם ההגנה המשפטית.',
+    keywords: 'סימן מסחר, רישום סימן מסחר, קניין רוחני, הגנה על מותג, trademark, רשות הפטנטים, פרוטוקול מדריד, עורך דין קניין רוחני',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/trademark-registration',
+    },
+    openGraph: {
+        title: 'רישום סימן מסחר: איך להגן על המותג?',
+        description: 'בניתם עסק ומותג מצליח? אל תשאירו אותו חשוף. למה חשוב לרשום סימן מסחר, איך עושים את זה ומה נותנת לכם ההגנה המשפטית.',
+        url: 'https://www.marietta-law.co.il/blog/trademark-registration',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/trademark_protection.png',
+            width: 1200,
+            height: 630,
+            alt: 'רישום סימן מסחר: איך להגן על המותג?',
+        }],
+    },
+}
 
 export default function TrademarkRegistration() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "רישום סימן מסחר: איך להגן על המותג?",
+                        "description": "בניתם עסק ומותג מצליח? אל תשאירו אותו חשוף. למה חשוב לרשום סימן מסחר, איך עושים את זה ומה נותנת לכם ההגנה המשפטית.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-05",
+                        "dateModified": "2026-01-05",
+                        "image": "https://www.marietta-law.co.il/blog-images/trademark_protection.png",
+                        "url": "https://www.marietta-law.co.il/blog/trademark-registration",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/trademark-registration"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-black text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>

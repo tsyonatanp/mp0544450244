@@ -1,15 +1,69 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaArrowRight, FaCheckCircle, FaExclamationTriangle, FaFileContract, FaClock } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים | מריאטה פנחסי - עורכת דין',
+    description: 'נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.',
+    keywords: 'ליקויי בנייה, דירה חדשה, תקופת בדק, תקופת אחריות, חוק המכר דירות, קבלן, רטיבות, סדקים, פיצוי ליקויי בנייה, עורך דין נדלן',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/construction-defects-guide',
+    },
+    openGraph: {
+        title: 'ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים',
+        description: 'נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.',
+        url: 'https://www.marietta-law.co.il/blog/construction-defects-guide',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/construction_defects_tools.png',
+            width: 1200,
+            height: 630,
+            alt: 'ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים',
+        }],
+    },
+}
 
 export default function ConstructionDefectsGuide() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים",
+                        "description": "נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-15",
+                        "dateModified": "2026-01-15",
+                        "image": "https://www.marietta-law.co.il/blog-images/construction_defects_tools.png",
+                        "url": "https://www.marietta-law.co.il/blog/construction-defects-guide",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/construction-defects-guide"
+                        }
+                    })
+                }}
+            />
             <Header />
 
             {/* Hero Section */}

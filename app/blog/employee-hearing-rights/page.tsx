@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaCalendar, FaUser, FaArrowRight, FaBriefcase, FaGavel, FaBullhorn } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'זכויות עובדים בשימוע לפני פיטורין | מריאטה פנחסי - עורכת דין',
+    description: 'זומנתם לשימוע? זהו שלב קריטי. דעו את הזכויות שלכם: הזכות לייצוג, הזכות לעיין במסמכים והזכות לטעון כנגד הכוונה לפטר אתכם.',
+    keywords: 'שימוע לפני פיטורין, זכויות עובדים, פיטורים שלא כדין, דיני עבודה, ייצוג בשימוע, עורך דין דיני עבודה, פיצויי פיטורין',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/employee-hearing-rights',
+    },
+    openGraph: {
+        title: 'זכויות עובדים בשימוע לפני פיטורין',
+        description: 'זומנתם לשימוע? זהו שלב קריטי. דעו את הזכויות שלכם: הזכות לייצוג, הזכות לעיין במסמכים והזכות לטעון כנגד הכוונה לפטר אתכם.',
+        url: 'https://www.marietta-law.co.il/blog/employee-hearing-rights',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/labor_hearing_room.png',
+            width: 1200,
+            height: 630,
+            alt: 'זכויות עובדים בשימוע לפני פיטורין',
+        }],
+    },
+}
+
 export default function EmployeeHearingRights() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "זכויות עובדים בשימוע לפני פיטורין",
+                        "description": "זומנתם לשימוע? זהו שלב קריטי. דעו את הזכויות שלכם: הזכות לייצוג, הזכות לעיין במסמכים והזכות לטעון כנגד הכוונה לפטר אתכם.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-18",
+                        "dateModified": "2026-01-18",
+                        "image": "https://www.marietta-law.co.il/blog-images/labor_hearing_room.png",
+                        "url": "https://www.marietta-law.co.il/blog/employee-hearing-rights",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/employee-hearing-rights"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-blue-900 via-sky-900 to-slate-900 text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>

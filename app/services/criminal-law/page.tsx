@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaGavel, FaBalanceScale, FaUserSecret, FaLock, FaUserShield, FaPhone, FaWhatsapp, FaGlobe } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'משפט פלילי | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'ייצוג בהליכים פליליים: חקירות משטרה, הגנה בבית משפט, עבירות כלכליות ותעבורה. ליווי מקצועי מהחקירה ועד לפסק הדין.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/criminal-law',
+    },
+    openGraph: {
+        title: 'משפט פלילי | מריאטה פנחסי',
+        description: 'ייצוג בהליכים פליליים: חקירות משטרה, הגנה בבית משפט, עבירות כלכליות ותעבורה. ליווי מקצועי מהחקירה ועד לפסק הדין.',
+        url: 'https://www.marietta-law.co.il/services/criminal-law',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function CriminalLawPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - משפט פלילי",
-        "description": "ייצוג משפטי פלילי: עבירות צווארון לבן, עבירות סמים, אלימות, מעצרים, שחרור ממעצר וייצוג קטינים ונוער.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "CriminalLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי משפט פלילי",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ייצוג במעצר" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "שימוע לפני כתב אישום" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "מחיקת רישום פלילי" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עבירות מחשב וסייבר" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -61,7 +53,21 @@ export default function CriminalLawPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "משפט פלילי - מריאטה פנחסי",
+                        "description": "ייצוג בהליכים פליליים: חקירות משטרה, הגנה בבית משפט, עבירות כלכליות ותעבורה. ליווי מקצועי מהחקירה ועד לפסק הדין.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/criminal-law"
+                    })
+                }}
             />
             <Header />
 

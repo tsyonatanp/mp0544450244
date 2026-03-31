@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaCarCrash, FaUserMd, FaHardHat, FaWheelchair, FaNotesMedical, FaPhone, FaWhatsapp, FaMedkit } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'נזיקין וביטוח | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'תביעות נזיקין, תאונות דרכים, רשלנות רפואית ותביעות ביטוח. משרד עו"ד מריאטה פנחסי מייצג נפגעים ומוודא מיצוי מלא של הזכויות.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/torts',
+    },
+    openGraph: {
+        title: 'נזיקין וביטוח | מריאטה פנחסי',
+        description: 'תביעות נזיקין, תאונות דרכים, רשלנות רפואית ותביעות ביטוח. משרד עו"ד מריאטה פנחסי מייצג נפגעים ומוודא מיצוי מלא של הזכויות.',
+        url: 'https://www.marietta-law.co.il/services/torts',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function TortsPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עורך דין נזיקין וביטוח לאומי",
-        "description": "ייצוג נפגעים בתביעות נזיקין, תאונות דרכים, תאונות עבודה ורשלנות רפואית מול חברות הביטוח וביטוח לאומי.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "AccidentLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי נזיקין",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תביעות תאונות דרכים" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תביעות תאונות עבודה" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "רשלנות רפואית" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "וועדות רפואיות ביטוח לאומי" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function TortsPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "נזיקין וביטוח - מריאטה פנחסי",
+                        "description": "תביעות נזיקין, תאונות דרכים, רשלנות רפואית ותביעות ביטוח. משרד עו\"ד מריאטה פנחסי מייצג נפגעים ומוודא מיצוי מלא של הזכויות.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/torts"
+                    })
+                }}
             />
             <Header />
 

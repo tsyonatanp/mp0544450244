@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaLandmark, FaCity, FaFileAlt, FaBalanceScale, FaPhone, FaWhatsapp, FaUniversity } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'משפט מנהלי ותכנון ובנייה | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'ייצוג בהליכים מנהליים, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות מקומיות.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/administrative-law',
+    },
+    openGraph: {
+        title: 'משפט מנהלי ותכנון ובנייה | מריאטה פנחסי',
+        description: 'ייצוג בהליכים מנהליים, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות מקומיות.',
+        url: 'https://www.marietta-law.co.il/services/administrative-law',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function AdministrativeLawPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - משפט מנהלי ורשויות מקומיות",
-        "description": "ייצוג משפטי בבתי משפט לעניינים מנהליים, מכרזים ציבוריים, רישוי עסקים והתנהלות מול רשויות מקומיות.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "AdministrativeLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי משפט מנהלי",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עתירות מנהליות" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ייצוג במכרזים" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "רישוי עסקים וארנונה" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תכנון ובנייה" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function AdministrativeLawPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "משפט מנהלי ותכנון ובנייה - מריאטה פנחסי",
+                        "description": "ייצוג בהליכים מנהליים, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות מקומיות.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/administrative-law"
+                    })
+                }}
             />
             <Header />
 

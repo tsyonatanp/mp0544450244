@@ -1,15 +1,69 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaArrowRight, FaHandHoldingHeart, FaFileSignature, FaShieldAlt } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'למה כולם מדברים על ייפוי כוח מתמשך? | מריאטה פנחסי - עורכת דין',
+    description: 'ייפוי כוח מתמשך הוא המהפכה המשפטית שהחזירה את הכוח לידיים שלנו. איך בוחרים מיופה כוח ולמה חשוב לערוך את המסמך כשאנחנו בריאים?',
+    keywords: 'ייפוי כוח מתמשך, אפוטרופסות, צוואה, תכנון עתידי, מיופה כוח, אפוטרופוס כללי, דמנציה, עורך דין ייפוי כוח',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/enduring-power-of-attorney',
+    },
+    openGraph: {
+        title: 'למה כולם מדברים על ייפוי כוח מתמשך?',
+        description: 'ייפוי כוח מתמשך הוא המהפכה המשפטית שהחזירה את הכוח לידיים שלנו. איך בוחרים מיופה כוח ולמה חשוב לערוך את המסמך כשאנחנו בריאים?',
+        url: 'https://www.marietta-law.co.il/blog/enduring-power-of-attorney',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/power_of_attorney_hands.png',
+            width: 1200,
+            height: 630,
+            alt: 'למה כולם מדברים על ייפוי כוח מתמשך?',
+        }],
+    },
+}
 
 export default function EnduringPowerOfAttorneyGuide() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "למה כולם מדברים על ייפוי כוח מתמשך?",
+                        "description": "ייפוי כוח מתמשך הוא המהפכה המשפטית שהחזירה את הכוח לידיים שלנו. איך בוחרים מיופה כוח ולמה חשוב לערוך את המסמך כשאנחנו בריאים?",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-01",
+                        "dateModified": "2026-01-01",
+                        "image": "https://www.marietta-law.co.il/blog-images/power_of_attorney_hands.png",
+                        "url": "https://www.marietta-law.co.il/blog/enduring-power-of-attorney",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/enduring-power-of-attorney"
+                        }
+                    })
+                }}
+            />
             <Header />
 
             {/* Hero Section */}

@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaGlobe, FaLightbulb, FaLaptopCode, FaUserShield, FaTrademark, FaPhone, FaWhatsapp, FaFingerprint } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'קניין רוחני וטכנולוגיה | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'הגנה על סימני מסחר, זכויות יוצרים, פטנטים והסכמי טכנולוגיה. ליווי משפטי מקיף בתחום הקניין הרוחני.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/ip-tech',
+    },
+    openGraph: {
+        title: 'קניין רוחני וטכנולוגיה | מריאטה פנחסי',
+        description: 'הגנה על סימני מסחר, זכויות יוצרים, פטנטים והסכמי טכנולוגיה. ליווי משפטי מקיף בתחום הקניין הרוחני.',
+        url: 'https://www.marietta-law.co.il/services/ip-tech',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function IpTechPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - קניין רוחני וטכנולוגיה",
-        "description": "ייצוג משפטי בתחום הטכנולוגיה והאינטרנט: רישום סימני מסחר, זכויות יוצרים, הגנת הפרטיות ודיני סייבר.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "IntellectualProperty",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי קניין רוחני",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "רישום סימני מסחר" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הגנה על זכויות יוצרים" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תקנוני אתרים ופרטיות" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "חוזים טכנולוגיים" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function IpTechPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "קניין רוחני וטכנולוגיה - מריאטה פנחסי",
+                        "description": "הגנה על סימני מסחר, זכויות יוצרים, פטנטים והסכמי טכנולוגיה. ליווי משפטי מקיף בתחום הקניין הרוחני.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/ip-tech"
+                    })
+                }}
             />
             <Header />
 

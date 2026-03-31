@@ -1,30 +1,24 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaUserTie, FaBriefcase, FaGavel, FaHandshake, FaMoneyCheckAlt, FaPhone, FaWhatsapp, FaBalanceScale, FaFileContract } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'דיני עבודה | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'ייצוג עובדים ומעסיקים בדיני עבודה: פיטורין, שימוע, זכויות עובדים, הסכמי העסקה ותביעות בבית הדין לעבודה.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/labor-law',
+    },
+    openGraph: {
+        title: 'דיני עבודה | מריאטה פנחסי',
+        description: 'ייצוג עובדים ומעסיקים בדיני עבודה: פיטורין, שימוע, זכויות עובדים, הסכמי העסקה ותביעות בבית הדין לעבודה.',
+        url: 'https://www.marietta-law.co.il/services/labor-law',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function LaborLawPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - דיני עבודה",
-        "description": "ייצוג משפטי לעובדים ולמעסיקים: שימוע ופיטורים, זכויות סוציאליות, חוזי עבודה, הטרדה מינית והעסקת עובדים זרים.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "LaborLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי דיני עבודה",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ייצוג בשימוע" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תביעות שכר וזכויות" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עריכת הסכמי עבודה" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "זכויות עובדים זרים" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -53,7 +47,21 @@ export default function LaborLawPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "דיני עבודה - מריאטה פנחסי",
+                        "description": "ייצוג עובדים ומעסיקים בדיני עבודה: פיטורין, שימוע, זכויות עובדים, הסכמי העסקה ותביעות בבית הדין לעבודה.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/labor-law"
+                    })
+                }}
             />
             <Header />
 

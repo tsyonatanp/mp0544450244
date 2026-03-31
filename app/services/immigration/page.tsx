@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaPassport, FaPlane, FaIdCard, FaHandHoldingHeart, FaUserCheck, FaPhone, FaWhatsapp, FaGlobeAmericas } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'הגירה ואזרחות | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'סיוע בהליכי הגירה, אשרות עבודה, ויזות מומחה זר, אזרחות ישראלית ומעמד בישראל. ליווי מקצועי מול משרד הפנים.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/immigration',
+    },
+    openGraph: {
+        title: 'הגירה ואזרחות | מריאטה פנחסי',
+        description: 'סיוע בהליכי הגירה, אשרות עבודה, ויזות מומחה זר, אזרחות ישראלית ומעמד בישראל. ליווי מקצועי מול משרד הפנים.',
+        url: 'https://www.marietta-law.co.il/services/immigration',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function ImmigrationPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - הגירה ואשרות לישראל",
-        "description": "ייצוג וליווי מול משרד הפנים ורשות האוכלוסין: אשרות כניסה, ויזות עבודה למומחים זרים, איחוד משפחות והסדרת מעמד.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "VisasAndImmigration",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי הגירה וויזות",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ויזת עבודה למומחה זר (ב-1)" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הסדרת מעמד לבן זוג זר" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "אשרות כניסה לישראל" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עלייה ואזרחות" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function ImmigrationPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "הגירה ואזרחות - מריאטה פנחסי",
+                        "description": "סיוע בהליכי הגירה, אשרות עבודה, ויזות מומחה זר, אזרחות ישראלית ומעמד בישראל. ליווי מקצועי מול משרד הפנים.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/immigration"
+                    })
+                }}
             />
             <Header />
 

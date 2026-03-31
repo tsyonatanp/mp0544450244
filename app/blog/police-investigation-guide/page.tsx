@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaArrowRight, FaFingerprint, FaGavel, FaUserSecret } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'חקירה במשטרה: זכויות הנחקר | מריאטה פנחסי - עורכת דין',
+    description: 'זומנתם לחקירה במשטרה? כל מילה שתאמרו עלולה לשמש נגדכם. המדריך החיוני לזכויות הנחקר, חשיבות ההיוועצות בעורך דין וכיצד לנהוג בחדר החקירות.',
+    keywords: 'חקירה במשטרה, זכויות נחקר, זכות שתיקה, זכות היוועצות, עורך דין פלילי, חדר חקירות, משפט פלילי, ייעוץ משפטי',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/police-investigation-guide',
+    },
+    openGraph: {
+        title: 'חקירה במשטרה: זכויות הנחקר',
+        description: 'זומנתם לחקירה במשטרה? כל מילה שתאמרו עלולה לשמש נגדכם. המדריך החיוני לזכויות הנחקר, חשיבות ההיוועצות בעורך דין וכיצד לנהוג בחדר החקירות.',
+        url: 'https://www.marietta-law.co.il/blog/police-investigation-guide',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/police_investigation_abstract.png',
+            width: 1200,
+            height: 630,
+            alt: 'חקירה במשטרה: זכויות הנחקר',
+        }],
+    },
+}
 
 export default function PoliceInvestigationGuide() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "חקירה במשטרה: זכויות הנחקר",
+                        "description": "זומנתם לחקירה במשטרה? כל מילה שתאמרו עלולה לשמש נגדכם. המדריך החיוני לזכויות הנחקר, חשיבות ההיוועצות בעורך דין וכיצד לנהוג בחדר החקירות.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-10",
+                        "dateModified": "2026-01-10",
+                        "image": "https://www.marietta-law.co.il/blog-images/police_investigation_abstract.png",
+                        "url": "https://www.marietta-law.co.il/blog/police-investigation-guide",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/police-investigation-guide"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-gray-900 via-black to-slate-900 text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-50"></div>

@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaBalanceScale, FaFileContract, FaGavel, FaHandshake, FaMoneyBillWave, FaBuilding, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'משפט אזרחי-מסחרי | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'דיני חוזים, ליטיגציה אזרחית, גבייה, הוצאה לפועל וחדלות פירעון. ליווי משפטי מקצועי לעסקים ולפרטיים באזור המרכז.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/civil-commercial',
+    },
+    openGraph: {
+        title: 'משפט אזרחי-מסחרי | מריאטה פנחסי',
+        description: 'דיני חוזים, ליטיגציה אזרחית, גבייה, הוצאה לפועל וחדלות פירעון. ליווי משפטי מקצועי לעסקים ולפרטיים באזור המרכז.',
+        url: 'https://www.marietta-law.co.il/services/civil-commercial',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function CivilCommercialPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - משפט אזרחי ומסחרי",
-        "description": "ייעוץ וליווי משפטי לעסקים ולפרטיים: דיני חוזים, תביעות כספיות, הוצאה לפועל וחדלות פירעון.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "CommercialLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותים אזרחיים-מסחריים",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עריכת חוזים והסכמים" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "תביעות כספיות וליטיגציה" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הוצאה לפועל וגבייה" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "חדלות פירעון/פשיטת רגל" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function CivilCommercialPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "משפט אזרחי-מסחרי - מריאטה פנחסי",
+                        "description": "דיני חוזים, ליטיגציה אזרחית, גבייה, הוצאה לפועל וחדלות פירעון. ליווי משפטי מקצועי לעסקים ולפרטיים באזור המרכז.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/civil-commercial"
+                    })
+                }}
             />
             <Header />
 

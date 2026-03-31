@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaCalendar, FaUser, FaArrowRight, FaHandshake, FaFileSignature, FaGavel } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'הפרת חוזה: מתי מותר לבטל? | מריאטה פנחסי - עורכת דין',
+    description: 'חתמתם על חוזה והצד השני לא קיים אותו? מתי הפרה נחשבת יסודית, האם מותר לבטל את החוזה חד-צדדית ומהם הפיצויים שניתן לדרוש.',
+    keywords: 'הפרת חוזה, ביטול חוזה, הפרה יסודית, פיצוי מוסכם, תביעת הפרת חוזה, עורך דין חוזים, דיני חוזים',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/contract-breach',
+    },
+    openGraph: {
+        title: 'הפרת חוזה: מתי מותר לבטל?',
+        description: 'חתמתם על חוזה והצד השני לא קיים אותו? מתי הפרה נחשבת יסודית, האם מותר לבטל את החוזה חד-צדדית ומהם הפיצויים שניתן לדרוש.',
+        url: 'https://www.marietta-law.co.il/blog/contract-breach',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/contract_breach_pen.png',
+            width: 1200,
+            height: 630,
+            alt: 'הפרת חוזה: מתי מותר לבטל?',
+        }],
+    },
+}
+
 export default function ContractBreach() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "הפרת חוזה: מתי מותר לבטל?",
+                        "description": "חתמתם על חוזה והצד השני לא קיים אותו? מתי הפרה נחשבת יסודית, האם מותר לבטל את החוזה חד-צדדית ומהם הפיצויים שניתן לדרוש.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-22",
+                        "dateModified": "2026-01-22",
+                        "image": "https://www.marietta-law.co.il/blog-images/contract_breach_pen.png",
+                        "url": "https://www.marietta-law.co.il/blog/contract-breach",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/contract-breach"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-slate-800 via-gray-800 to-black text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-40"></div>

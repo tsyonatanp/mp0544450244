@@ -1,40 +1,67 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaCheckCircle, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'גישור בגירושין: חלופה יעילה להליך משפטי ממושך | מריאטה פנחסי - עורכת דין',
+    description: 'ניהול גירושין בבית משפט יכול להימשך שנים. גישור מאפשר לכם לסיים את ההליך מהר יותר, בעלות נמוכה יותר ובפחות נזק לילדים. הנה מה שצריך לדעת.',
+    keywords: 'גישור בגירושין, גירושין, דיני משפחה, הסכם גירושין, משמורת ילדים, מזונות, עורך דין גירושין',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/divorce-mediation',
+    },
+    openGraph: {
+        title: 'גישור בגירושין: חלופה יעילה להליך משפטי ממושך',
+        description: 'ניהול גירושין בבית משפט יכול להימשך שנים. גישור מאפשר לכם לסיים את ההליך מהר יותר, בעלות נמוכה יותר ובפחות נזק לילדים. הנה מה שצריך לדעת.',
+        url: 'https://www.marietta-law.co.il/blog/divorce-mediation',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/divorce_justice_scales.png',
+            width: 1200,
+            height: 630,
+            alt: 'גישור בגירושין: חלופה יעילה להליך משפטי ממושך | מריאטה פנחסי - עורכת דין',
+        }],
+    },
+}
 
 export default function DivorceMediatio() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "גישור בגירושין: חלופה יעילה להליך משפטי ממושך",
-        "description": "גישור בגירושין הוא הליך מהיר, חסכוני ופחות פוגעני מניהול תיק בבית המשפט. כל מה שצריך לדעת על תהליך הגישור, היתרונות, הגבולות ומתי לבחור בו.",
-        "image": "https://www.marietta-law.co.il/professional-photo.jpg",
-        "author": {
-            "@type": "Person",
-            "name": "מריאטה פנחסי",
-            "url": "https://www.marietta-law.co.il"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.marietta-law.co.il/logo.png"
-            }
-        },
-        "datePublished": "2026-03-16",
-        "dateModified": "2026-03-16"
-    }
-
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "גישור בגירושין: חלופה יעילה להליך משפטי ממושך",
+                        "description": "ניהול גירושין בבית משפט יכול להימשך שנים. גישור מאפשר לכם לסיים את ההליך מהר יותר, בעלות נמוכה יותר ובפחות נזק לילדים. הנה מה שצריך לדעת.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-03-16",
+                        "dateModified": "2026-03-16",
+                        "image": "https://www.marietta-law.co.il/blog-images/divorce_justice_scales.png",
+                        "url": "https://www.marietta-law.co.il/blog/divorce-mediation",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/divorce-mediation"
+                        }
+                    })
+                }}
             />
             <Header />
 

@@ -1,34 +1,26 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { FaUserFriends, FaHandHoldingHeart, FaFileSignature, FaChild, FaGavel, FaPhone, FaWhatsapp, FaBalanceScale } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+export const metadata: Metadata = {
+    title: 'דיני משפחה וירושה | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'עורכת דין מריאטה פנחסי מתמחה בדיני משפחה: גירושין, משמורת, מזונות, צוואות, ירושות וייפוי כוח מתמשך. ליווי אישי ומקצועי באזור בקעת אונו והמרכז.',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/services/family-law',
+    },
+    openGraph: {
+        title: 'דיני משפחה וירושה | מריאטה פנחסי',
+        description: 'עורכת דין מריאטה פנחסי מתמחה בדיני משפחה: גירושין, משמורת, מזונות, צוואות, ירושות וייפוי כוח מתמשך. ליווי אישי ומקצועי באזור בקעת אונו והמרכז.',
+        url: 'https://www.marietta-law.co.il/services/family-law',
+        images: ['https://www.marietta-law.co.il/logo.png'],
+    },
+}
+
 export default function FamilyLawPage() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "עריכת דין - דיני משפחה וירושה",
-        "description": "ליווי משפטי רגיש ומקצועי בדיני משפחה: גירושין, הסכמי ממון, ירושות וצוואות, מזונות ומשמורת.",
-        "provider": {
-            "@type": "LegalService",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון"
-        },
-        "serviceType": "FamilyLaw",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "שירותי דיני משפחה",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הסכמי גירושין ושלום בית" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "עריכת צוואות וירושות" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הסכמי ממון" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ייפוי כוח מתמשך" } }
-            ]
-        }
-    }
 
     const features = [
         {
@@ -57,7 +49,21 @@ export default function FamilyLawPage() {
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LegalService",
+                        "name": "דיני משפחה וירושה - מריאטה פנחסי",
+                        "description": "עורכת דין מריאטה פנחסי מתמחה בדיני משפחה: גירושין, משמורת, מזונות, צוואות, ירושות וייפוי כוח מתמשך. ליווי אישי ומקצועי באזור בקעת אונו והמרכז.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון"
+                        },
+                        "areaServed": "בקעת אונו והמרכז",
+                        "url": "https://www.marietta-law.co.il/services/family-law"
+                    })
+                }}
             />
             <Header />
 

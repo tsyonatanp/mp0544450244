@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,9 +6,26 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaCalendarAlt, FaUser, FaArrowLeft } from 'react-icons/fa'
 
-// Note: Metadata export is not supported in client components in the same way, 
-// usually this should be a server component or metadata extracted to layout/pageWrapper. 
-// But keeping structure as is for now to avoid large refactors.
+export const metadata: Metadata = {
+    title: 'הבלוג המשפטי | מריאטה פנחסי - עורכת דין ונוטריון',
+    description: 'מאמרים משפטיים, עדכוני פסיקה וטיפים חשובים בנושאי נדל"ן, ליקויי בנייה, דיני משפחה, דיני עבודה ועוד. מאת עו"ד מריאטה פנחסי.',
+    keywords: 'בלוג משפטי, מאמרים משפטיים, עורך דין נדלן, ליקויי בנייה, דיני משפחה, דיני עבודה, עו"ד מריאטה פנחסי',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog',
+    },
+    openGraph: {
+        title: 'הבלוג המשפטי - מריאטה פנחסי',
+        description: 'מאמרים משפטיים, עדכוני פסיקה וטיפים חשובים. מאת עו"ד מריאטה פנחסי.',
+        url: 'https://www.marietta-law.co.il/blog',
+        type: 'website',
+        images: [{
+            url: 'https://www.marietta-law.co.il/logo.png',
+            width: 1200,
+            height: 630,
+            alt: 'הבלוג המשפטי - מריאטה פנחסי',
+        }],
+    },
+}
 
 export default function BlogPage() {
     const posts = [

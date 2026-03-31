@@ -1,41 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaCalendar, FaUser, FaTag, FaCheckCircle, FaMapMarkerAlt, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'המדריך המלא לרכישת דירה באור יהודה ב-2025 | מריאטה פנחסי - עורכת דין',
+    description: 'מתכננים לקנות דירה באור יהודה? כל מה שצריך לדעת על התפתחות העיר, השכונות החדשות וההיבטים המשפטיים החשובים לפני שחותמים על חוזה.',
+    keywords: 'רכישת דירה אור יהודה, נדלן אור יהודה, בית בפארק, מס רכישה, עורך דין מקרקעין, קניית דירה, חוזה מכר',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/buying-guide-or-yehuda-2025',
+    },
+    openGraph: {
+        title: 'המדריך המלא לרכישת דירה באור יהודה ב-2025',
+        description: 'מתכננים לקנות דירה באור יהודה? כל מה שצריך לדעת על התפתחות העיר, השכונות החדשות וההיבטים המשפטיים החשובים לפני שחותמים על חוזה.',
+        url: 'https://www.marietta-law.co.il/blog/buying-guide-or-yehuda-2025',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/real_estate_keys.png',
+            width: 1200,
+            height: 630,
+            alt: 'המדריך המלא לרכישת דירה באור יהודה ב-2025 | מריאטה פנחסי - עורכת דין',
+        }],
+    },
+}
 
 export default function BuyingGuideOrYehuda2025() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "המדריך המלא לרכישת דירה באור יהודה ב-2025",
-        "description": "מתכננים לקנות דירה באור יהודה? כל מה שצריך לדעת על התפתחות העיר, השכונות החדשות וההיבטים המשפטיים החשובים לפני שחותמים על חוזה.",
-        "image": "https://www.marietta-law.co.il/professional-photo.jpg",
-        "author": {
-            "@type": "Person",
-            "name": "מריאטה פנחסי",
-            "url": "https://www.marietta-law.co.il"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.marietta-law.co.il/logo.png"
-            }
-        },
-        "datePublished": "2026-01-26",
-        "dateModified": "2026-01-26"
-    }
-
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "המדריך המלא לרכישת דירה באור יהודה ב-2025",
+                        "description": "מתכננים לקנות דירה באור יהודה? כל מה שצריך לדעת על התפתחות העיר, השכונות החדשות וההיבטים המשפטיים החשובים לפני שחותמים על חוזה.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-26",
+                        "dateModified": "2026-01-26",
+                        "image": "https://www.marietta-law.co.il/blog-images/real_estate_keys.png",
+                        "url": "https://www.marietta-law.co.il/blog/buying-guide-or-yehuda-2025",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/buying-guide-or-yehuda-2025"
+                        }
+                    })
+                }}
             />
             <Header />
 

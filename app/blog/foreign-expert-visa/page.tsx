@@ -1,14 +1,68 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { FaCalendar, FaUser, FaArrowRight, FaPassport, FaGlobeAmericas, FaBriefcase } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'ויזת מומחה זר: המדריך למעסיק | מריאטה פנחסי - עורכת דין',
+    description: 'מעוניינים להעסיק מומחה זר? הבירוקרטיה יכולה להיות מתישה. כל מה שצריך לדעת על היתרי העסקה, סוגי הויזות והתהליך מול משרד הפנים.',
+    keywords: 'ויזת מומחה זר, ויזת ב-1, היתר העסקה, עובדים זרים, רשות האוכלוסין, הגירה לישראל, מסלול SEA, עורך דין הגירה',
+    alternates: {
+        canonical: 'https://www.marietta-law.co.il/blog/foreign-expert-visa',
+    },
+    openGraph: {
+        title: 'ויזת מומחה זר: המדריך למעסיק',
+        description: 'מעוניינים להעסיק מומחה זר? הבירוקרטיה יכולה להיות מתישה. כל מה שצריך לדעת על היתרי העסקה, סוגי הויזות והתהליך מול משרד הפנים.',
+        url: 'https://www.marietta-law.co.il/blog/foreign-expert-visa',
+        type: 'article',
+        images: [{
+            url: 'https://www.marietta-law.co.il/blog-images/visa_passport_globe.png',
+            width: 1200,
+            height: 630,
+            alt: 'ויזת מומחה זר: המדריך למעסיק',
+        }],
+    },
+}
 
 export default function ForeignExpertVisa() {
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "ויזת מומחה זר: המדריך למעסיק",
+                        "description": "מעוניינים להעסיק מומחה זר? הבירוקרטיה יכולה להיות מתישה. כל מה שצריך לדעת על היתרי העסקה, סוגי הויזות והתהליך מול משרד הפנים.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "מריאטה פנחסי",
+                            "jobTitle": "עורכת דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "מריאטה פנחסי - משרד עורכי דין ונוטריון",
+                            "url": "https://www.marietta-law.co.il",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.marietta-law.co.il/logo.png"
+                            }
+                        },
+                        "datePublished": "2026-01-08",
+                        "dateModified": "2026-01-08",
+                        "image": "https://www.marietta-law.co.il/blog-images/visa_passport_globe.png",
+                        "url": "https://www.marietta-law.co.il/blog/foreign-expert-visa",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://www.marietta-law.co.il/blog/foreign-expert-visa"
+                        }
+                    })
+                }}
+            />
             <Header />
             <section className="relative bg-gradient-to-br from-blue-600 via-blue-800 to-indigo-900 text-white pt-40 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-30"></div>

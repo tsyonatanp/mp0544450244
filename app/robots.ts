@@ -39,5 +39,9 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://www.marietta-law.co.il/sitemap.xml',
+    host: 'https://www.marietta-law.co.il',
   }
 }
+
+// Note: llms.txt is served from public/llms.txt for AI crawlers
+
