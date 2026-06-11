@@ -92,6 +92,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/real-estate-lawyer-cost`,
+      lastModified: new Date('2026-06-11'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/tabu-extract-guide`,
+      lastModified: new Date('2026-06-11'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/inherited-property-sale`,
       lastModified: new Date('2026-03-16'),
       changeFrequency: 'monthly',
