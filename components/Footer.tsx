@@ -9,6 +9,24 @@ const Footer = () => {
     <footer className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
+        {/* Areas Served */}
+        <div className="text-center">
+          <h3 className="text-lg font-bold text-amber-500 mb-4">אזורי השירות שלנו</h3>
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-300">
+            <Link href="/areas/or-yehuda" className="hover:text-white transition-colors duration-200">
+              עורך דין באור יהודה
+            </Link>
+            <Link href="/areas/kiryat-ono" className="hover:text-white transition-colors duration-200">
+              עורך דין בקריית אונו
+            </Link>
+            <Link href="/areas/yehud-monosson" className="hover:text-white transition-colors duration-200">
+              עורך דין ביהוד-מונוסון
+            </Link>
+            <Link href="/areas/ganei-tikva" className="hover:text-white transition-colors duration-200">
+              עורך דין בגני תקווה
+            </Link>
+          </nav>
+        </div>
 
         {/* Copyright and Links */}
         <div className="border-t border-white/20 mt-8 pt-8">

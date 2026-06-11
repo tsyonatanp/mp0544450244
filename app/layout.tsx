@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import { getGoogleReviews } from '../lib/google-reviews'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -80,11 +81,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { rating, reviewCount } = await getGoogleReviews()
   return (
     <html lang="he" dir="rtl">
       <head>
@@ -255,8 +257,8 @@ export default function RootLayout({
               "priceRange": "$$",
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "18",
+                "ratingValue": String(rating),
+                "reviewCount": String(reviewCount),
                 "bestRating": "5",
                 "worstRating": "1"
               },
