@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import VisitNotifier from '../components/VisitNotifier'
 import { getGoogleReviews } from '../lib/google-reviews'
 import './globals.css'
 
@@ -321,6 +322,7 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-ENV1EW9H1B" />
+        <VisitNotifier />
         {children}
       </body>
     </html>
