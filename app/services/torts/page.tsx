@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'נזיקין וביטוח | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'תביעות נזיקין, תאונות דרכים, רשלנות רפואית ותביעות ביטוח. משרד עו"ד מריאטה פנחסי מייצג נפגעים ומוודא מיצוי מלא של הזכויות.',
+    title: 'עורך דין נזיקין וביטוח במרכז | תאונות ונכות - מריאטה פנחסי',
+    description: 'עורכת דין נזיקין במרכז הארץ וגוש דן. תביעות תאונות דרכים, תאונות עבודה, רשלנות רפואית, ביטוח לאומי ונכות. מיצוי מלא של הפיצוי מול חברות הביטוח. ייעוץ ראשוני ללא התחייבות.',
+    keywords: 'עורך דין נזיקין, תביעות נזיקין, עורך דין תאונות דרכים, תאונת עבודה, רשלנות רפואית, תביעת ביטוח, ביטוח לאומי, נכות, פיצויים, עורך דין נזיקין מרכז, עורך דין נזיקין גוש דן, נזקי גוף',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/torts',
     },
     openGraph: {
-        title: 'נזיקין וביטוח | מריאטה פנחסי',
-        description: 'תביעות נזיקין, תאונות דרכים, רשלנות רפואית ותביעות ביטוח. משרד עו"ד מריאטה פנחסי מייצג נפגעים ומוודא מיצוי מלא של הזכויות.',
+        title: 'עורך דין נזיקין וביטוח במרכז | תאונות ונכות - מריאטה פנחסי',
+        description: 'תביעות תאונות דרכים, תאונות עבודה, רשלנות רפואית וביטוח לאומי. מיצוי מלא של הפיצוי במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/torts',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -45,6 +46,29 @@ export default function TortsPage() {
         }
     ]
 
+    const faqs = [
+        {
+            question: "כמה זמן יש לי להגיש תביעת נזיקין?",
+            answer: "תקופת ההתיישנות בתביעות נזיקין היא בדרך כלל 7 שנים מיום האירוע. בתאונות דרכים גם כן 7 שנים, ובמקרה של קטינים המניין מתחיל מגיל 18. חשוב לא להמתין - ככל שפונים מוקדם יותר, קל יותר לאסוף ראיות ותיעוד רפואי."
+        },
+        {
+            question: "כמה עולה עורך דין נזיקין?",
+            answer: "ברוב תביעות הנזיקין ונזקי הגוף שכר הטרחה הוא באחוזים מהפיצוי שמתקבל בפועל ('no win, no fee') - כלומר אתם לא משלמים מראש, ועורך הדין מקבל את שכרו רק אם זכיתם בפיצוי. כך האינטרסים מיושרים והסיכון שלכם מינימלי."
+        },
+        {
+            question: "מה ההבדל בין תביעה מול ביטוח לאומי לתביעה מול חברת ביטוח?",
+            answer: "אלה מסלולים נפרדים שלעיתים פועלים במקביל. הביטוח הלאומי מעניק קצבאות וגמלאות (למשל בתאונת עבודה או נכות), בעוד תביעה אזרחית מול חברת ביטוח או מזיק נועדה לפצות על מלוא הנזק (כאב וסבל, הפסדי השתכרות ועוד). מיצוי נכון של שני המסלולים יחד הוא קריטי."
+        },
+        {
+            question: "מה לא כדאי לעשות אחרי תאונה?",
+            answer: "אל תחתמו על שום מסמך או הצהרה של חברת הביטוח לפני התייעצות עם עורך דין, אל תוותרו על תיעוד רפואי, ואל תקבלו הצעת פשרה ראשונה ומהירה - לרוב היא נמוכה משמעותית מהמגיע לכם. תעדו הכל ופנו לייעוץ בהקדם."
+        },
+        {
+            question: "האם אתם מייצגים נפגעים בכל אזור המרכז?",
+            answer: "כן. המשרד מייצג נפגעים בתביעות נזיקין בכל גוש דן והמרכז - אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה, תל אביב, רמת גן, פתח תקווה ועוד, מול חברות הביטוח, המוסד לביטוח לאומי ובבתי המשפט."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -60,8 +84,32 @@ export default function TortsPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "יהוד-מונוסון" },
+                            { "@type": "City", "name": "גני תקווה" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/torts"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -125,6 +173,39 @@ export default function TortsPage() {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">מיצוי זכויות בנזיקין — מה שחשוב להבין</h3>
+                                <p>
+                                    דיני הנזיקין נועדו להחזיר את הנפגע, ככל הניתן, למצב שבו היה אלמלא הפגיעה — באמצעות פיצוי כספי.
+                                    הפיצוי מורכב מרכיבים רבים: כאב וסבל, הפסדי השתכרות בעבר ובעתיד, הוצאות רפואיות, עזרת צד ג' ועוד.
+                                    חברות הביטוח מנוסות במזעור הסכומים — ולכן ייצוג מקצועי עושה הבדל אמיתי בתוצאה.
+                                </p>
+                                <p>
+                                    <strong>תאונות דרכים</strong> מתנהלות לפי חוק הפיצויים לנפגעי תאונות דרכים (הפלת"ד), שמקנה פיצוי
+                                    גם ללא הוכחת אשם. <strong>תאונות עבודה</strong> מצריכות מיצוי מקביל מול הביטוח הלאומי ולעיתים גם
+                                    תביעה אזרחית מול המעסיק. ב<strong>רשלנות רפואית</strong> נדרשת חוות דעת של מומחה רפואי כבסיס לתביעה.
+                                </p>
+                                <p>
+                                    נפגעתם בתאונת עבודה? כדאי לקרוא את המדריך ל<Link href="/blog/work-accident-rights" className="text-amber-600 font-semibold hover:underline">מיצוי זכויות בתאונת עבודה</Link>.
+                                    בכל מקרה — אל תוותרו על זכויותיכם לפני בדיקה משפטית.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaMedkit className="text-red-500 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
