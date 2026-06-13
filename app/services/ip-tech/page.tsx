@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'קניין רוחני וטכנולוגיה | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'הגנה על סימני מסחר, זכויות יוצרים, פטנטים והסכמי טכנולוגיה. ליווי משפטי מקיף בתחום הקניין הרוחני.',
+    title: 'עורך דין קניין רוחני וטכנולוגיה במרכז | סימני מסחר - מריאטה פנחסי',
+    description: 'עורכת דין קניין רוחני וטכנולוגיה במרכז הארץ וגוש דן. רישום סימני מסחר, זכויות יוצרים, הסכמי טכנולוגיה וסטארטאפ, תקנוני אתרים ומדיניות פרטיות. הגנה על המותג והרעיונות שלכם.',
+    keywords: 'עורך דין קניין רוחני, רישום סימן מסחר, זכויות יוצרים, סימני מסחר, הסכם מייסדים, חוזה פיתוח תוכנה, מדיניות פרטיות, תקנון אתר, עורך דין הייטק, עורך דין קניין רוחני מרכז, עורך דין סטארטאפ',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/ip-tech',
     },
     openGraph: {
-        title: 'קניין רוחני וטכנולוגיה | מריאטה פנחסי',
-        description: 'הגנה על סימני מסחר, זכויות יוצרים, פטנטים והסכמי טכנולוגיה. ליווי משפטי מקיף בתחום הקניין הרוחני.',
+        title: 'עורך דין קניין רוחני וטכנולוגיה במרכז | סימני מסחר - מריאטה פנחסי',
+        description: 'רישום סימני מסחר, זכויות יוצרים, הסכמי טכנולוגיה ותקנוני אתרים. הגנה על המותג והרעיונות שלכם, במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/ip-tech',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -45,6 +46,29 @@ export default function IpTechPage() {
         }
     ]
 
+    const faqs = [
+        {
+            question: "כמה זמן לוקח לרשום סימן מסחר בישראל?",
+            answer: "הליך רישום סימן מסחר אורך בדרך כלל בין מספר חודשים לכשנה, תלוי בעומס ברשות סימני המסחר ובשאלה אם מוגשות התנגדויות. מומלץ לבצע 'חיפוש מקדים' לפני ההגשה כדי לוודא שהסימן פנוי ולמנוע דחייה."
+        },
+        {
+            question: "מה ההבדל בין סימן מסחר לזכויות יוצרים?",
+            answer: "זכויות יוצרים מגנות על יצירה (טקסט, קוד, מוזיקה, עיצוב) באופן אוטומטי עם יצירתה, ללא צורך ברישום. סימן מסחר מגן על שם/לוגו המזהים מוצר או שירות, ודורש רישום פעיל כדי לקבל בלעדיות. לרוב עסק זקוק לשניהם."
+        },
+        {
+            question: "האם חובה לרשום סימן מסחר?",
+            answer: "אין חובה חוקית, אך ללא רישום קשה מאוד להגן על המותג. רישום מעניק בלעדיות לשימוש בשם, מרתיע מתחרים, הופך את המותג לנכס סחיר, ומקל מאוד באכיפה ובתביעות נגד מפרים. הרחבנו במדריך רישום סימן מסחר."
+        },
+        {
+            question: "אני סטארטאפ — אילו מסמכים משפטיים אני צריך?",
+            answer: "בסיס משפטי לסטארטאפ כולל בדרך כלל: הסכם מייסדים (מסדיר אחזקות ותפקידים), הגנה על קניין רוחני, הסכמי סודיות (NDA), הסכמי העסקה/קבלנות, ותקנון ומדיניות פרטיות למוצר. הסדרה מוקדמת חוסכת סכסוכים יקרים בהמשך."
+        },
+        {
+            question: "האם אתם מלווים לקוחות בכל אזור המרכז?",
+            answer: "כן, ובפועל בכל הארץ. בתחום הקניין הרוחני והטכנולוגיה רוב העבודה דיגיטלית, כך שאנו מלווים יזמים ועסקים מגוש דן והמרכז - תל אביב, רמת גן, הרצליה, פתח תקווה ועוד - ללא תלות במיקום."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -60,8 +84,31 @@ export default function IpTechPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "הרצליה" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/ip-tech"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -75,7 +122,7 @@ export default function IpTechPage() {
 
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                        קניין רוחני,, טכנולוגיה וסייבר
+                        קניין רוחני, טכנולוגיה וסייבר
                     </h1>
                     <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                         הנכסים החשובים ביותר היום הם לא נדל"ן, אלא רעיונות.
@@ -129,6 +176,37 @@ export default function IpTechPage() {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">הגנה על קניין רוחני בעידן הדיגיטלי</h3>
+                                <p>
+                                    הנכסים היקרים ביותר של עסקים רבים היום אינם פיזיים אלא רעיוניים: המותג, הקוד, העיצוב והמידע.
+                                    בעולם שבו העתקה במרחק קליק, הגנה משפטית על הקניין הרוחני היא קריטית — לכל יוצר, עסק וסטארטאפ.
+                                </p>
+                                <p>
+                                    <strong>בניית המותג:</strong> רישום סימן מסחר מעניק לכם בלעדיות על השם והלוגו, הרתעה מפני
+                                    מתחרים, וכלי אכיפה חזק. הרחבנו במדריך <Link href="/blog/trademark-registration" className="text-amber-600 font-semibold hover:underline">רישום סימן מסחר: איך להגן על המותג</Link>.
+                                </p>
+                                <p>
+                                    <strong>טכנולוגיה וסטארטאפ:</strong> הסכם מייסדים, הסכמי סודיות, חוזי פיתוח תוכנה ותקנוני אתרים
+                                    ומדיניות פרטיות הם הבסיס המשפטי לכל מיזם דיגיטלי. הסדרה מוקדמת מונעת סכסוכים יקרים בהמשך הדרך.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaFingerprint className="text-purple-500 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 

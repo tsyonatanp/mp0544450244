@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'הגירה ואזרחות | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'סיוע בהליכי הגירה, אשרות עבודה, ויזות מומחה זר, אזרחות ישראלית ומעמד בישראל. ליווי מקצועי מול משרד הפנים.',
+    title: 'עורך דין הגירה ואזרחות במרכז | ויזות ומשרד הפנים - מריאטה פנחסי',
+    description: 'עורכת דין הגירה ואזרחות במרכז הארץ וגוש דן. אשרות עבודה, ויזות מומחה זר (ב/1), איחוד משפחות, אזרחות מכוח חוק השבות והסדרת מעמד. ליווי מקצועי מול משרד הפנים ורשות האוכלוסין.',
+    keywords: 'עורך דין הגירה, ויזת עבודה, מומחה זר, ויזה ב/1, איחוד משפחות, אזרחות ישראלית, חוק השבות, הסדרת מעמד, רשות האוכלוסין, משרד הפנים, עורך דין הגירה מרכז, עורך דין הגירה גוש דן',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/immigration',
     },
     openGraph: {
-        title: 'הגירה ואזרחות | מריאטה פנחסי',
-        description: 'סיוע בהליכי הגירה, אשרות עבודה, ויזות מומחה זר, אזרחות ישראלית ומעמד בישראל. ליווי מקצועי מול משרד הפנים.',
+        title: 'עורך דין הגירה ואזרחות במרכז | ויזות ומשרד הפנים - מריאטה פנחסי',
+        description: 'אשרות עבודה, ויזות מומחה זר, איחוד משפחות ואזרחות. ליווי מול משרד הפנים ורשות האוכלוסין, במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/immigration',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -45,6 +46,29 @@ export default function ImmigrationPage() {
         }
     ]
 
+    const faqs = [
+        {
+            question: "כמה זמן לוקח הליך איחוד משפחות?",
+            answer: "ההליך המדורג להסדרת מעמד לבן/בת זוג זר/ה של אזרח ישראלי אורך בדרך כלל כ-5 עד 7 שנים, ומתקדם בשלבים: אשרת עבודה, מעמד ארעי (א/5) ולבסוף תושבות קבע או אזרחות. נדרשת הוכחת כנות הקשר ומרכז חיים בישראל לאורך כל הדרך."
+        },
+        {
+            question: "איך מביאים מומחה זר לעבודה בישראל?",
+            answer: "העסקת מומחה זר דורשת היתר העסקה ממשרד הפנים, ובדרך כלל הוכחה שמדובר במומחה ייחודי שלא ניתן לאייש מקרב הישראלים, בשכר העולה על פעמיים השכר הממוצע במשק. התהליך בירוקרטי ומורכב, וליווי משפטי מגדיל משמעותית את סיכויי האישור."
+        },
+        {
+            question: "מי זכאי לאזרחות מכוח חוק השבות?",
+            answer: "חוק השבות מקנה זכות עלייה ואזרחות ליהודים, לילדיהם, לנכדיהם ולבני זוגם. הזכאות נבחנת לפי מסמכים המוכיחים יהדות או קרבת משפחה. במקרים מורכבים (גיור, נישואין) נדרשת בדיקה משפטית פרטנית."
+        },
+        {
+            question: "מה עושים במקרה של סירוב כניסה בנתב\"ג?",
+            answer: "סירוב כניסה הוא מצב דחוף הדורש פעולה מהירה. ניתן לעיתים לפעול לשחרור ממשמורת ולערער על ההחלטה. חשוב ליצור קשר עם עורך דין בהקדם האפשרי, שכן המועדים קצרים והאדם עלול להיות מורחק תוך זמן קצר."
+        },
+        {
+            question: "האם אתם מלווים לקוחות בכל אזור המרכז?",
+            answer: "כן, ובפועל בכל הארץ. ענייני הגירה מתנהלים מול לשכות רשות האוכלוסין, ואנו מלווים לקוחות ומעסיקים מגוש דן והמרכז - תל אביב, רמת גן, פתח תקווה, אור יהודה ועוד - לאורך כל ההליך."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -60,8 +84,30 @@ export default function ImmigrationPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/immigration"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -97,7 +143,7 @@ export default function ImmigrationPage() {
                                     </p>
                                     <p>
                                         משרדנו בקיא בכל הנהלים הפנימיים של רשות האוכלוסין וההגירה.
-                                        אנו מלווים את הלקוח החל מהכנת התיק הראשוניה, דרך הראיונות בלשכות ועד לקבלת המעמד הנכסף.
+                                        אנו מלווים את הלקוח החל מהכנת התיק הראשוני, דרך הראיונות בלשכות ועד לקבלת המעמד הנכסף.
                                     </p>
                                 </div>
                             </div>
@@ -127,6 +173,38 @@ export default function ImmigrationPage() {
                                         </li>
                                     ))}
                                 </ol>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">הגירה ומעמד בישראל — לפלס את הדרך בבירוקרטיה</h3>
+                                <p>
+                                    מדיניות ההגירה של ישראל היא מהמורכבות בעולם, וההתנהלות מול רשות האוכלוסין וההגירה דורשת היכרות
+                                    מעמיקה עם הנהלים. טעות או מסמך חסר עלולים לעכב את ההליך בחודשים ואף לסכן אותו. ליווי משפטי מקצועי
+                                    הוא ההבדל בין תהליך חלק לבין מבוי סתום.
+                                </p>
+                                <p>
+                                    <strong>מומחים זרים והעסקה:</strong> חברות הייטק, תעשייה ומסעדנות הזקוקות למומחה מחו"ל נדרשות
+                                    להיתר העסקה ולעמידה בתנאי שכר וייחודיות. הרחבנו במדריך <Link href="/blog/foreign-expert-visa" className="text-amber-600 font-semibold hover:underline">ויזת מומחה זר: המדריך למעסיק</Link>.
+                                </p>
+                                <p>
+                                    <strong>איחוד משפחות ואזרחות:</strong> הסדרת מעמד לבן/בת זוג זר/ה היא הליך מדורג רב-שנתי הדורש
+                                    הוכחת כנות קשר ומרכז חיים. אנו מלווים גם בקשות לאזרחות מכוח חוק השבות ובמקרים דחופים של סירוב כניסה.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaGlobeAmericas className="text-blue-600 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 

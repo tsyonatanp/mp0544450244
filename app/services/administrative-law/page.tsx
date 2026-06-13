@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'משפט מנהלי ותכנון ובנייה | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'ייצוג בהליכים מנהליים, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות מקומיות.',
+    title: 'עורך דין מנהלי ותכנון ובנייה במרכז | ארנונה ועתירות - מריאטה פנחסי',
+    description: 'עורכת דין למשפט מנהלי במרכז הארץ וגוש דן. עתירות מנהליות, ועדות תכנון ובנייה, ערעורי ארנונה והשגות, רישוי עסקים, מכרזים והליכים מול רשויות מקומיות.',
+    keywords: 'עורך דין מנהלי, עתירה מנהלית, ערעור ארנונה, השגת ארנונה, תכנון ובנייה, התנגדות לבנייה, רישוי עסקים, מכרזים ציבוריים, צו הריסה, עורך דין מנהלי מרכז, עורך דין מנהלי גוש דן',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/administrative-law',
     },
     openGraph: {
-        title: 'משפט מנהלי ותכנון ובנייה | מריאטה פנחסי',
-        description: 'ייצוג בהליכים מנהליים, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות מקומיות.',
+        title: 'עורך דין מנהלי ותכנון ובנייה במרכז | ארנונה ועתירות - מריאטה פנחסי',
+        description: 'עתירות מנהליות, ועדות תכנון ובנייה, ערעורי ארנונה, רישוי עסקים והליכים מול רשויות. במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/administrative-law',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -45,6 +46,29 @@ export default function AdministrativeLawPage() {
         }
     ]
 
+    const faqs = [
+        {
+            question: "איך מגישים השגה על ארנונה?",
+            answer: "ניתן להגיש השגה למנהל הארנונה בעירייה תוך 90 יום מקבלת דרישת התשלום השנתית, בטענות כמו טעות בגודל הנכס, סיווג שגוי או זהות המחזיק. אם ההשגה נדחית ניתן לערור לוועדת ערר ואף לבית המשפט. טעויות בחישוב ארנונה נפוצות מאוד וכדאי לבדוק."
+        },
+        {
+            question: "מה זה עתירה מנהלית ומתי מגישים אותה?",
+            answer: "עתירה מנהלית היא הליך משפטי לתקיפת החלטה של רשות ציבורית (עירייה, ועדת תכנון, משרד ממשלתי) שפעלה בחוסר סבירות, בחוסר סמכות או תוך פגיעה בזכויות. יש להגישה בדרך כלל ללא שיהוי - לרוב תוך 45 יום מההחלטה - ולכן חשוב לפעול מהר."
+        },
+        {
+            question: "קיבלתי צו הריסה — מה עושים?",
+            answer: "צו הריסה (מנהלי או שיפוטי) דורש תגובה משפטית מהירה, שכן יש מועדים קצרים להגשת בקשות לעיכוב או ביטול. ניתן לעיתים להכשיר את הבנייה בדיעבד או להשיג ארכות. אל תתעלמו מהצו - פנו מיד לייעוץ משפטי."
+        },
+        {
+            question: "אפשר להתנגד לבנייה של שכן?",
+            answer: "כן. כאשר מתפרסמת בקשה להיתר בנייה או תוכנית שעלולה לפגוע בכם (הצללה, פגיעה בפרטיות, ירידת ערך), ניתן להגיש התנגדות לוועדה המקומית במועד הקבוע, ובהמשך ערר לוועדת הערר המחוזית. ליווי משפטי מגדיל את סיכויי ההתנגדות."
+        },
+        {
+            question: "האם אתם מטפלים מול כל הרשויות במרכז?",
+            answer: "כן. המשרד מייצג מול רשויות מקומיות וועדות תכנון בכל גוש דן והמרכז - אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה, תל אביב, רמת גן, פתח תקווה ועוד, ובבתי המשפט לעניינים מנהליים."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -60,8 +84,32 @@ export default function AdministrativeLawPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "יהוד-מונוסון" },
+                            { "@type": "City", "name": "גני תקווה" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/administrative-law"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -129,6 +177,38 @@ export default function AdministrativeLawPage() {
                                         </div>
                                     ))}
                                 </div>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">משפט מנהלי — להחזיר את הכוח לאזרח</h3>
+                                <p>
+                                    מול רשויות המדינה והשלטון המקומי, לאזרח ולעסק יש זכויות — וגם כלים לתקוף החלטות שגויות.
+                                    המשפט המנהלי מאפשר לבטל החלטות שהתקבלו בחוסר סבירות, בחוסר סמכות או תוך פגיעה בזכויות, באמצעות
+                                    עתירות מנהליות, השגות ועררים.
+                                </p>
+                                <p>
+                                    <strong>ארנונה:</strong> טעויות בחיוב ארנונה נפוצות מאוד — בגודל הנכס, בסיווג או בזהות המחזיק.
+                                    הגשת השגה במועד יכולה לחסוך לכם סכומים נכבדים. הרחבנו במדריך <Link href="/blog/arnona-discounts" className="text-amber-600 font-semibold hover:underline">ארנונה לעסקים: איך להפחית חיובים</Link>.
+                                </p>
+                                <p>
+                                    <strong>תכנון ובנייה:</strong> בין אם אתם מתנגדים לבנייה פוגענית של שכן, מתמודדים עם צו הריסה
+                                    או מבקשים היתר — המועדים קצרים והליווי המשפטי קריטי. אנו פועלים במהירות ובמיקוד מול הוועדות והרשויות.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaBalanceScale className="text-amber-500 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 

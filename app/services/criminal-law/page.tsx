@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'משפט פלילי | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'ייצוג בהליכים פליליים: חקירות משטרה, הגנה בבית משפט, עבירות כלכליות ותעבורה. ליווי מקצועי מהחקירה ועד לפסק הדין.',
+    title: 'עורך דין פלילי במרכז | חקירות משטרה והגנה - מריאטה פנחסי',
+    description: 'עורכת דין פלילי במרכז הארץ וגוש דן. ליווי בחקירות משטרה, ייצוג והגנה בבית המשפט, עבירות צווארון לבן, מעצרים, עבירות תעבורה וייצוג קטינים. זמינות לייעוץ לפני חקירה.',
+    keywords: 'עורך דין פלילי, ייצוג בחקירת משטרה, הגנה פלילית, עבירות צווארון לבן, מעצר, זכות השתיקה, עבירות תעבורה, ייצוג קטינים, עורך דין פלילי מרכז, עורך דין פלילי גוש דן, עורך דין פלילי אור יהודה',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/criminal-law',
     },
     openGraph: {
-        title: 'משפט פלילי | מריאטה פנחסי',
-        description: 'ייצוג בהליכים פליליים: חקירות משטרה, הגנה בבית משפט, עבירות כלכליות ותעבורה. ליווי מקצועי מהחקירה ועד לפסק הדין.',
+        title: 'עורך דין פלילי במרכז | חקירות משטרה והגנה - מריאטה פנחסי',
+        description: 'ליווי בחקירות משטרה, הגנה בבית המשפט, עבירות צווארון לבן ומעצרים. במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/criminal-law',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -48,6 +49,29 @@ export default function CriminalLawPage() {
     // Handcuffs icon fallback just in case
     const FaHandcuffsIcon = () => <span className="text-2xl text-red-600 font-bold">⚠️</span>;
 
+    const faqs = [
+        {
+            question: "זומנתי לחקירה במשטרה — מה לעשות?",
+            answer: "לפני שאתם מתייצבים לחקירה, התייעצו עם עורך דין. יש לכם זכות חוקית להיוועץ בעורך דין לפני החקירה. זכרו: יש לכם זכות שתיקה (אך כדאי להבין מתי להפעיל אותה), וכל מה שתאמרו עלול לשמש כראיה. אל תיכנסו לחקירה 'על עיוור'."
+        },
+        {
+            question: "האם כדאי לשתוק בחקירה?",
+            answer: "זכות השתיקה היא זכות יסוד, אך הפעלתה היא החלטה אסטרטגית שתלויה בנסיבות. במקרים מסוימים שתיקה עשויה לשמש כחיזוק ראייתי נגדכם. דווקא בגלל זה חשוב להתייעץ עם עורך דין לפני החקירה, שיתאים את הקו להגנה הספציפית שלכם."
+        },
+        {
+            question: "מה ההבדל בין כתב אישום לתיק שנסגר?",
+            answer: "לא כל חקירה מסתיימת בכתב אישום. ניתן לפעול בשלב החקירה ובשלב ה'שימוע הפלילי' כדי לשכנע את התביעה לסגור את התיק או להעמיד באישום מופחת. עורך דין שמעורב מוקדם יכול להשפיע מהותית על התוצאה עוד לפני בית המשפט."
+        },
+        {
+            question: "האם יישאר לי רישום פלילי?",
+            answer: "תלוי בתוצאת ההליך. זיכוי או סגירת תיק בעילה מסוימת לא מותירים רישום פלילי. אחת המטרות המרכזיות של ההגנה היא לא רק זיכוי אלא גם מניעת הרשעה ורישום שילווה אתכם בעתיד (תעסוקה, רישיונות ועוד)."
+        },
+        {
+            question: "האם אתם מייצגים בכל אזור המרכז?",
+            answer: "כן. המשרד מלווה נחקרים ונאשמים בכל גוש דן והמרכז - אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה, תל אביב, רמת גן, פתח תקווה ועוד, בתחנות המשטרה ובבתי המשפט הרלוונטיים."
+        }
+    ]
+
 
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
@@ -64,8 +88,32 @@ export default function CriminalLawPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "יהוד-מונוסון" },
+                            { "@type": "City", "name": "גני תקווה" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/criminal-law"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -132,6 +180,35 @@ export default function CriminalLawPage() {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">הגנה פלילית — למה כל רגע קובע</h3>
+                                <p>
+                                    בהליך פלילי, ההחלטות המתקבלות בשעות הראשונות — עוד בחדר החקירות — עשויות להכריע את גורל התיק
+                                    כולו. לכן ייעוץ משפטי <strong>לפני</strong> החקירה הוא קריטי, ולא מותרות. אתם זכאים להיוועץ
+                                    בעורך דין לפני שמתחילים לחקור אתכם, ומומלץ לממש זכות זו.
+                                </p>
+                                <p>
+                                    הגנה מקצועית פועלת בכל שלב: ליווי בחקירה, ייצוג בדיוני מעצר, השפעה על שלב ההחלטה אם להגיש כתב
+                                    אישום (כולל באמצעות שימוע פלילי), והגנה בבית המשפט. המטרה אינה רק זיכוי, אלא גם מניעת הרשעה
+                                    ורישום פלילי שעלול ללוות אתכם שנים. הרחבנו במדריך <Link href="/blog/police-investigation-guide" className="text-amber-600 font-semibold hover:underline">חקירה במשטרה: זכויות הנחקר</Link>.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaBalanceScale className="text-red-600 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
