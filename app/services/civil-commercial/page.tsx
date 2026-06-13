@@ -7,14 +7,15 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
 export const metadata: Metadata = {
-    title: 'משפט אזרחי-מסחרי | מריאטה פנחסי - עורכת דין ונוטריון',
-    description: 'דיני חוזים, ליטיגציה אזרחית, גבייה, הוצאה לפועל וחדלות פירעון. ליווי משפטי מקצועי לעסקים ולפרטיים באזור המרכז.',
+    title: 'עורך דין אזרחי-מסחרי במרכז | חוזים וליטיגציה - מריאטה פנחסי',
+    description: 'עורכת דין למשפט אזרחי-מסחרי במרכז הארץ וגוש דן. דיני חוזים, ליטיגציה אזרחית, תביעות כספיות, גבייה והוצאה לפועל, חדלות פירעון ופשיטת רגל. ליווי לעסקים ולפרטיים.',
+    keywords: 'עורך דין אזרחי, עורך דין מסחרי, דיני חוזים, ליטיגציה אזרחית, תביעה כספית, הפרת חוזה, הוצאה לפועל, גביית חובות, חדלות פירעון, פשיטת רגל, דיני חברות, עורך דין מסחרי מרכז, עורך דין אזרחי גוש דן',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/services/civil-commercial',
     },
     openGraph: {
-        title: 'משפט אזרחי-מסחרי | מריאטה פנחסי',
-        description: 'דיני חוזים, ליטיגציה אזרחית, גבייה, הוצאה לפועל וחדלות פירעון. ליווי משפטי מקצועי לעסקים ולפרטיים באזור המרכז.',
+        title: 'עורך דין אזרחי-מסחרי במרכז | חוזים וליטיגציה - מריאטה פנחסי',
+        description: 'דיני חוזים, ליטיגציה אזרחית, תביעות כספיות, גבייה, הוצאה לפועל וחדלות פירעון. לעסקים ולפרטיים במרכז הארץ וגוש דן.',
         url: 'https://www.marietta-law.co.il/services/civil-commercial',
         images: ['https://www.marietta-law.co.il/logo.png'],
     },
@@ -45,6 +46,29 @@ export default function CivilCommercialPage() {
         }
     ]
 
+    const faqs = [
+        {
+            question: "מתי הפרת חוזה נחשבת 'יסודית' ומאפשרת ביטול?",
+            answer: "הפרה יסודית היא הפרה שאדם סביר לא היה מתקשר בחוזה לו ידע שתתרחש, או הפרה שהוגדרה מראש כיסודית בחוזה. במקרה כזה ניתן לבטל את החוזה מיד. בהפרה 'רגילה' יש לתת לצד המפר ארכה סבירה לתיקון לפני ביטול. הרחבנו במדריך הפרת חוזה."
+        },
+        {
+            question: "כמה זמן לוקח הליך גבייה בהוצאה לפועל?",
+            answer: "משך ההליך תלוי בשיתוף הפעולה של החייב וביכולת הפירעון שלו. הליך גבייה יעיל מתחיל בפתיחת תיק, איתור נכסים והטלת עיקולים. עורך דין מנוסה יודע לזרז את התהליך באמצעות הכלים הנכונים (עיקול חשבונות, צו תשלומים, הגבלות)."
+        },
+        {
+            question: "מה ההבדל בין פשיטת רגל לחדלות פירעון?",
+            answer: "המונח 'פשיטת רגל' הוחלף בחוק חדלות פירעון ושיקום כלכלי (2019). מטרת ההליך כיום היא לא רק לגבות מהחייב אלא לאפשר לו שיקום כלכלי ופתיחת דף חדש, תוך הסדר חובות מול הנושים. ההליך מתאים ליחידים ולעסקים שנקלעו לקשיים."
+        },
+        {
+            question: "כדאי להתייעץ עם עורך דין לפני חתימה על חוזה?",
+            answer: "בהחלט כן. בדיקת חוזה לפני חתימה זולה בהרבה מהתמודדות עם סכסוך אחרי. עורך דין יזהה סעיפים בעייתיים, יאזן את ההגנות לטובתכם ויחסוך לכם סיכונים משפטיים וכספיים משמעותיים."
+        },
+        {
+            question: "האם אתם מלווים עסקים בכל אזור המרכז?",
+            answer: "כן. המשרד מלווה עסקים ופרטיים בכל גוש דן והמרכז - אור יהודה, קריית אונו, יהוד-מונוסון, גני תקווה, תל אביב, רמת גן, פתח תקווה ועוד, בליטיגציה אזרחית-מסחרית ובבתי המשפט הרלוונטיים."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -60,8 +84,32 @@ export default function CivilCommercialPage() {
                             "name": "מריאטה פנחסי",
                             "jobTitle": "עורכת דין ונוטריון"
                         },
-                        "areaServed": "בקעת אונו והמרכז",
+                        "areaServed": [
+                            { "@type": "City", "name": "אור יהודה" },
+                            { "@type": "City", "name": "קריית אונו" },
+                            { "@type": "City", "name": "יהוד-מונוסון" },
+                            { "@type": "City", "name": "גני תקווה" },
+                            { "@type": "City", "name": "תל אביב" },
+                            { "@type": "City", "name": "רמת גן" },
+                            { "@type": "City", "name": "פתח תקווה" },
+                            { "@type": "AdministrativeArea", "name": "גוש דן ומרכז הארץ" }
+                        ],
                         "url": "https://www.marietta-law.co.il/services/civil-commercial"
+                    })
+                }}
+            />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
                     })
                 }}
             />
@@ -127,6 +175,38 @@ export default function CivilCommercialPage() {
                                         </div>
                                     ))}
                                 </div>
+                            </div>
+
+                            {/* In-depth Content */}
+                            <article className="prose max-w-none text-gray-600 space-y-4 mt-8 border-t border-gray-100 pt-8">
+                                <h3 className="text-2xl font-bold text-gray-900">משפט אזרחי-מסחרי — ליווי שמגן על העסק שלכם</h3>
+                                <p>
+                                    כל פעילות כלכלית נשענת על חוזים והסכמים. חוזה מנוסח היטב הוא קו ההגנה הראשון מפני סכסוכים —
+                                    ולכן בדיקה משפטית לפני חתימה זולה בהרבה מהתמודדות עם תביעה אחרי. אנו עורכים ובודקים חוזים מסחריים,
+                                    הסכמי שותפות, הסכמי מייסדים והתקשרויות מול ספקים ולקוחות.
+                                </p>
+                                <p>
+                                    <strong>כשמתעורר סכסוך</strong> — בין אם בהפרת חוזה, חוב שלא שולם או מחלוקת עסקית — אנו מנהלים
+                                    ליטיגציה אזרחית תקיפה ויעילה, מתוך חתירה לתוצאה המהירה ביותר. ראו גם את המדריך ל<Link href="/blog/contract-breach" className="text-amber-600 font-semibold hover:underline">הפרת חוזה: מתי מותר לבטל</Link>.
+                                </p>
+                                <p>
+                                    <strong>גבייה וחדלות פירעון:</strong> אנו מייצגים זוכים בהליכי הוצאה לפועל יעילים, וכן חייבים
+                                    בהליכי הסדר חובות ושיקום כלכלי (חדלות פירעון) — לפתיחת דף חדש ונקי.
+                                </p>
+                            </article>
+
+                            {/* FAQ Section for SEO */}
+                            <div className="space-y-6 mt-12">
+                                <h3 className="text-2xl font-bold text-gray-900">שאלות נפוצות</h3>
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <FaBalanceScale className="text-amber-500 flex-shrink-0" />
+                                            {faq.question}
+                                        </h4>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
