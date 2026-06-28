@@ -92,6 +92,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/purchase-tax-guide`,
+      lastModified: new Date('2026-06-11'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/inheritance-order-vs-probate`,
+      lastModified: new Date('2026-06-11'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/real-estate-lawyer-cost`,
       lastModified: new Date('2026-06-11'),
       changeFrequency: 'monthly',
