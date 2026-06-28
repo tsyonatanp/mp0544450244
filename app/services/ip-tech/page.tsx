@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaGlobe, FaLightbulb, FaLaptopCode, FaUserShield, FaTrademark, FaPhone, FaWhatsapp, FaFingerprint } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין קניין רוחני וטכנולוגיה במרכז | סימני מסחר - מריאטה פנחסי',
@@ -130,6 +131,8 @@ export default function IpTechPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'קניין רוחני וטכנולוגיה', href: '/services/ip-tech' }]} />
 
             {/* Main Content */}
             <section className="py-16">

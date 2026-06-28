@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaGavel, FaBalanceScale, FaUserSecret, FaLock, FaUserShield, FaPhone, FaWhatsapp, FaGlobe } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין פלילי במרכז | חקירות משטרה והגנה - מריאטה פנחסי',
@@ -132,6 +133,8 @@ export default function CriminalLawPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין פלילי', href: '/services/criminal-law' }]} />
 
             {/* Main Content */}
             <section className="py-16">

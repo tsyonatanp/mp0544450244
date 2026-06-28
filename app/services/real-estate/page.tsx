@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import { FaHome, FaKey, FaHandshake, FaFileSignature, FaCheckCircle, FaPhone, FaWhatsapp, FaBalanceScale } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין נדל"ן ומקרקעין במרכז | מריאטה פנחסי - ליווי עסקאות בטוח',
@@ -164,6 +165,8 @@ export default function RealEstatePage() {
                     </div>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין נדל"ן ומקרקעין', href: '/services/real-estate' }]} />
 
             {/* Services Grid */}
             <section className="py-20">

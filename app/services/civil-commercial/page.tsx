@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaBalanceScale, FaFileContract, FaGavel, FaHandshake, FaMoneyBillWave, FaBuilding, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין אזרחי-מסחרי במרכז | חוזים וליטיגציה - מריאטה פנחסי',
@@ -128,6 +129,8 @@ export default function CivilCommercialPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין אזרחי-מסחרי', href: '/services/civil-commercial' }]} />
 
             {/* Main Content */}
             <section className="py-16">

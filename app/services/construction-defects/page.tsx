@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import { FaTools, FaHardHat, FaWater, FaGavel, FaCheckCircle, FaPhone, FaWhatsapp, FaRulerCombined } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין ליקויי בנייה במרכז | תביעות קבלן ורטיבות - מריאטה פנחסי',
@@ -164,6 +165,8 @@ export default function ConstructionDefectsPage() {
                     </div>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין ליקויי בנייה', href: '/services/construction-defects' }]} />
 
             {/* Services Grid */}
             <section className="py-20">

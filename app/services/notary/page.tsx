@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import { FaStamp, FaFileContract, FaPenFancy, FaGlobe, FaCheckCircle, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'נוטריון במרכז | אימות חתימה, ייפוי כוח ותרגום - מריאטה פנחסי',
@@ -164,6 +165,8 @@ export default function NotaryPage() {
                     </div>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'נוטריון', href: '/services/notary' }]} />
 
             {/* Services Grid */}
             <section className="py-20">

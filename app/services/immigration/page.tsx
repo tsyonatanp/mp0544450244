@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaPassport, FaPlane, FaIdCard, FaHandHoldingHeart, FaUserCheck, FaPhone, FaWhatsapp, FaGlobeAmericas } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין הגירה ואזרחות במרכז | ויזות ומשרד הפנים - מריאטה פנחסי',
@@ -126,6 +127,8 @@ export default function ImmigrationPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'הגירה ואזרחות', href: '/services/immigration' }]} />
 
             {/* Main Content */}
             <section className="py-16">

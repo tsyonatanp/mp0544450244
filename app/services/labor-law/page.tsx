@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { FaUserTie, FaBriefcase, FaGavel, FaHandshake, FaMoneyCheckAlt, FaPhone, FaWhatsapp, FaBalanceScale, FaFileContract } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין דיני עבודה במרכז | פיטורין, שימוע וזכויות - מריאטה פנחסי',
@@ -126,6 +127,8 @@ export default function LaborLawPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין דיני עבודה', href: '/services/labor-law' }]} />
 
             {/* Main Content */}
             <section className="py-16">

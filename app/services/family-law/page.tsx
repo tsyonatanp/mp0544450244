@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaUserFriends, FaHandHoldingHeart, FaFileSignature, FaChild, FaGavel, FaPhone, FaWhatsapp, FaBalanceScale } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין דיני משפחה במרכז | גירושין, מזונות וצוואות - מריאטה פנחסי',
@@ -128,6 +129,8 @@ export default function FamilyLawPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין דיני משפחה', href: '/services/family-law' }]} />
 
             {/* Main Content */}
             <section className="py-16">

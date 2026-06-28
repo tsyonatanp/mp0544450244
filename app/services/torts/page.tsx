@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 import { FaCarCrash, FaUserMd, FaHardHat, FaWheelchair, FaNotesMedical, FaPhone, FaWhatsapp, FaMedkit } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
     title: 'עורך דין נזיקין וביטוח במרכז | תאונות ונכות - מריאטה פנחסי',
@@ -127,6 +128,8 @@ export default function TortsPage() {
                     </p>
                 </div>
             </section>
+
+            <Breadcrumbs items={[{ label: 'עורך דין נזיקין וביטוח', href: '/services/torts' }]} />
 
             {/* Main Content */}
             <section className="py-16">

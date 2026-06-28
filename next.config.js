@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    // Serve modern, smaller formats (AVIF first, then WebP) for better Core Web Vitals.
+    formats: ['image/avif', 'image/webp'],
+    // Cache optimized images for 31 days to reduce repeat processing.
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: 'https',
