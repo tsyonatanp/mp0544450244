@@ -3,18 +3,19 @@ import Link from 'next/link'
 import { FaCalendar, FaUser, FaCheckCircle, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'מכירת דירה שהתקבלה בירושה: המדריך המשפטי המלא | מריאטה פנחסי - עורכת דין',
-    description: 'ירשתם דירה ורוצים למכור? כל מה שצריך לדעת על צו ירושה, צו קיום צוואה, מס שבח ואיך מנהלים את תהליך המכירה נכון — כולל כשיש מספר יורשים.',
-    keywords: 'מכירת דירה בירושה, צו ירושה, צו קיום צוואה, מס שבח, ירושה, נדלן, עורך דין ירושה, מכירת נכס יורשים',
+    title: 'מכירת דירה שהתקבלה בירושה 2026: מס שבח, צו ירושה והליך מלא | מריאטה פנחסי',
+    description: 'ירשתם דירה ורוצים למכור? המדריך המלא: צו ירושה מול צו קיום צוואה, פטור ממס שבח על דירה יורשת, מה קורה כשיש כמה יורשים, ואיך מוכרים נכון וללא סכסוכים.',
+    keywords: 'מכירת דירה בירושה, מכירת דירה שהתקבלה בירושה, צו ירושה, צו קיום צוואה, מס שבח דירה בירושה, פטור ממס שבח ירושה, מכירת נכס בין יורשים, עורך דין ירושה',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/blog/inherited-property-sale',
     },
     openGraph: {
-        title: 'מכירת דירה שהתקבלה בירושה: המדריך המשפטי המלא',
-        description: 'ירשתם דירה ורוצים למכור? כל מה שצריך לדעת על צו ירושה, צו קיום צוואה, מס שבח ואיך מנהלים את תהליך המכירה נכון — כולל כשיש מספר יורשים.',
+        title: 'מכירת דירה שהתקבלה בירושה 2026: המדריך המלא',
+        description: 'צו ירושה מול צו קיום צוואה, פטור ממס שבח, ומה עושים כשיש כמה יורשים - המדריך המלא למכירת דירה בירושה.',
         url: 'https://www.marietta-law.co.il/blog/inherited-property-sale',
         type: 'article',
         images: [{
@@ -27,6 +28,29 @@ export const metadata: Metadata = {
 }
 
 export default function InheritedPropertySale() {
+    const faqs = [
+        {
+            question: "האם חייבים במס שבח על מכירת דירה שהתקבלה בירושה?",
+            answer: "לא בהכרח. אם היורש זכאי לפטור ממס שבח (למשל פטור לדירת מגורים יחידה, בהתאם לתנאים שהתקיימו אצל המוריש או היורש), ייתכן שהמכירה תהיה פטורה כולה או בחלקה. החישוב נעשה על ההפרש בין שווי הנכס במועד הפטירה למחיר המכירה, ולכן שווי במועד הפטירה הוא נתון קריטי שיש לתעד."
+        },
+        {
+            question: "כמה זמן לוקח להוציא צו ירושה לפני מכירת הדירה?",
+            answer: "התהליך אורך בדרך כלל בין חודש למספר חודשים, תלוי בעומס אצל הרשם לענייני ירושה, בפרסום ברשומות ובהמתנה לתגובת האפוטרופוס הכללי. ניתן להתחיל לשווק את הדירה כבר בשלב זה, אך לא ניתן להשלים את המכירה (חתימת חוזה מחייב עם רישום) ללא הצו."
+        },
+        {
+            question: "מה קורה אם אחד היורשים מתנגד למכירה?",
+            answer: "כאשר יש מספר יורשים ואחד מתנגד למכירה, ניתן לנסות להגיע להסכם חלוקת עיזבון (למשל: יורש אחד קונה את חלקי האחרים), ובמקרים של מבוי סתום - לפנות לבית המשפט בבקשה לפירוק שיתוף במקרקעין, שעשוי להורות על מכירת הנכס וחלוקת התמורה."
+        },
+        {
+            question: "האם צריך לשלם מס רכישה כשיורשים דירה?",
+            answer: "לא. ירושה עצמה אינה אירוע מס רכישה - העברת הזכויות ליורשים אינה חייבת במס רכישה. מס הרכישה רלוונטי רק כאשר מישהו רוכש את הדירה (למשל אם יורש קונה את חלקי היורשים האחרים בעסקה נפרדת מירושה טהורה)."
+        },
+        {
+            question: "אפשר למכור את הדירה לפני שמסתיים רישום היורשים בטאבו?",
+            answer: "אפשר לחתום על הסכם מכר המותנה בהשלמת רישום הזכויות, אך מומלץ מאוד להשלים תחילה את רישום היורשים בטאבו (או לפחות לקבל את הצו) לפני מכירה בפועל, כדי להימנע מסיכונים משפטיים ומעיכובים מול הקונה."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -35,8 +59,8 @@ export default function InheritedPropertySale() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "BlogPosting",
-                        "headline": "מכירת דירה שהתקבלה בירושה: המדריך המשפטי המלא",
-                        "description": "ירשתם דירה ורוצים למכור? כל מה שצריך לדעת על צו ירושה, צו קיום צוואה, מס שבח ואיך מנהלים את תהליך המכירה נכון — כולל כשיש מספר יורשים.",
+                        "headline": "מכירת דירה שהתקבלה בירושה 2026: מס שבח, צו ירושה והליך מלא",
+                        "description": "ירשתם דירה ורוצים למכור? המדריך המלא: צו ירושה מול צו קיום צוואה, פטור ממס שבח, ומה קורה כשיש כמה יורשים.",
                         "author": {
                             "@type": "Person",
                             "name": "מריאטה פנחסי",
@@ -53,7 +77,7 @@ export default function InheritedPropertySale() {
                             }
                         },
                         "datePublished": "2026-03-16",
-                        "dateModified": "2026-03-16",
+                        "dateModified": "2026-07-05",
                         "image": "https://www.marietta-law.co.il/blog-images/real_estate_keys.png",
                         "url": "https://www.marietta-law.co.il/blog/inherited-property-sale",
                         "mainEntityOfPage": {
@@ -63,7 +87,26 @@ export default function InheritedPropertySale() {
                     })
                 }}
             />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
+                    })
+                }}
+            />
             <Header />
+            <Breadcrumbs items={[
+                { label: 'בלוג', href: '/blog' },
+                { label: 'מכירת דירה שהתקבלה בירושה' }
+            ]} />
 
             {/* Article Header */}
             <section className="bg-white py-12 border-b border-gray-100">
@@ -81,12 +124,12 @@ export default function InheritedPropertySale() {
                     </div>
 
                     <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        מכירת דירה שהתקבלה בירושה: המדריך המשפטי המלא
+                        מכירת דירה שהתקבלה בירושה 2026: מס שבח, צו ירושה וההליך המלא
                     </h1>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
                         ירשתם דירה? לפני שממהרים לחתום על חוזה מכר, חשוב להבין את הצעדים המשפטיים הנדרשים,
-                        הזכויות שלכם ואיך להימנע ממלכודות מס שיכולות לעלות ביוקר.
+                        מתי מגיע פטור ממס שבח, ואיך להימנע ממלכודות וסכסוכים בין יורשים שיכולים לעלות ביוקר.
                     </p>
                 </div>
             </section>
@@ -166,6 +209,25 @@ export default function InheritedPropertySale() {
                             ומסכימים לתנאי העסקה מראש. עורך דין מטעמכם ינהל את המו"מ, יבטיח את הביטחונות
                             ויוודא שהכסף יגיע בבטחה לידיכם.
                         </p>
+
+                        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">שאלות נפוצות</h2>
+                        <div className="space-y-6">
+                            {faqs.map((faq, idx) => (
+                                <div key={idx} className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3>
+                                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 my-8">
+                            <h3 className="font-bold text-xl mb-2 text-gray-900">קריאה נוספת:</h3>
+                            <p className="text-gray-700">
+                                מבולבלים לגבי סוג הצו שאתם צריכים? ראו <Link href="/blog/inheritance-order-vs-probate" className="text-amber-600 font-semibold hover:underline">צו ירושה מול צו קיום צוואה</Link>.
+                                לפני חתימה על חוזה מכר, כדאי להכיר את <Link href="/services/real-estate" className="text-amber-600 font-semibold hover:underline">הליווי המשפטי בעסקת נדל"ן</Link>,
+                                ואת <Link href="/blog/purchase-tax-guide" className="text-amber-600 font-semibold hover:underline">מדרגות מס הרכישה</Link> אם אתם גם רוכשים דירה אחרת.
+                            </p>
+                        </div>
 
                         <hr className="border-gray-200 my-12" />
 
