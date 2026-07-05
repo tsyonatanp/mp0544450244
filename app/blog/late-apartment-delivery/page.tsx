@@ -3,18 +3,19 @@ import Link from 'next/link'
 import { FaCalendar, FaUser, FaCheckCircle, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'איחור במסירת דירה מקבלן: הזכויות שלכם ואיך למצות פיצויים | מריאטה פנחסי - עורכת דין',
-    description: 'הקבלן לא מסר את הדירה בזמן? חוק המכר קובע פיצוי ברור — 1.5 משכר דירה ראוי לכל חודש איחור. כל מה שצריך לדעת על חישוב הפיצוי ואיך לתבוע.',
-    keywords: 'איחור מסירת דירה, קבלן, חוק המכר דירות, פיצוי איחור מסירה, תביעת קבלן, ליקויי בנייה, עורך דין מקרקעין',
+    title: 'איחור במסירת דירה מקבלן 2026: כמה פיצוי מגיע לכם? | מריאטה פנחסי',
+    description: 'הקבלן איחר במסירת הדירה? חוק המכר קובע פיצוי אוטומטי של 1.5-1.25 משכר דירה ראוי לכל חודש איחור, גם ללא הוכחת נזק. מדריך מלא: חישוב הפיצוי, 60 ימי הגרייס, ואיך תובעים.',
+    keywords: 'איחור מסירת דירה, איחור במסירת דירה מקבלן, פיצוי איחור מסירה, חוק המכר דירות, תביעת קבלן, כמה פיצוי מגיע לי, דמי שכירות ראויים, עורך דין מקרקעין',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/blog/late-apartment-delivery',
     },
     openGraph: {
-        title: 'איחור במסירת דירה מקבלן: הזכויות שלכם ואיך למצות פיצויים',
-        description: 'הקבלן לא מסר את הדירה בזמן? חוק המכר קובע פיצוי ברור — 1.5 משכר דירה ראוי לכל חודש איחור. כל מה שצריך לדעת על חישוב הפיצוי ואיך לתבוע.',
+        title: 'איחור במסירת דירה מקבלן 2026: כמה פיצוי מגיע לכם?',
+        description: 'חוק המכר קובע פיצוי אוטומטי של 1.5-1.25 משכר דירה ראוי לכל חודש איחור, גם ללא הוכחת נזק. מדריך מלא לחישוב הפיצוי ולתביעה.',
         url: 'https://www.marietta-law.co.il/blog/late-apartment-delivery',
         type: 'article',
         images: [{
@@ -27,6 +28,29 @@ export const metadata: Metadata = {
 }
 
 export default function LateApartmentDelivery() {
+    const faqs = [
+        {
+            question: "האם מגיע פיצוי גם אם לא נגרם לי נזק כספי בפועל?",
+            answer: "כן. הפיצוי לפי חוק המכר (דירות) הוא פיצוי מוסכם וקבוע מראש (\"פיצוי ליקווידציה\") ומגיע אוטומטית בגין עצם האיחור, ללא צורך להוכיח נזק ממשי או לשלם שכירות בפועל. זה יתרון משמעותי לרוכש - אין צורך בהליך הוכחה מורכב."
+        },
+        {
+            question: "מתי מתחיל האיחור להיספר - ממועד המסירה בחוזה או ממועד אחר?",
+            answer: "האיחור נספר ממועד המסירה החוזי (או המועד הדחוי אם הוסכם על דחייה בחוזה). לכך מתווספת תקופת גרייס של עד 60 יום שבה הקבלן פטור מפיצוי. מהיום ה-61 לאיחור ואילך, הפיצוי רץ ומצטבר על בסיס חודשי."
+        },
+        {
+            question: "כמה זמן יש לי להגיש תביעה על איחור במסירה?",
+            answer: "תקופת ההתיישנות הכללית היא 7 שנים ממועד המסירה בפועל. עם זאת, מומלץ לפעול מוקדם ככל האפשר - גם כדי לשמר ראיות וגם כדי לקבל את הפיצוי בלי לחכות שנים."
+        },
+        {
+            question: "מה קורה אם הקבלן טוען ל'כוח עליון' כתירוץ לאיחור?",
+            answer: "בתי המשפט בוחנים כל מקרה לגופו, אך הפסיקה נוטה שלא לקבל בקלות טענות כלליות של מזג אוויר, מחסור בעובדים או עיכובים בירוקרטיים כפטור מפיצוי. אירועים חריגים ובלתי צפויים באמת (כמו מלחמה) עשויים להיחשב שונה - אך הנטל להוכיח זאת מוטל על הקבלן."
+        },
+        {
+            question: "האם ניתן לתבוע גם על איחור בפרויקט התחדשות עירונית (פינוי-בינוי)?",
+            answer: "כן, גם בפרויקטים של פינוי-בינוי ותמ\"א 38 חלה חובת פיצוי על איחור במסירה, בכפוף לתנאי ההסכם הספציפי. מומלץ לבדוק את סעיפי הפיצוי בהסכם הפינוי-בינוי מראש, לפני החתימה."
+        }
+    ]
+
     return (
         <div className="min-h-screen bg-gray-50 direction-rtl">
             <script
@@ -35,8 +59,8 @@ export default function LateApartmentDelivery() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "BlogPosting",
-                        "headline": "איחור במסירת דירה מקבלן: הזכויות שלכם ואיך למצות פיצויים",
-                        "description": "הקבלן לא מסר את הדירה בזמן? חוק המכר קובע פיצוי ברור — 1.5 משכר דירה ראוי לכל חודש איחור. כל מה שצריך לדעת על חישוב הפיצוי ואיך לתבוע.",
+                        "headline": "איחור במסירת דירה מקבלן 2026: כמה פיצוי מגיע לכם?",
+                        "description": "חוק המכר קובע פיצוי אוטומטי של 1.5-1.25 משכר דירה ראוי לכל חודש איחור, גם ללא הוכחת נזק. מדריך מלא לחישוב הפיצוי ולתביעה.",
                         "author": {
                             "@type": "Person",
                             "name": "מריאטה פנחסי",
@@ -53,7 +77,7 @@ export default function LateApartmentDelivery() {
                             }
                         },
                         "datePublished": "2026-03-16",
-                        "dateModified": "2026-03-16",
+                        "dateModified": "2026-07-05",
                         "image": "https://www.marietta-law.co.il/blog-images/construction_defects_tools.png",
                         "url": "https://www.marietta-law.co.il/blog/late-apartment-delivery",
                         "mainEntityOfPage": {
@@ -63,7 +87,26 @@ export default function LateApartmentDelivery() {
                     })
                 }}
             />
+            {/* FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                        }))
+                    })
+                }}
+            />
             <Header />
+            <Breadcrumbs items={[
+                { label: 'בלוג', href: '/blog' },
+                { label: 'איחור במסירת דירה מקבלן' }
+            ]} />
 
             {/* Article Header */}
             <section className="bg-white py-12 border-b border-gray-100">
@@ -81,12 +124,13 @@ export default function LateApartmentDelivery() {
                     </div>
 
                     <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        איחור במסירת דירה מקבלן: הזכויות שלכם ואיך למצות פיצויים
+                        איחור במסירת דירה מקבלן 2026: כמה פיצוי מגיע לכם?
                     </h1>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
                         קניתם דירה על הנייר, ועכשיו הקבלן מאחר במסירה? אתם לא לבד — וחשוב שתדעו:
-                        החוק לצידכם. כל חודש איחור שווה לכם כסף — ואנחנו מסבירים בדיוק כמה.
+                        החוק לצידכם, והפיצוי מגיע לכם <strong>אוטומטית</strong>, גם בלי להוכיח נזק.
+                        במדריך הזה נסביר בדיוק כמה כסף מגיע לכם, איך מחשבים ואיך תובעים.
                     </p>
                 </div>
             </section>
@@ -175,6 +219,31 @@ export default function LateApartmentDelivery() {
                             קבלו את הדירה, חתמו על פרוטוקול מסירה המפרט את הליקויים שמצאתם —
                             והמשיכו לתביעת הפיצויים בנפרד.
                         </p>
+
+                        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. איחור לעומת ליקויי בנייה — שתי תביעות נפרדות</h2>
+                        <p>
+                            חשוב להבחין: הפיצוי על איחור במסירה הוא נפרד לגמרי מתביעה על <strong>ליקויי בנייה</strong> שהתגלו בדירה
+                            (רטיבות, אי-התאמות למפרט וכו'). ניתן - ולעיתים כדאי - להגיש את שתי התביעות במקביל.
+                            הרחבנו על כך במדריך <Link href="/blog/construction-defects-guide" className="text-amber-600 font-semibold hover:underline">ליקויי בנייה בדירה חדשה</Link>.
+                        </p>
+
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 my-8">
+                            <h3 className="font-bold text-xl mb-2 text-gray-900">קריאה נוספת:</h3>
+                            <p className="text-gray-700">
+                                לפני שרוכשים דירה מקבלן, כדאי להכיר את מלוא הליווי המשפטי בעמוד <Link href="/services/real-estate" className="text-amber-600 font-semibold hover:underline">עורך דין נדל"ן ומקרקעין</Link>,
+                                ואת עלויות הליווי במדריך <Link href="/blog/real-estate-lawyer-cost" className="text-amber-600 font-semibold hover:underline">כמה עולה עורך דין לעסקת נדל"ן</Link>.
+                            </p>
+                        </div>
+
+                        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">שאלות נפוצות</h2>
+                        <div className="space-y-6">
+                            {faqs.map((faq, idx) => (
+                                <div key={idx} className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3>
+                                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
 
                         <hr className="border-gray-200 my-12" />
 
