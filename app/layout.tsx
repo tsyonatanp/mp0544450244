@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import VisitNotifier from '../components/VisitNotifier'
@@ -7,6 +7,13 @@ import { getGoogleReviews } from '../lib/google-reviews'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+/** Next.js App Router: single viewport via export (avoid duplicate meta tags). */
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export const metadata: Metadata = {
   title: 'מריאטה פנחסי - עורכת דין נדל"ן ונוטריון בקעת אונו | אור יהודה, קריית אונו, יהוד',
@@ -25,7 +32,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.marietta-law.co.il/',
   },
   other: {
-    'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
     'theme-color': '#fbbf24',
     'color-scheme': 'light',
     'accessibility': 'accessible',
@@ -97,9 +103,6 @@ export default async function RootLayout({
         <meta name="accessibility-hazard" content="none" />
         <meta name="accessibility-control" content="fullKeyboardControl" />
         <meta name="accessibility-api" content="ARIA" />
-
-        {/* Viewport for Accessibility */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
 
         {/* Color Scheme */}
         <meta name="color-scheme" content="light" />
