@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import FacebookGroupInfo from '../components/FacebookGroupInfo'
 import AllServices from '../components/AllServices'
+import GuidesSection from '../components/GuidesSection'
 
 export default function HomePage() {
   const [testimonials, setTestimonials] = useState<{ name: string; text: string; rating: number; relativeTime?: string }[]>([])
@@ -388,6 +389,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GuidesSection />
+
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -508,7 +511,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white">
+      <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-800 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">צרו קשר</h2>
@@ -612,4 +615,4 @@ export default function HomePage() {
       <Footer />
     </div>
   )
-} 
+}
