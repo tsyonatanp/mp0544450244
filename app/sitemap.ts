@@ -208,7 +208,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Location Pages
     {
       url: `${baseUrl}/areas/or-yehuda`,
-      lastModified: new Date('2026-01-26'),
+      lastModified: new Date('2026-09-06'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/areas/bikat-ono`,
+      lastModified: new Date('2026-09-06'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },

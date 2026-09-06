@@ -14,16 +14,19 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-amber-500 mb-4">אזורי השירות שלנו</h3>
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-300">
             <Link href="/areas/or-yehuda" className="hover:text-white transition-colors duration-200">
-              עורך דין באור יהודה
+              עורכת דין נדל״ן אור יהודה
+            </Link>
+            <Link href="/areas/bikat-ono" className="hover:text-white transition-colors duration-200">
+              נוטריון בקעת אונו
             </Link>
             <Link href="/areas/kiryat-ono" className="hover:text-white transition-colors duration-200">
-              עורך דין בקריית אונו
+              עורכת דין בקריית אונו
             </Link>
             <Link href="/areas/yehud-monosson" className="hover:text-white transition-colors duration-200">
-              עורך דין ביהוד-מונוסון
+              עורכת דין ביהוד-מונוסון
             </Link>
             <Link href="/areas/ganei-tikva" className="hover:text-white transition-colors duration-200">
-              עורך דין בגני תקווה
+              עורכת דין בגני תקווה
             </Link>
           </nav>
         </div>
@@ -48,4 +51,4 @@ const Footer = () => {
   )
 }
 
-export default Footer 
+export default Footer
