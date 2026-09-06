@@ -8,14 +8,14 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים | מריאטה פנחסי - עורכת דין',
-    description: 'נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.',
+    description: 'מדריך לרוכשי דירה חדשה: מה נחשב ליקוי בנייה, תקופות בדק ואחריות, שלבי פנייה לקבלן, שאלות נפוצות וקישורים לשירותי עורכת דין.',
     keywords: 'ליקויי בנייה, דירה חדשה, תקופת בדק, תקופת אחריות, חוק המכר דירות, קבלן, רטיבות, סדקים, פיצוי ליקויי בנייה, עורך דין נדלן',
     alternates: {
         canonical: 'https://www.marietta-law.co.il/blog/construction-defects-guide',
     },
     openGraph: {
         title: 'ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים',
-        description: 'נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.',
+        description: 'מדריך לרוכשי דירה חדשה: מה נחשב ליקוי בנייה, תקופות בדק ואחריות, שלבי פנייה לקבלן, שאלות נפוצות וקישורים לשירותי עורכת דין.',
         url: 'https://www.marietta-law.co.il/blog/construction-defects-guide',
         type: 'article',
         images: [{
@@ -37,7 +37,7 @@ export default function ConstructionDefectsGuide() {
                         "@context": "https://schema.org",
                         "@type": "BlogPosting",
                         "headline": "ליקויי בנייה בדירה חדשה: המדריך המלא לזכויות הרוכשים",
-                        "description": "נכנסתם לדירה החדשה וגיליתם רטיבות? הקבלן מתעלם? המדריך המלא לתקופות הבדק והאחריות ואיך להבטיח שהליקויים יתוקנו.",
+                        "description": "מדריך לרוכשי דירה חדשה: מה נחשב ליקוי בנייה, תקופות בדק ואחריות, שלבי פנייה לקבלן, שאלות נפוצות וקישורים לשירותי עורכת דין.",
                         "author": {
                             "@type": "Person",
                             "name": "מריאטה פנחסי",
@@ -54,7 +54,7 @@ export default function ConstructionDefectsGuide() {
                             }
                         },
                         "datePublished": "2026-01-15",
-                        "dateModified": "2026-01-15",
+                        "dateModified": "2026-09-06",
                         "image": "https://www.marietta-law.co.il/blog-images/construction_defects_tools.png",
                         "url": "https://www.marietta-law.co.il/blog/construction-defects-guide",
                         "mainEntityOfPage": {
@@ -83,7 +83,7 @@ export default function ConstructionDefectsGuide() {
                         </span>
                         <span className="flex items-center gap-2">
                             <FaUser className="text-amber-500" />
-                            מאת: עו"ד מריאטה פנחסי
+                            מאת: עורכת דין מריאטה פנחסי
                         </span>
                     </div>
                 </div>
@@ -176,6 +176,43 @@ export default function ConstructionDefectsGuide() {
                                 </p>
                             </div>
 
+
+                            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">שאלות נפוצות על ליקויי בנייה</h2>
+                            <div className="space-y-4 my-6">
+                                <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                                    <h3 className="font-bold text-gray-900 mb-2">האם אפשר לתבוע גם ירידת ערך?</h3>
+                                    <p>במקרים מתאימים כן — כאשר הליקוי אינו ניתן לתיקון מלא או כשהתיקון אינו מחזיר את הנכס למצב סביר. ההערכה נעשית בדרך כלל בעזרת שמאי/מהנדס ובליווי משפטי.</p>
+                                </div>
+                                <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                                    <h3 className="font-bold text-gray-900 mb-2">מה הקשר לאיחור במסירה?</h3>
+                                    <p>
+                                        איחור במסירה וליקויים הם עילות נפרדות, אך לעיתים מופיעים יחד. לפירוט על פיצויי איחור ראו{' '}
+                                        <Link href="/blog/late-apartment-delivery" className="text-amber-600 font-semibold hover:underline">איחור במסירת דירה מקבלן</Link>.
+                                    </p>
+                                </div>
+                                <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                                    <h3 className="font-bold text-gray-900 mb-2">רכשתי דירה באור יהודה / בקעת אונו — ממי מתחילים?</h3>
+                                    <p>
+                                        תעדו את הליקויים, פנו בכתב לקבלן, ושקלו חוות דעת הנדסית. לליווי מקומי:{' '}
+                                        <Link href="/areas/or-yehuda" className="text-amber-600 font-semibold hover:underline">אור יהודה</Link>
+                                        {' '}·{' '}
+                                        <Link href="/areas/bikat-ono" className="text-amber-600 font-semibold hover:underline">בקעת אונו</Link>
+                                        {' '}·{' '}
+                                        <Link href="/services/construction-defects" className="text-amber-600 font-semibold hover:underline">שירות ליקויי בנייה</Link>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 my-8">
+                                <h3 className="font-bold text-xl mb-2 text-gray-900">קריאה נוספת</h3>
+                                <ul className="list-none space-y-2 pr-0">
+                                    <li><Link href="/services/construction-defects" className="text-amber-600 font-semibold hover:underline">עמוד שירות: ליקויי בנייה</Link></li>
+                                    <li><Link href="/services/real-estate" className="text-amber-600 font-semibold hover:underline">עורך דין נדל&quot;ן ומקרקעין</Link></li>
+                                    <li><Link href="/blog/buying-guide-or-yehuda-2025" className="text-amber-600 font-semibold hover:underline">מדריך רכישת דירה באור יהודה</Link></li>
+                                    <li><Link href="/blog" className="text-amber-600 font-semibold hover:underline">כל מדריכי הבלוג</Link> · <Link href="/#contact" className="text-amber-600 font-semibold hover:underline">צור קשר</Link></li>
+                                </ul>
+                            </div>
+
                             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">סיכום</h2>
                             <p>
                                 רכישת דירה היא העסקה הגדולה ביותר בחייכם. אל תתפשרו על האיכות המגיעה לכם. אם הקבלן מתעלם או מורח את הזמן, פנו לייעוץ משפטי כדי לקבל את הפיצוי המגיע לכם.
@@ -186,7 +223,7 @@ export default function ConstructionDefectsGuide() {
                         <div className="bg-slate-900 text-white rounded-2xl p-8 mt-12 text-center shadow-xl">
                             <h3 className="text-2xl font-bold mb-4">נתקלתם בליקויי בנייה והקבלן מתעלם?</h3>
                             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                                משרדנו מנוסה בייצוג מאות דיירים מול הקבלנים הגדולים ביותר. נדאג שתקבלו את התיקון או הפיצוי הכספי המלא.
+                                עורכת הדין מריאטה פנחסי מלווה רוכשי דירות בהתמודדות מול קבלנים בענייני ליקויי בנייה — מפנייה מסודרת ועד מיצוי זכויות לפי חוק המכר.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
@@ -218,4 +255,3 @@ export default function ConstructionDefectsGuide() {
         </div>
     )
 }
-
