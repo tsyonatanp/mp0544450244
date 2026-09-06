@@ -212,8 +212,16 @@ export default function BlogPage() {
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
                         הבלוג המשפטי
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                        מאמרים, עדכוני פסיקה וטיפים חשובים שיעזרו לכם לקבל החלטות נכונות.
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+                        מאמרים ומדריכים מעשיים שיעזרו לכם לקבל החלטות נכונות — נדל&quot;ן, ליקויי בנייה, דיני משפחה, חוזים ועוד.
+                    </p>
+                    <p className="text-base text-gray-400 max-w-2xl mx-auto">
+                        כל המאמרים שלהלן מוצגים ברשימה מלאה (ללא דפדוף נסתר) עם קישורים ישירים. לליווי באזור:{' '}
+                        <Link href="/areas/or-yehuda" className="text-amber-400 hover:underline">אור יהודה</Link>
+                        {' · '}
+                        <Link href="/areas/bikat-ono" className="text-amber-400 hover:underline">בקעת אונו</Link>
+                        {' · '}
+                        <Link href="/#contact" className="text-amber-400 hover:underline">צור קשר</Link>
                     </p>
                 </div>
             </section>
@@ -274,4 +282,3 @@ export default function BlogPage() {
         </div>
     )
 }
-
