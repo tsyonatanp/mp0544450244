@@ -118,10 +118,10 @@ export default function RealEstateLawyerCost() {
             <Header />
 
             {/* Article Header */}
-            <section className="bg-white py-12 border-b border-gray-100">
+            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white pt-40 pb-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
-                        <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">נדל"ן</span>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6">
+                        <span className="bg-amber-500 text-white px-3 py-1 rounded-full font-medium">נדל"ן</span>
                         <span className="flex items-center gap-2">
                             <FaCalendar />
                             11 יוני, 2026
@@ -132,11 +132,11 @@ export default function RealEstateLawyerCost() {
                         </span>
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                         כמה עולה עורך דין לעסקת נדל"ן? מדריך שכר טרחה 2026
                     </h1>
 
-                    <p className="text-xl text-gray-600 leading-relaxed">
+                    <p className="text-xl text-gray-300 leading-relaxed">
                         אחת השאלות הראשונות שעולות לפני רכישה או מכירה של דירה. הנה פירוט ברור של טווחי המחירים,
                         מה משפיע עליהם, מה כלול בשירות — ולמה דווקא כאן כדאי לא להתפשר על המחיר הזול ביותר.
                     </p>

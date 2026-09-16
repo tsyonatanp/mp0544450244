@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { FaCalendar, FaUser, FaCheckCircle, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
-import Breadcrumbs from '../../../components/Breadcrumbs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -103,16 +102,12 @@ export default function LateApartmentDelivery() {
                 }}
             />
             <Header />
-            <Breadcrumbs items={[
-                { label: 'בלוג', href: '/blog' },
-                { label: 'איחור במסירת דירה מקבלן' }
-            ]} />
 
             {/* Article Header */}
-            <section className="bg-white py-12 border-b border-gray-100">
+            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white pt-40 pb-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
-                        <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">ליקויי בנייה</span>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6">
+                        <span className="bg-amber-500 text-white px-3 py-1 rounded-full font-medium">ליקויי בנייה</span>
                         <span className="flex items-center gap-2">
                             <FaCalendar />
                             16 מרץ, 2026
@@ -123,11 +118,11 @@ export default function LateApartmentDelivery() {
                         </span>
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                         איחור במסירת דירה מקבלן 2026: כמה פיצוי מגיע לכם?
                     </h1>
 
-                    <p className="text-xl text-gray-600 leading-relaxed">
+                    <p className="text-xl text-gray-300 leading-relaxed">
                         קניתם דירה על הנייר, ועכשיו הקבלן מאחר במסירה? אתם לא לבד — וחשוב שתדעו:
                         החוק לצידכם, והפיצוי מגיע לכם <strong>אוטומטית</strong>, גם בלי להוכיח נזק.
                         במדריך הזה נסביר בדיוק כמה כסף מגיע לכם, איך מחשבים ואיך תובעים.

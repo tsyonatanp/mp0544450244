@@ -102,19 +102,19 @@ export default function PurchaseTaxGuide() {
             <Header />
 
             {/* Article Header */}
-            <section className="bg-white py-12 border-b border-gray-100">
+            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white pt-40 pb-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
-                        <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">נדל"ן ומיסוי</span>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6">
+                        <span className="bg-amber-500 text-white px-3 py-1 rounded-full font-medium">נדל"ן ומיסוי</span>
                         <span className="flex items-center gap-2"><FaCalendar /> 11 יוני, 2026</span>
                         <span className="flex items-center gap-2"><FaUser /> עו"ד מריאטה פנחסי</span>
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                         מס רכישה 2026: כמה משלמים ואיך מחשבים?
                     </h1>
 
-                    <p className="text-xl text-gray-600 leading-relaxed">
+                    <p className="text-xl text-gray-300 leading-relaxed">
                         מס הרכישה הוא אחת ההוצאות הגדולות בעסקת נדל"ן — והוא תלוי לחלוטין בשאלה אם זו דירתכם היחידה או נוספת.
                         הנה כל מה שצריך להבין כדי לתכנן נכון ולא לשלם יותר מהנדרש.
                     </p>
