@@ -41,6 +41,12 @@ const Footer = () => {
             <Link href="/calculators/lawyer-fee" className="hover:text-white transition-colors duration-200">
               מחשבון שכר טרחה עורך דין
             </Link>
+            <Link href="/calculators/delay-compensation" className="hover:text-white transition-colors duration-200">
+              מחשבון פיצוי איחור במסירה
+            </Link>
+            <Link href="/calculators/purchase-costs" className="hover:text-white transition-colors duration-200">
+              מחשבון עלויות רכישת דירה
+            </Link>
           </nav>
         </div>
 

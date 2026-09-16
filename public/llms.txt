@@ -96,6 +96,8 @@
 
 - [מחשבון מס רכישה](https://www.marietta-law.co.il/calculators/purchase-tax)
 - [מחשבון שכר טרחה עורך דין נדל"ן](https://www.marietta-law.co.il/calculators/lawyer-fee)
+- [מחשבון פיצוי איחור במסירת דירה](https://www.marietta-law.co.il/calculators/delay-compensation)
+- [מחשבון עלויות רכישת דירה](https://www.marietta-law.co.il/calculators/purchase-costs)
 
 ## שאלות נפוצות
 

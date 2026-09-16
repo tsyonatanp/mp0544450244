@@ -33,6 +33,16 @@ export default function CalculatorsPage() {
             desc: 'הערכת עלות ליווי משפטי בעסקת נדל"ן, לפי שווי וסוג העסקה.',
             href: '/calculators/lawyer-fee',
         },
+        {
+            title: 'מחשבון פיצוי איחור במסירה',
+            desc: 'הקבלן איחר? חשבו כמה פיצוי מגיע לכם לפי חוק המכר.',
+            href: '/calculators/delay-compensation',
+        },
+        {
+            title: 'מחשבון עלויות רכישת דירה',
+            desc: 'כל העלויות הנלוות לרכישה: מס רכישה, עורך דין ותיווך.',
+            href: '/calculators/purchase-costs',
+        },
     ]
 
     return (

@@ -255,5 +255,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/calculators/delay-compensation`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/calculators/purchase-costs`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
