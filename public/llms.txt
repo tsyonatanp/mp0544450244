@@ -92,6 +92,11 @@
 - [עורך דין ביהוד-מונוסון](https://www.marietta-law.co.il/areas/yehud-monosson)
 - [עורך דין בגני תקווה](https://www.marietta-law.co.il/areas/ganei-tikva)
 
+## כלים ומחשבונים
+
+- [מחשבון מס רכישה](https://www.marietta-law.co.il/calculators/purchase-tax)
+- [מחשבון שכר טרחה עורך דין נדל"ן](https://www.marietta-law.co.il/calculators/lawyer-fee)
+
 ## שאלות נפוצות
 
 ### כמה עולה ייעוץ ראשוני?

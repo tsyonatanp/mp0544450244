@@ -31,6 +31,19 @@ const Footer = () => {
           </nav>
         </div>
 
+        {/* Tools */}
+        <div className="text-center mt-8">
+          <h3 className="text-lg font-bold text-amber-500 mb-4">מחשבונים משפטיים</h3>
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-300">
+            <Link href="/calculators/purchase-tax" className="hover:text-white transition-colors duration-200">
+              מחשבון מס רכישה
+            </Link>
+            <Link href="/calculators/lawyer-fee" className="hover:text-white transition-colors duration-200">
+              מחשבון שכר טרחה עורך דין
+            </Link>
+          </nav>
+        </div>
+
         {/* Copyright and Links */}
         <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

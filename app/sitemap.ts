@@ -236,5 +236,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Calculators / Tools
+    {
+      url: `${baseUrl}/calculators`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/calculators/purchase-tax`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/calculators/lawyer-fee`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
