@@ -20,6 +20,7 @@ export default function Header() {
 
   const servicesLinks = [
     { name: 'נדל"ן ומקרקעין', href: '/services/real-estate' },
+    { name: 'פינוי בינוי והתחדשות עירונית', href: '/services/urban-renewal' },
     { name: 'ליקויי בנייה', href: '/services/construction-defects' },
     { name: 'דיני משפחה וירושה', href: '/services/family-law' },
     { name: 'משפט אזרחי ומסחרי', href: '/services/civil-commercial' },

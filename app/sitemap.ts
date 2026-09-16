@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/services/urban-renewal`,
+      lastModified: new Date('2026-09-16'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/services/notary`,
       lastModified: new Date('2026-01-15'),
       changeFrequency: 'monthly',
