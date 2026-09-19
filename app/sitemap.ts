@@ -98,6 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/apartment-area-calculation`,
+      lastModified: new Date('2026-09-19'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/purchase-tax-guide`,
       lastModified: new Date('2026-06-11'),
       changeFrequency: 'monthly',
