@@ -104,6 +104,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/betterment-tax-guide`,
+      lastModified: new Date('2026-09-20'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/purchase-tax-guide`,
       lastModified: new Date('2026-06-11'),
       changeFrequency: 'monthly',
