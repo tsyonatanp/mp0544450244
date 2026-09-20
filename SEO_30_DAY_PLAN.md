@@ -63,6 +63,7 @@ https://www.marietta-law.co.il
 ## תזכורות טכניות
 
 - 🗓️ **ינואר 2026:** לעדכן מדרגות מס רכישה ל-2026 בקובץ `components/PurchaseTaxCalculator.tsx` ו-`PurchaseCostsCalculator.tsx` (4 מספרים בראש כל קובץ).
+- 🗓️ **סוף 2027:** תקרת הפטור ממס שבח (5,008,000 ₪) נעולה עד 31.12.2027. לעדכן את המספר במאמר `app/blog/betterment-tax-guide/page.tsx` כשתתפרסם התקרה החדשה.
 - 🔗 מדריך אינדקסים מלא: `BACKLINKS_GUIDE.md`
 
 ---
